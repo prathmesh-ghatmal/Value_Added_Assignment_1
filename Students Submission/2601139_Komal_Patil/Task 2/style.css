@@ -1,0 +1,503 @@
+
+/* Removing default browser spacing to keep the layout consistent */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17182e;
+    background-color: #ffffff;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar stays on the left side of the dashboard */
+.sidebar {
+    width: 287px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #22234e, #202044);
+    color: white;
+    padding: 30px 13px;
+    flex-shrink: 0;
+}
+
+.portal-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 25px;
+    margin-bottom: 55px;
+}
+
+.portal-logo img {
+    width: 70px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.portal-logo h2 {
+    font-size: 27px;
+    line-height: 1.2;
+}
+
+/* Keeping all menu items in a vertical list */
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 25px;
+    margin-bottom: 10px;
+    border-radius: 13px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu li img,
+.logout img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.menu li.selected {
+    background: linear-gradient(90deg, #6941d5, #6745ca);
+}
+
+/* Logout is placed below a separating line */
+.logout {
+    border-top: 2px solid #55547f;
+    margin: 35px 17px 0;
+    padding: 35px 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Main area takes the remaining screen width */
+.content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Header containing the dashboard title and profile */
+.topbar {
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    border-bottom: 2px solid #eeeeF5;
+}
+
+.topbar h1 {
+    font-size: 38px;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    margin-right: 35px;
+}
+
+.profile-pic {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.user-details h3 {
+    font-size: 21px;
+}
+
+.dropdown {
+    font-size: 28px;
+    color: #515579;
+    margin-left: 5px;
+}
+
+/* Giving some space around the dashboard sections */
+.dashboard-body {
+    padding: 30px 33px;
+}
+
+/* Welcome banner with text on the left and image on the right */
+.welcome {
+    min-height: 258px;
+    background: #f0ebff;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    overflow: hidden;
+}
+
+.welcome-text {
+    width: 58%;
+}
+
+.welcome-text h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.welcome-text p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #555d80;
+}
+
+.welcome-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-image img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+}
+
+/* Four cards showing the student's current statistics */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    margin: 32px 0;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 0;
+    min-height: 124px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+}
+
+.stat-card img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.stat-card h2 {
+    font-size: 35px;
+    margin-bottom: 4px;
+}
+
+.stat-card p {
+    font-size: 20px;
+    color: #343b5e;
+}
+
+/* Each card has a different light background colour */
+.purple {
+    background-color: #eeeaff;
+    border: 1px solid #ded5ff;
+}
+
+.green {
+    background-color: #e3f8ec;
+    border: 1px solid #d0f0dd;
+}
+
+.yellow {
+    background-color: #fff6df;
+    border: 1px solid #ffebc0;
+}
+
+.pink {
+    background-color: #ffe9ee;
+    border: 1px solid #ffdae2;
+}
+
+/* Two panels are placed next to each other */
+.bottom-section {
+    display: flex;
+    gap: 30px;
+}
+
+.panel {
+    flex: 1;
+    min-width: 0;
+    background-color: white;
+    border: 1px solid #e0e1f0;
+    border-radius: 18px;
+    padding: 25px 28px;
+    box-shadow: 0 3px 8px rgba(30, 30, 70, 0.07);
+}
+
+.panel h2 {
+    font-size: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eeeeF5;
+}
+
+/* Course details with their progress bars */
+.course-item {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 18px 5px;
+}
+
+.course-item > img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.course-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.course-info h3 {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.course-info p {
+    font-size: 17px;
+    color: #545c82;
+}
+
+.course-progress {
+    width: 175px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.course-progress span {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 12px;
+    background-color: #e5e5f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6233d1, #7149df);
+    border-radius: 10px;
+}
+
+.eighty {
+    width: 80%;
+}
+
+.seventy {
+    width: 70%;
+}
+
+.eighty-five {
+    width: 85%;
+}
+
+/* Assignment details with their due dates */
+.assignment-item {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 18px 5px;
+    border-bottom: 1px solid #e5e5ef;
+}
+
+.assignment-item:last-child {
+    border-bottom: none;
+}
+
+.assignment-item > img {
+    width: 35px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.assignment-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.assignment-info h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.assignment-info p {
+    font-size: 18px;
+    color: #565e83;
+}
+
+.pending {
+    background-color: #ffe5eb;
+    color: #e12b43;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+/* Adjusting the layout when the screen becomes smaller */
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .portal-logo {
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .portal-logo h2 {
+        font-size: 22px;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+    .stat-card {
+        flex-basis: 45%;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .portal-logo {
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu li {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .logout {
+        margin-top: 10px;
+        padding: 15px 10px;
+    }
+
+    .topbar {
+        padding: 15px;
+        height: auto;
+    }
+
+    .topbar h1 {
+        font-size: 27px;
+    }
+
+    .user-details {
+        gap: 7px;
+    }
+
+    .notification {
+        margin-right: 5px;
+    }
+
+    .user-details h3 {
+        font-size: 15px;
+    }
+
+    .dashboard-body {
+        padding: 15px;
+    }
+
+    .welcome {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-text,
+    .welcome-image {
+        width: 100%;
+    }
+
+    .welcome-text h2 {
+        font-size: 28px;
+    }
+
+    .welcome-text p {
+        font-size: 18px;
+    }
+
+    .stats {
+        gap: 12px;
+    }
+
+    .stat-card {
+        flex-basis: 100%;
+    }
+
+    .course-item,
+    .assignment-item {
+        gap: 10px;
+    }
+
+    .course-progress {
+        width: 90px;
+    }
+
+    .course-info h3,
+    .assignment-info h3 {
+        font-size: 15px;
+    }
+
+    .course-info p,
+    .assignment-info p {
+        font-size: 13px;
+    }
+
+    .pending {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
