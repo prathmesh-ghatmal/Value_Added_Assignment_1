@@ -1,0 +1,369 @@
+/* ==================== 1. RESET & BASE STYLES ==================== */
+/* Removes default browser margins and makes element sizing predictable */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #ffffff;
+  color: #18181b;
+}
+
+/* Reusable Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: #6c3ce9; /* Brand vibrant purple */
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #5b2fd1;
+}
+
+.btn-outline {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+/* ==================== 2. NAVIGATION BAR ==================== */
+.navbar {
+  background-color: #ffffff;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.nav-container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #18181b;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transform: rotate(45deg); /* Tilts the airplane icon slightly like the reference */
+}
+
+/* Center Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 26px 0;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #6c3ce9;
+}
+
+/* Active ("Home") link with purple underline */
+.nav-links a.active {
+  color: #6c3ce9;
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #6c3ce9;
+  border-radius: 99px;
+}
+
+/* ==================== 3. HERO BANNER ==================== */
+.hero {
+  /* Uses your uploaded mountain sunset image */
+  background-image: url('Assets/07.png');
+  background-size: cover;
+  background-position: center right;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+}
+
+/* Left-to-right dark gradient so white text stands out clearly */
+.hero-overlay {
+  width: 100%;
+  min-height: 440px;
+  background: linear-gradient(90deg, rgba(18, 22, 41, 0.72) 0%, rgba(18, 22, 41, 0.25) 55%, rgba(18, 22, 41, 0) 100%);
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px 36px 24px;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  color: #f1f5f9;
+  font-size: 17px;
+  max-width: 470px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+}
+
+/* ==================== 4. FLOATING SEARCH BAR ==================== */
+/* Negative top margin pulls the white box up so it overlaps the hero image */
+.search-wrapper {
+  max-width: 1020px;
+  margin: -46px auto 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.search-bar {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 18px 24px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.field-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.field-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.field-text label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #18181b;
+  margin-bottom: 3px;
+}
+
+.field-text input,
+.field-text select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: #64748b;
+  background: transparent;
+}
+
+/* Thin gray vertical separator between search fields */
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: #e2e8f0;
+}
+
+.search-btn {
+  padding: 14px 28px;
+  border-radius: 12px;
+}
+
+/* Makes the black background on 05_2.png transparent on the purple button */
+.btn-icon-white {
+  width: 18px;
+  height: 18px;
+  mix-blend-mode: screen;
+}
+
+/* ==================== 5. POPULAR DESTINATIONS ==================== */
+.destinations-section {
+  max-width: 1180px;
+  margin: 56px auto 64px auto;
+  padding: 0 24px;
+}
+
+/* Heading with purple lines on both sides */
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.heading-line {
+  width: 36px;
+  height: 3px;
+  background-color: #6c3ce9;
+  border-radius: 99px;
+}
+
+/* 3 Equal Columns Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.destination-card {
+  height: 230px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.25s;
+}
+
+.destination-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Sunset beach fallback gradient for Goa (replace with url('Assets/your-goa-img.png') if available) */
+.goa-card {
+  background-image: linear-gradient(180deg, #f97316 0%, #fb923c 45%, #38bdf8 75%, #0284c7 100%);
+}
+
+/* Bottom dark fade so white city text & location pin are super legible */
+.card-gradient {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.78) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.card-info h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e2e8f0;
+  font-size: 13px;
+}
+
+/* Removes the black square background from 06_2.png */
+.pin-white {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+/* White rounded price tag in bottom-right corner */
+.price-pill {
+  background-color: #ffffff;
+  color: #18181b;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 99px;
+}
+
+/* ==================== 6. RESPONSIVE DESIGN ==================== */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none; /* Hides desktop links on small tablets/phones */
+  }
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr; /* Stacks cards vertically on mobile */
+  }
+  .hero-content h1 {
+    font-size: 34px;
+  }
+}

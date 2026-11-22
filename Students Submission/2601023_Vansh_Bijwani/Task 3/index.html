@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skilli Travel - Explore the World</title>
+
+  <!-- Google Font: Plus Jakarta Sans for clean, modern headings & text -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Connects this HTML page to style.css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== 1. TOP NAVIGATION BAR ==================== -->
+  <header class="navbar">
+    <div class="nav-container">
+      
+      <!-- Brand Logo (Uses Assets/04.png) -->
+      <a href="#" class="logo">
+        <img src="Assets/04.png" alt="Skilli Travel Logo" class="logo-icon" />
+        <span>Skilli Travel</span>
+      </a>
+
+      <!-- Center Menu Links -->
+      <nav class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#packages">Packages</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Right Action Button -->
+      <a href="#book" class="btn btn-primary">Book Now</a>
+
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO BANNER SECTION ==================== -->
+  <section class="hero">
+    <!-- Dark gradient overlay so white text is easy to read over the sunset photo -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Explore the World<br>with Skilli Travel</h1>
+        <p>Discover amazing destinations, curated travel packages, and unforgettable experiences.</p>
+
+        <!-- Two Hero Buttons -->
+        <div class="hero-buttons">
+          <a href="#packages" class="btn btn-primary">Explore Packages &rarr;</a>
+          <a href="#contact" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. FLOATING SEARCH BAR ==================== -->
+  <div class="search-wrapper">
+    <form class="search-bar">
+      
+      <!-- Field 1: Destination (Uses Assets/03.png) -->
+      <div class="search-field">
+        <img src="Assets/03.png" alt="Destination Pin" class="field-icon" />
+        <div class="field-text">
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" placeholder="Where to go?" />
+        </div>
+      </div>
+
+      <!-- Vertical Divider Line -->
+      <div class="divider"></div>
+
+      <!-- Field 2: Travel Date (Uses Assets/02.png) -->
+      <div class="search-field">
+        <img src="Assets/02.png" alt="Calendar Icon" class="field-icon" />
+        <div class="field-text">
+          <label for="travel-date">Travel Date</label>
+          <input type="text" id="travel-date" placeholder="Select date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" />
+        </div>
+      </div>
+
+      <!-- Vertical Divider Line -->
+      <div class="divider"></div>
+
+      <!-- Field 3: Travelers (Uses Assets/01.png) -->
+      <div class="search-field">
+        <img src="Assets/01.png" alt="Travelers Icon" class="field-icon" />
+        <div class="field-text">
+          <label for="travelers">Travelers</label>
+          <select id="travelers">
+            <option value="1">1 Traveler</option>
+            <option value="2">2 Travelers</option>
+            <option value="3">3 Travelers</option>
+            <option value="4+">4+ Travelers</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Search Submit Button (Uses Assets/05.png) -->
+      <button type="submit" class="btn btn-primary search-btn">
+        <img src="Assets/05.png" alt="Search" class="btn-icon-white" />
+        <span>Search</span>
+      </button>
+
+    </form>
+  </div>
+
+  <!-- ==================== 4. POPULAR DESTINATIONS ==================== -->
+  <section id="destinations" class="destinations-section">
+    
+    <!-- Section Title with Purple Lines on Both Sides -->
+    <div class="section-heading">
+      <span class="heading-line"></span>
+      <h2>Popular Destinations</h2>
+      <span class="heading-line"></span>
+    </div>
+
+    <!-- 3-Column Destination Cards Grid -->
+    <div class="cards-grid">
+
+      <!-- Card 1: Lonavala (Uses Assets/08.png) -->
+      <div class="destination-card" style="background-image: url('Assets/08.png');">
+        <div class="card-gradient">
+          <div class="card-info">
+            <h3>Lonavala</h3>
+            <p class="location">
+              <img src="Assets/06.png" alt="Location" class="pin-white" />
+              <span>Maharashtra</span>
+            </p>
+          </div>
+          <span class="price-pill">₹4,999</span>
+        </div>
+      </div>
+
+     <!-- Card 2: Goa -->
+      <div class="destination-card" style="background-image: url('Assets/10.png');">
+        <div class="card-gradient">
+          <div class="card-info">
+            <h3>Goa</h3>
+            <p class="location">
+              <img src="Assets/06.png" alt="Location" class="pin-white" />
+              <span>India</span>
+            </p>
+          </div>
+          <span class="price-pill">₹8,999</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Manali (Uses Assets/09.png) -->
+      <div class="destination-card" style="background-image: url('Assets/09.png');">
+        <div class="card-gradient">
+          <div class="card-info">
+            <h3>Manali</h3>
+            <p class="location">
+              <img src="Assets/06.png" alt="Location" class="pin-white" />
+              <span>Himachal Pradesh</span>
+            </p>
+          </div>
+          <span class="price-pill">₹12,999</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
