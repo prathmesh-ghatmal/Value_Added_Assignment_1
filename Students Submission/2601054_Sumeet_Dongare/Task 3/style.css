@@ -1,0 +1,508 @@
+
+/* Universal Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #111322;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5.3%;
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    font-size: 38px;
+    color: #7039e8;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #505575;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 22px 0;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #7039e8;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #7039e8;
+    border-radius: 5px;
+}
+
+
+/* Book Button */
+
+.book-btn {
+    text-decoration: none;
+    color: white;
+    background: #7039e8;
+    padding: 12px 21px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #5425bd;
+}
+
+
+/* Hero Section */
+
+.hero {
+    height: 343px;
+    background:
+        linear-gradient(90deg, rgba(20, 32, 60, 0.65), rgba(20, 20, 40, 0.05)),
+        url("Assets/07.png");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 5.3%;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 47px;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #f0efff;
+    margin-bottom: 22px;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    display: flex;
+    gap: 19px;
+}
+
+.explore-btn,
+.contact-btn {
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explore-btn {
+    background: #7039e8;
+    color: white;
+}
+
+.explore-btn:hover {
+    background: #5425bd;
+}
+
+.contact-btn {
+    border: 1px solid white;
+    color: white;
+}
+
+.contact-btn:hover {
+    background: white;
+    color: #7039e8;
+}
+
+
+/* Search Container */
+
+.search-container {
+    position: relative;
+    margin-top: -40px;
+    padding: 0 8%;
+    z-index: 2;
+}
+
+.search-box {
+    min-height: 80px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 22px;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    flex: 1;
+    padding: 0 12px;
+    border-right: 1px solid #dddded;
+}
+
+.search-item:nth-child(3) {
+    border: none;
+}
+
+.search-icon {
+    font-size: 27px;
+    color: #7039e8;
+}
+
+.search-item h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.search-item p {
+    color: #606887;
+    font-size: 15px;
+}
+
+
+/* Search Button */
+
+.search-btn {
+    background: #7039e8;
+    color: white;
+    border: none;
+    padding: 13px 24px;
+    border-radius: 11px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #5425bd;
+}
+
+
+/* Popular Destinations */
+
+.destinations {
+    padding: 40px 3.3% 20px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 31px;
+    font-weight: 800;
+}
+
+.section-heading span {
+    width: 42px;
+    height: 3px;
+    background: #7039e8;
+    border-radius: 5px;
+}
+
+
+/* Destination Cards */
+
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.destination-card {
+    height: 187px;
+    position: relative;
+    border-radius: 17px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 35%,
+        rgba(0, 0, 0, 0.75)
+    );
+}
+
+.destination-info {
+    position: absolute;
+    bottom: 13px;
+    left: 20px;
+    right: 13px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.destination-info h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.destination-info p {
+    font-size: 15px;
+}
+
+.price {
+    background: white;
+    color: #111322;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* Additional Images */
+
+.extra-images {
+    padding: 35px 4%;
+}
+
+.extra-images h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.extra-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.extra-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #211e43;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+    color: #dedaf0;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .nav-links {
+        gap: 17px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .search-container {
+        padding: 0 4%;
+    }
+
+    .search-box {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .search-item {
+        min-width: 28%;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+        min-height: 65px;
+        flex-wrap: wrap;
+        padding: 12px 4%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo span {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+        padding: 8px 0;
+    }
+
+    .book-btn {
+        font-size: 12px;
+        padding: 9px 13px;
+    }
+
+    .hero {
+        height: 330px;
+        padding: 20px 5%;
+        background-position: center;
+    }
+
+    .hero-content h1 {
+        font-size: 33px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .explore-btn,
+    .contact-btn {
+        padding: 11px 13px;
+        font-size: 13px;
+    }
+
+    .search-container {
+        margin-top: -25px;
+        padding: 0 5%;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-item {
+        width: 100%;
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        height: 210px;
+    }
+
+    .extra-container {
+        grid-template-columns: 1fr;
+    }
+
+}

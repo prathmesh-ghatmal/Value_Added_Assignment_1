@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- This viewport is used to adjust my page on mobile devices -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DSA Tracker</title>
+
+    <!-- I connected my external CSS file to style this HTML page -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation bar contains logo, page links and get started button -->
+
+    <nav>
+      <!-- I created a separate div for logo because I want to align image and text together -->
+
+      <div class="logo">
+        <!-- Span is used to keep my logo image separate for styling -->
+
+        <span>
+          <img src="Assets/04.png" alt="Logo" width="50" height="40" />
+        </span>
+
+        DSA Tracker
+      </div>
+
+      <!-- This div contains all navigation links of my website -->
+
+      <div class="nav-links">
+        <a href="#" class="active">Home</a>
+
+        <a href="problems.html">Problems</a>
+
+        <a href="leaderboard.html">Leaderboard</a>
+
+        <a href="about.html">About</a>
+      </div>
+
+      <!-- This button redirects users to the Problems page -->
+
+      <a href="problems.html" class="get-started"> Get Started </a>
+    </nav>
+
+    <!-- Hero section: I used this section to show my main heading and student image -->
+
+    <section class="boy">
+      <!-- Left side content contains heading, description and two buttons -->
+
+      <div class="boy-content">
+        <!-- I used h1 because this is the main heading of my home page -->
+
+        <h1>
+          Practice DSA<br />
+          Track Progress<br />
+          Become<span> Job Ready</span>
+        </h1>
+
+        <!-- This paragraph explains the purpose of my DSA Tracker website -->
+
+        <p>
+          Solve daily coding problems, track your progress,<br />
+          and build a strong DSA foundation.
+        </p>
+
+        <!-- I created a separate div because I want to display both buttons in one row -->
+
+        <div class="boy-buttons">
+          <!-- This button redirects users to start solving DSA problems -->
+
+          <a href="problems.html" class="primary-btn">
+            Start Practicing &nbsp; →
+          </a>
+
+          <!-- This button allows users to visit the problems page -->
+
+          <a href="problems.html" class="secondary-btn"> View Problems </a>
+        </div>
+      </div>
+
+      <!-- Right side content contains student illustration -->
+
+      <div class="boy-image">
+        <!-- I added this image to make my home page more attractive -->
+
+        <img src="Assets/05.png" alt="Student practicing DSA" />
+      </div>
+    </section>
+
+    <!-- Features section: Here I display the main features of my website -->
+
+    <section class="features">
+      <!-- First feature card: Daily coding challenges -->
+
+      <div class="feature-card">
+        <!-- I added an image to represent daily challenges -->
+
+        <div>
+          <img
+            src="Assets/03.png"
+            alt="Daily Challenges Icon"
+            width="50"
+            height="50"
+          />
+        </div>
+
+        <h3>Daily Challenges</h3>
+
+        <p>Solve a new problem every day</p>
+      </div>
+
+      <!-- Second feature card: Track user progress -->
+
+      <div class="feature-card">
+        <!-- This image represents progress tracking -->
+
+        <div>
+          <img
+            src="Assets/02.png"
+            alt="Track Progress Icon"
+            width="50"
+            height="50"
+          />
+        </div>
+
+        <h3>Track Progress</h3>
+
+        <p>See your improvement over time</p>
+      </div>
+
+      <!-- Third feature card: Leaderboard -->
+
+      <div class="feature-card">
+        <!-- This image represents leaderboard ranking -->
+
+        <div>
+          <img
+            src="Assets/01.png"
+            alt="Leaderboard Icon"
+            width="50"
+            height="50"
+          />
+        </div>
+
+        <h3>Leaderboard</h3>
+
+        <p>Compete with your peers</p>
+      </div>
+    </section>
+  </body>
+</html>
