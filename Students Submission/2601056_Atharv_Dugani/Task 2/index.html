@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar navigation -->
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="../../../Task 2/Assets/17.png" alt="">
+            <span>Student<br>Portal</span>
+        </div>
+
+        <nav class="nav" aria-label="Student navigation">
+            <a class="active" href="#">
+                <img src="../../../Task 2/Assets/13.png" alt=""> <span>Dashboard</span>
+            </a>
+            <a href="#">
+                <img src="../../../Task 2/Assets/12.png" alt=""> <span>Assignments</span>
+            </a>
+            <a href="#">
+                <img src="../../../Task 2/Assets/11.png" alt=""> <span>Courses</span>
+            </a>
+            <a href="#">
+                <img src="../../../Task 2/Assets/10.png" alt=""> <span>Progress</span>
+            </a>
+            <a href="#">
+                <img src="../../../Task 2/Assets/09.png" alt=""> <span>Profile</span>
+            </a>
+        </nav>
+
+        <a class="logout" href="#">
+            <span aria-hidden="true">↪</span> <span>Logout</span>
+        </a>
+    </aside>
+
+    <!-- Dashboard workspace -->
+    <main class="workspace">
+        <header class="topbar">
+            <h1>Dashboard</h1>
+            <div class="user-area">
+                <img class="notification" src="../../../Task 2/Assets/16.png" alt="Notifications">
+                <img class="avatar" src="../../../Task 2/Assets/15.png" alt="">
+                <strong>Atharv</strong>
+                <span class="chevron">⌄</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Welcome banner -->
+            <section class="welcome">
+                <div>
+                    <h2>Welcome Back, Atharv! <span class="wave">👋</span></h2>
+                    <p>Continue your learning journey and complete your<br>pending assignments.</p>
+                </div>
+                <img src="../../../Task 2/Assets/18.png" alt="">
+            </section>
+
+            <!-- Summary statistics -->
+            <section class="stats" aria-label="Learning summary">
+                <article class="stat-card courses">
+                    <img src="../../../Task 2/Assets/04.png" alt="">
+                    <div><strong>3</strong><span>Courses</span></div>
+                </article>
+                <article class="stat-card assignments">
+                    <img src="../../../Task 2/Assets/03.png" alt="">
+                    <div><strong>12</strong><span>Assignments</span></div>
+                </article>
+                <article class="stat-card progress">
+                    <img src="../../../Task 2/Assets/02.png" alt="">
+                    <div><strong>78%</strong><span>Progress</span></div>
+                </article>
+                <article class="stat-card due">
+                    <img src="../../../Task 2/Assets/01.png" alt="">
+                    <div><strong>5</strong><span>Due This Week</span></div>
+                </article>
+            </section>
+
+            <!-- Course progress and assignments -->
+            <section class="details">
+                <article class="panel courses-panel">
+                    <h2>Your Courses</h2>
+                    <div class="course">
+                        <img src="../../../Task 2/Assets/07.png" alt="">
+                        <div class="course-info">
+                            <strong>Web Development</strong>
+                            <span>HTML, CSS, JavaScript</span>
+                        </div>
+                        <div class="course-progress">
+                            <b>80%</b>
+                            <div class="bar"><span style="width:80%"></span></div>
+                        </div>
+                    </div>
+                    <div class="course">
+                        <img src="../../../Task 2/Assets/06.png" alt="">
+                        <div class="course-info">
+                            <strong>Python Programming</strong>
+                            <span>Basics to Advanced</span>
+                        </div>
+                        <div class="course-progress">
+                            <b>70%</b>
+                            <div class="bar"><span style="width:70%"></span></div>
+                        </div>
+                    </div>
+                    <div class="course">
+                        <img src="../../../Task 2/Assets/05.png" alt="">
+                        <div class="course-info">
+                            <strong>Database Systems</strong>
+                            <span>SQL, Normalization, Queries</span>
+                        </div>
+                        <div class="course-progress">
+                            <b>85%</b>
+                            <div class="bar"><span style="width:85%"></span></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel assignments-panel">
+                    <h2>Upcoming Assignments</h2>
+                    <div class="assignment">
+                        <img src="../../../Task 2/Assets/14.png" alt="">
+                        <div>
+                            <strong>Create a Responsive Landing Page</strong>
+                            <span>Due: 20 Nov 2026</span>
+                        </div>
+                        <em>Pending</em>
+                    </div>
+                    <div class="assignment">
+                        <img src="../../../Task 2/Assets/14.png" alt="">
+                        <div>
+                            <strong>Array Problem Set</strong>
+                            <span>Due: 22 Nov 2026</span>
+                        </div>
+                        <em>Pending</em>
+                    </div>
+                    <div class="assignment">
+                        <img src="../../../Task 2/Assets/14.png" alt="">
+                        <div>
+                            <strong>DBMS SQL Queries</strong>
+                            <span>Due: 25 Nov 2026</span>
+                        </div>
+                        <em>Pending</em>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
