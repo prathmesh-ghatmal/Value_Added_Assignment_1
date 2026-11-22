@@ -1,5 +1,4 @@
 
-/* Removing the default spacing of the browser */
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +7,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #171927;
+    color: #16192b;
     background-color: white;
 }
 
-/* Navbar styling */
-.navbar {
+/* Navbar */
+.nav {
     height: 100px;
     display: flex;
     align-items: center;
@@ -28,29 +27,31 @@ body {
     gap: 12px;
 }
 
+.logo img {
+    width: 60px;
+    height: 50px;
+    object-fit: contain;
+}
+
 .logo h2 {
     font-size: 30px;
 }
 
-.cap {
-    font-size: 38px;
-}
-
-.nav-links {
+.links {
     display: flex;
     list-style: none;
     gap: 55px;
     align-items: center;
 }
 
-.nav-links li {
+.links li {
     font-size: 21px;
     color: #454a60;
     cursor: pointer;
 }
 
-.nav-links .active {
-    color: #5726cf;
+.links .active {
+    color: #5627cd;
     border-bottom: 4px solid #5726cf;
     padding-bottom: 25px;
     margin-top: 25px;
@@ -62,16 +63,15 @@ button {
     border-radius: 14px;
 }
 
-/* Get Started button */
-.get-started {
+.btn {
     background-color: #5827cb;
     color: white;
     border: none;
     padding: 17px 25px;
 }
 
-/* Hero section containing text and illustration */
-.hero {
+/* Main section */
+.main {
     min-height: 610px;
     display: flex;
     align-items: center;
@@ -80,21 +80,21 @@ button {
     gap: 30px;
 }
 
-.hero-content {
+.content {
     width: 50%;
 }
 
-.hero-content h1 {
+.content h1 {
     font-size: 60px;
     line-height: 1.18;
     color: #11131d;
 }
 
-.hero-content h1 span {
+.content h1 span {
     color: #5827cb;
 }
 
-.hero-content p {
+.content p {
     font-size: 25px;
     line-height: 1.5;
     color: #626b8c;
@@ -102,42 +102,42 @@ button {
     max-width: 620px;
 }
 
-/* Keeping both buttons next to each other */
-.hero-buttons {
+/* Buttons */
+.buttons {
     display: flex;
     gap: 30px;
     margin-top: 35px;
 }
 
-.start-btn {
+.start {
     background-color: #5827cb;
     color: white;
     border: 1px solid #5827cb;
     padding: 19px 35px;
 }
 
-.view-btn {
+.view {
     background-color: white;
     color: #5827cb;
     border: 2px solid #743cff;
     padding: 19px 35px;
 }
 
-/* Making sure the illustration fits properly */
-.hero-image {
+/* Image */
+.image {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero-image img {
+.image img {
     width: 100%;
     max-height: 450px;
     object-fit: contain;
 }
 
-/* Features section with three cards */
+/* Features */
 .features {
     display: flex;
     justify-content: space-between;
@@ -146,7 +146,7 @@ button {
     background-color: #f8f5ff;
 }
 
-.feature-card {
+.box {
     background-color: white;
     border: 1px solid #e5e2ef;
     border-radius: 20px;
@@ -161,53 +161,53 @@ button {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
-.feature-card img {
+.box img {
     width: 65px;
     height: 65px;
     object-fit: contain;
     margin-bottom: 10px;
 }
 
-.feature-card h2 {
+.box h2 {
     font-size: 29px;
     margin-bottom: 10px;
 }
 
-.feature-card p {
+.box p {
     font-size: 22px;
     color: #454545;
 }
 
-/* Making the page fit smaller screens */
+/* For small screens */
 @media (max-width: 900px) {
 
-    .navbar {
+    .nav {
         flex-wrap: wrap;
         height: auto;
         padding: 20px;
         gap: 20px;
     }
 
-    .nav-links {
+    .links {
         gap: 15px;
         flex-wrap: wrap;
     }
 
-    .hero {
+    .main {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-content,
-    .hero-image {
+    .content,
+    .image {
         width: 100%;
     }
 
-    .hero-content h1 {
+    .content h1 {
         font-size: 42px;
     }
 
-    .hero-buttons {
+    .buttons {
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -216,12 +216,7 @@ button {
         flex-direction: column;
     }
 
-    .feature-card {
+    .box {
         width: 100%;
     }
-}
-.logo img {
-    width: 60px;
-    height: 50px;
-    object-fit: contain;
 }

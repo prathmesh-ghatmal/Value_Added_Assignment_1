@@ -1,5 +1,4 @@
 
-/* Removing default spacing so all sections line up properly */
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +11,8 @@ body {
     background-color: white;
 }
 
-/* Navbar keeps the logo, links and button in one row */
-.navbar {
+/* Navbar */
+.nav {
     height: 90px;
     display: flex;
     align-items: center;
@@ -22,7 +21,6 @@ body {
     background-color: white;
 }
 
-/* Logo and website name */
 .logo {
     display: flex;
     align-items: center;
@@ -39,29 +37,29 @@ body {
     font-size: 32px;
 }
 
-/* Navigation links */
-.nav-links {
+/* Menu */
+.links {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 55px;
 }
 
-.nav-links li {
+.links li {
     font-size: 21px;
     color: #505571;
     cursor: pointer;
 }
 
-.nav-links .active {
+.links .active {
     color: #642ed5;
     border-bottom: 4px solid #642ed5;
     padding-bottom: 18px;
     margin-top: 18px;
 }
 
-/* Book Now button */
-.book-btn {
+/* Buttons */
+.btn {
     background-color: #6735d9;
     color: white;
     border: none;
@@ -71,8 +69,8 @@ body {
     cursor: pointer;
 }
 
-/* Hero banner with the travel image as its background */
-.hero {
+/* Main part */
+.main {
     height: 456px;
     background-image: linear-gradient(
         to right,
@@ -87,31 +85,31 @@ body {
     padding: 50px 5.5%;
 }
 
-.hero-content {
+.text {
     color: white;
     max-width: 650px;
 }
 
-.hero-content h1 {
+.text h1 {
     font-size: 64px;
     line-height: 1.08;
     margin-bottom: 15px;
 }
 
-.hero-content p {
+.text p {
     font-size: 25px;
     line-height: 1.5;
     margin-bottom: 28px;
     color: #f0efff;
 }
 
-/* Two buttons below the welcome text */
-.hero-buttons {
+/* Two buttons */
+.buttons {
     display: flex;
     gap: 25px;
 }
 
-.hero-buttons button {
+.buttons button {
     padding: 17px 30px;
     border-radius: 15px;
     font-size: 21px;
@@ -119,26 +117,26 @@ body {
     cursor: pointer;
 }
 
-.explore-btn {
+.explore {
     background-color: #7139e5;
     color: white;
     border: 2px solid #7139e5;
 }
 
-.contact-btn {
+.contact {
     background-color: transparent;
     color: white;
     border: 2px solid white;
 }
 
-/* Search box overlaps the bottom of the hero banner */
-.search-section {
+/* Search box */
+.search {
     padding: 0 8%;
     margin-top: -55px;
     position: relative;
 }
 
-.search-box {
+.box {
     min-height: 108px;
     background-color: white;
     border-radius: 25px;
@@ -149,8 +147,8 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Each search option contains an icon and its details */
-.search-option {
+/* Search options */
+.option {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -159,28 +157,28 @@ body {
     border-right: 2px solid #e4e3ee;
 }
 
-.search-option:nth-child(3) {
+.option:nth-child(3) {
     border-right: none;
 }
 
-.search-option img {
+.option img {
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
 
-.search-option h3 {
+.option h3 {
     font-size: 20px;
     margin-bottom: 7px;
 }
 
-.search-option p {
+.option p {
     font-size: 20px;
     color: #626b8c;
 }
 
 /* Search button */
-.search-btn {
+.find {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,18 +192,18 @@ body {
     cursor: pointer;
 }
 
-.search-btn img {
+.find img {
     width: 25px;
     height: 25px;
     object-fit: contain;
 }
 
-/* Heading for the popular destination cards */
-.destinations {
+/* Places heading */
+.places {
     padding: 50px 3.5%;
 }
 
-.section-heading {
+.heading {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,24 +211,24 @@ body {
     margin-bottom: 42px;
 }
 
-.section-heading h2 {
+.heading h2 {
     font-size: 40px;
 }
 
-.section-heading span {
+.heading span {
     width: 55px;
     height: 3px;
     background-color: #6735d9;
     border-radius: 5px;
 }
 
-/* Three destination cards are placed in one row */
-.destination-cards {
+/* Place cards */
+.cards {
     display: flex;
     gap: 25px;
 }
 
-.destination-card {
+.place {
     flex: 1;
     height: 248px;
     position: relative;
@@ -238,15 +236,15 @@ body {
     border-radius: 23px;
 }
 
-/* Images fill the cards */
-.destination-image {
+/* Place images */
+.place-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Text is placed over the bottom of each destination image */
-.destination-info {
+/* Place details */
+.info {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -263,19 +261,19 @@ body {
     justify-content: space-between;
 }
 
-.destination-info h2 {
+.info h2 {
     font-size: 30px;
     margin-bottom: 5px;
 }
 
-.destination-info p {
+.info p {
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 20px;
 }
 
-.destination-info p img {
+.info p img {
     width: 22px;
     height: 22px;
     object-fit: contain;
@@ -291,83 +289,83 @@ body {
     white-space: nowrap;
 }
 
-/* Making the page adjust to smaller screens */
+/* For smaller screens */
 @media (max-width: 1000px) {
 
-    .navbar {
+    .nav {
         flex-wrap: wrap;
         height: auto;
         padding: 20px;
         gap: 20px;
     }
 
-    .nav-links {
+    .links {
         gap: 20px;
         flex-wrap: wrap;
     }
 
-    .hero-content h1 {
+    .text h1 {
         font-size: 48px;
     }
 
-    .search-box {
+    .box {
         flex-wrap: wrap;
         gap: 20px;
     }
 
-    .search-option {
+    .option {
         min-width: 40%;
     }
 
-    .destination-cards {
+    .cards {
         flex-wrap: wrap;
     }
 
-    .destination-card {
+    .place {
         flex-basis: 45%;
     }
 }
 
 @media (max-width: 650px) {
 
-    .hero {
+    .main {
         height: auto;
         min-height: 420px;
         padding: 40px 20px;
     }
 
-    .hero-content h1 {
+    .text h1 {
         font-size: 38px;
     }
 
-    .hero-content p {
+    .text p {
         font-size: 18px;
     }
 
-    .hero-buttons {
+    .buttons {
         flex-wrap: wrap;
     }
 
-    .search-section {
+    .search {
         padding: 0 15px;
     }
 
-    .search-box {
+    .box {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .search-option {
+    .option {
         border-right: none;
         border-bottom: 1px solid #eeeeF5;
         padding: 10px;
     }
 
-    .section-heading h2 {
+    .heading h2 {
         font-size: 27px;
     }
 
-    .destination-card {
+    .place {
         flex-basis: 100%;
     }
 }
