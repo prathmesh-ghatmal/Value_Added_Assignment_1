@@ -1,0 +1,465 @@
+/* 
+  Global CSS Reset:
+  Eliminating default margin and padding ensures consistent layout across all browsers.
+  'box-sizing: border-box' ensures internal padding does not expand total element dimensions.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+  Page Body:
+  Uses 'Segoe UI' sans-serif typography. 'min-height: 100vh' ensures the layout 
+  fills the full height of the viewport.
+*/
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8f9fd;
+    color: #161824;
+    min-height: 100vh;
+}
+
+/* 
+  Master Application Layout:
+  Uses Flexbox to place the sidebar on the left and the main content on the right.
+*/
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =======================================================
+   Sidebar Navigation Panel
+======================================================= */
+
+/* 
+  Sidebar Container:
+  Fixed width (240px) with dark navy background (#1e1b4b).
+  Flexbox column direction allows items to stack vertically from top to bottom.
+*/
+.sidebar {
+    width: 240px;
+    background-color: #1e1b4b;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* Brand logo and title at the top of the sidebar */
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 36px;
+    padding-left: 6px;
+}
+
+.sidebar-logo img {
+    width: 34px;
+    height: 34px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.15;
+}
+
+/* Navigation items container: stacks menu items with 6px gap */
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Individual navigation link styling */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #9e9ebc;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-item img {
+    width: 18px;
+    height: 18px;
+}
+
+/* 
+  Active navigation state:
+  Highlights 'Dashboard' with a solid purple pill background (#5b34da) and white text.
+*/
+.nav-item.active {
+    background-color: #5b34da;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* 
+  Sidebar Footer:
+  'margin-top: auto' pushes the logout button down to the very bottom of the sidebar.
+*/
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.nav-item.logout {
+    color: #9e9ebc;
+}
+
+/* =======================================================
+   Main Content Area
+======================================================= */
+
+/* 
+  Main container:
+  'flex: 1' allows it to fill all remaining horizontal screen space.
+  Padding provides consistent breathing space around dashboard elements.
+*/
+.main-content {
+    flex: 1;
+    padding: 28px 36px 40px;
+}
+
+/* 
+  Top Bar Header:
+  Flexbox space-between positions the 'Dashboard' title on the left 
+  and the user controls on the right.
+*/
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.top-bar h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #161824;
+}
+
+/* User controls container: aligns bell icon and profile pill side-by-side */
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bell-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Profile pill grouping avatar, name, and caret */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #161824;
+}
+
+.dropdown-arrow {
+    font-size: 14px;
+    color: #777;
+}
+
+/* =======================================================
+   Welcome Banner
+======================================================= */
+
+/* 
+  Banner Container:
+  Soft pastel purple background (#ede9fe) with rounded corners.
+  Flexbox space-between separates greeting text on the left from illustration on the right.
+*/
+.welcome-banner {
+    background-color: #ede9fe;
+    border-radius: 16px;
+    padding: 26px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.welcome-text {
+    max-width: 500px;
+}
+
+.welcome-text h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #161824;
+    margin-bottom: 8px;
+}
+
+.welcome-text p {
+    font-size: 14.5px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Banner illustration size constrained to fit neatly */
+.welcome-image img {
+    max-width: 240px;
+    height: auto;
+}
+
+/* =======================================================
+   Metric Stat Cards Row
+======================================================= */
+
+/* 
+  Stats Row:
+  Uses Flexbox with an 18px gap to evenly display four metric cards in a row.
+*/
+.stats-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+/* 
+  Individual Stat Card:
+  'flex: 1' gives all four cards equal width.
+  Padding and rounded corners create clean, friendly metric badges.
+*/
+.stat-card {
+    flex: 1;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.stat-card img {
+    width: 44px;
+    height: 44px;
+}
+
+.stat-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-size: 22px;
+    font-weight: 800;
+    color: #161824;
+    line-height: 1.15;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #555c68;
+    font-weight: 500;
+}
+
+/* Specific pastel background colors matching the reference design */
+.purple-card {
+    background-color: #ede9fe; /* Soft Lavender */
+}
+
+.green-card {
+    background-color: #e6f7ef;  /* Soft Mint Green */
+}
+
+.yellow-card {
+    background-color: #fef3c7; /* Soft Butter Yellow */
+}
+
+.pink-card {
+    background-color: #fee2e2;   /* Soft Blush Pink */
+}
+
+/* =======================================================
+   Bottom Two-Column Details Section
+======================================================= */
+
+/* 
+  Two-column container:
+  Splits the space equally between 'Your Courses' and 'Upcoming Assignments'.
+*/
+.details-section {
+    display: flex;
+    gap: 22px;
+}
+
+/* 
+  Content Card:
+  White surface card with subtle border (#edf0f8) and rounded corners.
+  'flex: 1' keeps both columns symmetrical in width.
+*/
+.content-card {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #edf0f8;
+    border-radius: 16px;
+    padding: 24px 26px;
+}
+
+.card-heading {
+    font-size: 17.5px;
+    font-weight: 700;
+    color: #161824;
+    margin-bottom: 20px;
+}
+
+/* Vertical list of course or assignment rows */
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* 
+  Individual Row Item:
+  Flexbox aligns icon on left, title in center, and progress/status on right.
+*/
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.item-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+}
+
+.item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.item-info h4 {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #161824;
+}
+
+.item-info p {
+    font-size: 12.5px;
+    color: #64748b;
+}
+
+/* 
+  Course Progress Bar:
+  A fixed-width track (110px) with a colored inner fill representing completion %.
+*/
+.progress-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    width: 110px;
+    flex-shrink: 0;
+}
+
+.progress-val {
+    font-size: 13px;
+    font-weight: 600;
+    color: #161824;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #ede9fe;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #5b34da;
+    border-radius: 6px;
+}
+
+/* 
+  Assignment Pending Badge:
+  Soft pink pill with red text indicating an unfinished task.
+*/
+.status-badge {
+    background-color: #fee2e2;
+    color: #ef4444;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+/* =======================================================
+   Responsive Breakpoints
+   Allows comfortable viewing on smaller screens/tablets
+======================================================= */
+@media (max-width: 950px) {
+    .stats-row {
+        flex-wrap: wrap;
+    }
+
+    .stat-card {
+        flex: 1 1 45%;
+    }
+
+    .details-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .welcome-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .stat-card {
+        flex: 1 1 100%;
+    }
+}

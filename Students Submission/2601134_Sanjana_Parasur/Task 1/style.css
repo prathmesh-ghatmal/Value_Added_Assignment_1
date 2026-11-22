@@ -1,0 +1,254 @@
+/* 
+  Global CSS Reset:
+  Setting margins and paddings to 0 across all elements removes default browser 
+  inconsistencies. Using 'box-sizing: border-box' ensures padding and borders are 
+  included in total widths and heights, avoiding accidental horizontal scrolling.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+  Base Page Styling:
+  Using a clean sans-serif font stack starting with 'Segoe UI' for crisp readability.
+  The light off-white background (#fafaff) creates a subtle contrast with white cards.
+*/
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fafaff;
+    color: #1a1a2e;
+}
+
+/* =======================================================
+   Header & Navigation Bar
+======================================================= */
+
+/* 
+  The header uses Flexbox with 'space-between' to automatically distribute the 
+  logo to the far left, the navigation links to the center, and the button to the far right.
+  Padding provides breathing room around the header edges.
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 80px;
+}
+
+/* Flexbox aligns the logo icon and title text horizontally with a 10px gap */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Fixed sizing on the logo icon to maintain clear proportions */
+.logo img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Navigation links container: spaced out horizontally with a 32px gap between items */
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+/* Base style for nav links: removing underline and setting neutral gray color */
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* 
+  Active navigation state:
+  Highlights the current page ('Home') with the brand purple color and a bottom border 
+  that matches the purple active indicator line in the reference design.
+*/
+.nav-links a.active {
+    color: #6033c9;
+    font-weight: 600;
+    border-bottom: 3px solid #6033c9;
+    padding-bottom: 4px;
+}
+
+/* Header 'Get Started' button: styled as a solid purple pill with rounded corners */
+.btn-get-started {
+    background-color: #6033c9;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =======================================================
+   Hero Section Layout
+======================================================= */
+
+/* 
+  Hero section container:
+  Uses Flexbox to position the text content on the left and the illustration on the right.
+  'align-items: center' keeps both sides vertically aligned with each other.
+*/
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px 40px;
+    gap: 40px;
+}
+
+/* 
+  Constraining the left column with max-width forces the headline to break naturally 
+  into three lines: 'Practice DSA', 'Track Progress', 'Become Job Ready'.
+*/
+.hero-left {
+    max-width: 520px;
+}
+
+/* Large bold headline typography with tight line-height matching modern landing pages */
+.hero-left h1 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.18;
+    color: #161824;
+}
+
+/* Applies the purple brand color specifically to the phrase 'Job Ready' */
+.purple-text {
+    color: #6033c9;
+}
+
+/* Subtitle styling: muted color and line-height for comfortable reading */
+.hero-left p {
+    font-size: 16px;
+    color: #66667e;
+    line-height: 1.5;
+    margin-top: 18px;
+    margin-bottom: 30px;
+}
+
+/* Positions the primary and secondary call-to-action buttons side-by-side */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* Primary button: solid purple background with white text and bold weight */
+.btn-primary {
+    background-color: #6033c9;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Secondary button: white background with purple border and purple text */
+.btn-secondary {
+    background-color: #ffffff;
+    color: #6033c9;
+    border: 1.5px solid #6033c9;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Hero illustration graphic: scales proportionally within its container */
+.hero-right img {
+    width: 100%;
+    max-width: 530px;
+    height: auto;
+}
+
+/* =======================================================
+   Feature Cards Section
+======================================================= */
+
+/* 
+  Features container:
+  Uses Flexbox to lay out three cards in a single row.
+  The 24px gap ensures consistent whitespace between adjacent cards.
+*/
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 10px 80px 60px;
+}
+
+/* 
+  Individual Card Styling:
+  'flex: 1' makes each card take an equal share of the available width.
+  White background, light border, and soft box-shadow give the cards a modern card surface.
+*/
+.card {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #eef0f6;
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* Uniform sizing and bottom spacing for the feature card icons */
+.card img {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+}
+
+/* Card headline: bold, dark, and cleanly separated from the description */
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #161824;
+    margin-bottom: 6px;
+}
+
+/* Card description: small muted gray text */
+.card p {
+    font-size: 13.5px;
+    color: #66667e;
+}
+
+/* =======================================================
+   Responsive Media Queries
+   Ensures the design reorganizes cleanly on tablets and mobile screens
+======================================================= */
+@media (max-width: 900px) {
+    /* Reduce horizontal padding on narrower screens */
+    .header {
+        padding: 20px 30px;
+    }
+
+    /* Stack hero text and image vertically instead of side-by-side */
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px 30px;
+    }
+
+    /* Center the button group when the hero is stacked */
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Stack the three feature cards vertically on mobile screens */
+    .features-container {
+        flex-direction: column;
+        padding: 20px 30px 40px;
+    }
+}

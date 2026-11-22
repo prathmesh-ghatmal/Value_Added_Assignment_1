@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Dashboard</title>
+    <!-- Link external CSS stylesheet for styling the dashboard layout -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 
+      Main Application Layout:
+      Uses a top-level Flexbox container to place the dark navigation sidebar 
+      on the left and the main content area on the right.
+    -->
+    <div class="app-container">
+
+        <!-- ==============================================
+             SIDEBAR NAVIGATION
+             Fixed-width vertical panel with logo and links
+        ============================================== -->
+        <aside class="sidebar">
+            <!-- Sidebar Brand: graduation cap logo and two-line portal title -->
+            <div class="sidebar-logo">
+                <img src="../../../Task 2/Assets/17.png" alt="Portal Logo">
+                <div class="logo-text">
+                    <span>Student</span>
+                    <span>Portal</span>
+                </div>
+            </div>
+
+            <!-- 
+              Sidebar Navigation Links:
+              Vertical list of links. The 'Dashboard' link has the 'active' class 
+              to give it a solid purple pill background.
+            -->
+            <nav class="sidebar-menu">
+                <a href="#" class="nav-item active">
+                    <img src="../../../Task 2/Assets/13.png" alt="Dashboard Icon">
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="../../../Task 2/Assets/12.png" alt="Assignments Icon">
+                    <span>Assignments</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="../../../Task 2/Assets/11.png" alt="Courses Icon">
+                    <span>Courses</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="../../../Task 2/Assets/10.png" alt="Progress Icon">
+                    <span>Progress</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="../../../Task 2/Assets/09.png" alt="Profile Icon">
+                    <span>Profile</span>
+                </a>
+            </nav>
+
+            <!-- Logout Link pinned to the bottom using 'margin-top: auto' in CSS -->
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item logout">
+                    <img src="../../../Task 2/Assets/08.png" alt="Logout Icon">
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- ==============================================
+             MAIN DASHBOARD CONTENT
+             Contains header, welcome banner, metrics, and cards
+        ============================================== -->
+        <main class="main-content">
+
+            <!-- 
+              Top Header Bar:
+              Displays the 'Dashboard' page title on the left and user controls 
+              (notification bell and user profile info) on the right.
+            -->
+            <header class="top-bar">
+                <h2>Dashboard</h2>
+
+                <div class="user-controls">
+                    <!-- Notification Bell Icon with unread red alert dot -->
+                    <img src="../../../Task 2/Assets/16.png" alt="Notifications" class="bell-icon">
+
+                    <!-- User Profile section showing avatar, student name, and dropdown arrow -->
+                    <div class="user-profile">
+                        <img src="../../../Task 2/Assets/15.png" alt="User Avatar" class="avatar">
+                        <span class="user-name">Sanjana</span>
+                        <span class="dropdown-arrow">&#709;</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 
+              Welcome Banner:
+              A soft purple greeting card highlighting the student's return.
+              Flexbox aligns the text on the left and the desk illustration on the right.
+            -->
+            <section class="welcome-banner">
+                <div class="welcome-text">
+                    <h3>Welcome Back, Sanjana! &#128075;</h3>
+                    <p>Continue your learning journey and complete your pending assignments.</p>
+                </div>
+                <div class="welcome-image">
+                    <img src="../../../Task 2/Assets/18.png" alt="Study illustration with laptop and books">
+                </div>
+            </section>
+
+            <!-- 
+              Four Stat Cards:
+              Arranged in a 4-column row using Flexbox with equal widths.
+              Each card features its own pastel background tint and relevant metric.
+            -->
+            <section class="stats-row">
+                <!-- Card 1: Courses count with soft purple background -->
+                <div class="stat-card purple-card">
+                    <img src="../../../Task 2/Assets/04.png" alt="Courses Icon">
+                    <div class="stat-text">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">Courses</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Assignments count with soft green background -->
+                <div class="stat-card green-card">
+                    <img src="../../../Task 2/Assets/03.png" alt="Assignments Icon">
+                    <div class="stat-text">
+                        <span class="stat-num">12</span>
+                        <span class="stat-label">Assignments</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Progress percentage with soft yellow background -->
+                <div class="stat-card yellow-card">
+                    <img src="../../../Task 2/Assets/02.png" alt="Progress Icon">
+                    <div class="stat-text">
+                        <span class="stat-num">78%</span>
+                        <span class="stat-label">Progress</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Due count with soft pink background -->
+                <div class="stat-card pink-card">
+                    <img src="../../../Task 2/Assets/01.png" alt="Due Icon">
+                    <div class="stat-text">
+                        <span class="stat-num">5</span>
+                        <span class="stat-label">Due This Week</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+              Bottom Two-Column Section:
+              Splits into 'Your Courses' on the left and 'Upcoming Assignments' on the right.
+              Both columns use white cards with light borders and padding.
+            -->
+            <section class="details-section">
+
+                <!-- Left Card: Enrolled Courses List -->
+                <div class="content-card">
+                    <h3 class="card-heading">Your Courses</h3>
+                    
+                    <div class="item-list">
+                        <!-- Course 1: Web Development -->
+                        <div class="list-item">
+                            <img src="../../../Task 2/Assets/07.png" alt="Code Icon" class="item-icon">
+                            <div class="item-info">
+                                <h4>Web Development</h4>
+                                <p>HTML, CSS, JavaScript</p>
+                            </div>
+                            <div class="progress-box">
+                                <span class="progress-val">80%</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course 2: Python Programming -->
+                        <div class="list-item">
+                            <img src="../../../Task 2/Assets/06.png" alt="Python Icon" class="item-icon">
+                            <div class="item-info">
+                                <h4>Python Programming</h4>
+                                <p>Basics to Advanced</p>
+                            </div>
+                            <div class="progress-box">
+                                <span class="progress-val">70%</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course 3: Database Systems -->
+                        <div class="list-item">
+                            <img src="../../../Task 2/Assets/05.png" alt="Database Icon" class="item-icon">
+                            <div class="item-info">
+                                <h4>Database Systems</h4>
+                                <p>SQL, Normalization, Queries</p>
+                            </div>
+                            <div class="progress-box">
+                                <span class="progress-val">85%</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Card: Upcoming Assignments List -->
+                <div class="content-card">
+                    <h3 class="card-heading">Upcoming Assignments</h3>
+                    
+                    <div class="item-list">
+                        <!-- Assignment 1: Landing Page -->
+                        <div class="list-item">
+                            <img src="../../../Task 2/Assets/14.png" alt="Document Icon" class="item-icon">
+                            <div class="item-info">
+                                <h4>Create a Responsive Landing Page</h4>
+                                <p>Due: 20 Nov 2026</p>
+                            </div>
+                            <span class="status-badge">Pending</span>
+                        </div>
+
+                        <!-- Assignment 2: Array Problem Set -->
+                        <div class="list-item">
+                            <img src="../../../Task 2/Assets/14.png" alt="Document Icon" class="item-icon">
+                            <div class="item-info">
+                                <h4>Array Problem Set</h4>
+                                <p>Due: 22 Nov 2026</p>
+                            </div>
+                            <span class="status-badge">Pending</span>
+                        </div>
+
+                        <!-- Assignment 3: DBMS SQL Queries -->
+                        <div class="list-item">
+                            <img src="../../../Task 2/Assets/14.png" alt="Document Icon" class="item-icon">
+                            <div class="item-info">
+                                <h4>DBMS SQL Queries</h4>
+                                <p>Due: 25 Nov 2026</p>
+                            </div>
+                            <span class="status-badge">Pending</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
