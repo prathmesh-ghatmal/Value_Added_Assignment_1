@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skilli Travel - Explore the World</title>
+    <!-- Linking external stylesheet for styling the travel landing page -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 
+      Header Navigation Bar:
+      Uses Flexbox to distribute the airplane logo on the left, the main menu 
+      in the middle, and the 'Book Now' button on the right.
+    -->
+    <header class="header">
+        <!-- Logo and company branding -->
+        <div class="logo">
+            <img src="../../../Task 3/Assets/04.png" alt="Skilli Travel Logo">
+            <span>Skilli Travel</span>
+        </div>
+
+        <!-- Navigation Menu Links: 'Home' has the active class for the underline indicator -->
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Packages</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <!-- Book Now button -->
+        <a href="#" class="btn-book">Book Now</a>
+    </header>
+
+    <!-- 
+      Hero Banner Section:
+      A large scenic panoramic card with the mountain sunset image as its background.
+      An overlay ensures the white headline and text remain easily readable.
+    -->
+    <section class="hero-wrapper">
+        <div class="hero-banner">
+            <div class="hero-text">
+                <h1>Explore the World<br>with Skilli Travel</h1>
+                <p>Discover amazing destinations, curated travel packages, and unforgettable experiences.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Explore Packages &rarr;</a>
+                    <a href="#" class="btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+          Floating Search Filter Bar:
+          Overlaps the bottom edge of the hero banner using a negative margin.
+          Contains 3 travel parameter filters separated by divider lines, plus a search button.
+        -->
+        <div class="search-card">
+            <!-- Filter 1: Destination -->
+            <div class="filter-item">
+                <img src="../../../Task 3/Assets/03.png" alt="Destination Pin Icon">
+                <div class="filter-text">
+                    <span class="filter-title">Destination</span>
+                    <span class="filter-sub">Where to go?</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Filter 2: Travel Date -->
+            <div class="filter-item">
+                <img src="../../../Task 3/Assets/02.png" alt="Calendar Icon">
+                <div class="filter-text">
+                    <span class="filter-title">Travel Date</span>
+                    <span class="filter-sub">Select date</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Filter 3: Travelers -->
+            <div class="filter-item">
+                <img src="../../../Task 3/Assets/01.png" alt="Travelers Icon">
+                <div class="filter-text">
+                    <span class="filter-title">Travelers</span>
+                    <span class="filter-sub">1 Traveler</span>
+                </div>
+            </div>
+
+            <!-- Search Action Button with search icon and label -->
+            <button type="button" class="btn-search">
+                <img src="../../../Task 3/Assets/05.png" alt="Search Icon" class="search-icon">
+                <span>Search</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- 
+      Popular Destinations Section:
+      Displays a section heading with purple accent lines on both sides, 
+      followed by three destination cards arranged in a row using Flexbox.
+    -->
+    <section class="destinations-section">
+        <!-- Section Title with left and right purple accent bars -->
+        <div class="section-title-wrap">
+            <span class="accent-bar"></span>
+            <h2>Popular Destinations</h2>
+            <span class="accent-bar"></span>
+        </div>
+
+        <!-- Destination Cards Grid -->
+        <div class="cards-grid">
+            
+            <!-- Destination Card 1: Lonavala -->
+            <div class="destination-card">
+                <img src="../../../Task 3/Assets/08.png" alt="Lonavala Waterfall" class="card-bg">
+                <div class="card-overlay"></div>
+                <div class="card-info">
+                    <div class="location-details">
+                        <h3>Lonavala</h3>
+                        <p>&#128205; Maharashtra</p>
+                    </div>
+                    <div class="price-badge">&#8377;4,999</div>
+                </div>
+            </div>
+
+            <!-- Destination Card 2: Goa -->
+            <div class="destination-card">
+                <img src="../../../Task 3/Assets/10.png" alt="Goa Beach Sunset" class="card-bg">
+                <div class="card-overlay"></div>
+                <div class="card-info">
+                    <div class="location-details">
+                        <h3>Goa</h3>
+                        <p>&#128205; India</p>
+                    </div>
+                    <div class="price-badge">&#8377;8,999</div>
+                </div>
+            </div>
+
+            <!-- Destination Card 3: Manali -->
+            <div class="destination-card">
+                <img src="../../../Task 3/Assets/09.png" alt="Manali Snow Mountains" class="card-bg">
+                <div class="card-overlay"></div>
+                <div class="card-info">
+                    <div class="location-details">
+                        <h3>Manali</h3>
+                        <p>&#128205; Himachal Pradesh</p>
+                    </div>
+                    <div class="price-badge">&#8377;12,999</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

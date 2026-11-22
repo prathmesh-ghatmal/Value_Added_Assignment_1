@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Tracker</title>
+    <!-- Link the external stylesheet that contains all visual styling and layout rules -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 
+      Header Section:
+      Serves as the top navigation bar. It is styled with Flexbox (space-between) 
+      to distribute the logo on the far left, the navigation links in the center, 
+      and the 'Get Started' action button on the far right.
+    -->
+    <header class="header">
+        <!-- Logo container: groups the graduation cap icon and the title together with a small gap -->
+        <div class="logo">
+            <img src="../../../Task 1/Assets/04.png" alt="DSA Tracker Logo">
+            <span>DSA Tracker</span>
+        </div>
+
+        <!-- 
+          Navigation Menu:
+          Contains links to primary site sections. The 'Home' link has the 'active' 
+          class so we can add a bottom border highlight in CSS matching the design.
+        -->
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Problems</a>
+            <a href="#">Leaderboard</a>
+            <a href="#">About</a>
+        </nav>
+
+        <!-- Primary header call-to-action button styled with purple background -->
+        <a href="#" class="btn-get-started">Get Started</a>
+    </header>
+
+    <!-- 
+      Hero Section:
+      The main promotional section of the page. It uses a two-column Flexbox layout 
+      where the left column holds the textual value proposition and buttons, 
+      and the right column displays the student coding illustration.
+    -->
+    <section class="hero-section">
+        <!-- 
+          Left Column (Text Content):
+          Constrained by max-width in CSS to ensure the headline naturally wraps 
+          into three distinct lines as shown in the reference design.
+        -->
+        <div class="hero-left">
+            <!-- Main headline with the phrase 'Job Ready' wrapped in a span for purple accent coloring -->
+            <h1>Practice DSA<br>Track Progress<br>Become <span class="purple-text">Job Ready</span></h1>
+            
+            <!-- Short descriptive subtitle explaining the platform benefits -->
+            <p>Solve daily coding problems, track your progress,<br>and build a strong DSA foundation.</p>
+            
+            <!-- Action buttons container: placed side by side using a flex row with a gap -->
+            <div class="hero-buttons">
+                <!-- Primary solid purple button with an arrow character for direction -->
+                <a href="#" class="btn-primary">Start Practicing &rarr;</a>
+                <!-- Secondary outlined button providing an alternate action -->
+                <a href="#" class="btn-secondary">View Problems</a>
+            </div>
+        </div>
+
+        <!-- 
+          Right Column (Illustration Graphic):
+          Displays the coding student illustration graphic. Styled to scale responsively.
+        -->
+        <div class="hero-right">
+            <img src="../../../Task 1/Assets/05.png" alt="Student coding at desk illustration">
+        </div>
+    </section>
+
+    <!-- 
+      Feature Cards Section:
+      A horizontal row of three feature highlight cards placed near the bottom.
+      Flexbox with 'justify-content: space-between' and 'flex: 1' on each card ensures 
+      all three cards have identical widths and equal spacing across the page.
+    -->
+    <section class="features-container">
+        <!-- Card 1: Daily Challenges highlight with target/dartboard icon -->
+        <div class="card">
+            <img src="../../../Task 1/Assets/03.png" alt="Daily Challenges Target Icon">
+            <h3>Daily Challenges</h3>
+            <p>Solve a new problem every day</p>
+        </div>
+
+        <!-- Card 2: Track Progress highlight with rising bar chart icon -->
+        <div class="card">
+            <img src="../../../Task 1/Assets/02.png" alt="Track Progress Chart Icon">
+            <h3>Track Progress</h3>
+            <p>See your improvement over time</p>
+        </div>
+
+        <!-- Card 3: Leaderboard highlight with trophy achievement icon -->
+        <div class="card">
+            <img src="../../../Task 1/Assets/01.png" alt="Leaderboard Trophy Icon">
+            <h3>Leaderboard</h3>
+            <p>Compete with your peers</p>
+        </div>
+    </section>
+
+</body>
+</html>

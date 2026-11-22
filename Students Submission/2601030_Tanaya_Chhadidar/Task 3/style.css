@@ -1,0 +1,400 @@
+/* 
+  Global CSS Reset:
+  Removes default browser margins and paddings for a clean baseline across all devices.
+  'box-sizing: border-box' ensures padding and borders are accounted for within element dimensions.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+  Base Page Styling:
+  Clean modern sans-serif typography starting with 'Segoe UI'.
+  The background is a soft light off-white (#fafaff) providing pleasant contrast.
+*/
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fafaff;
+    color: #161824;
+}
+
+/* =======================================================
+   Header Navigation Bar
+======================================================= */
+
+/* 
+  Header Container:
+  Uses Flexbox with 'space-between' to distribute the brand logo to the left, 
+  the navigation menu to the center, and the 'Book Now' button to the right.
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 80px;
+    background-color: #ffffff;
+}
+
+/* Logo container: aligns airplane icon and brand name side-by-side with a 10px gap */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Nav links container: items spaced out horizontally with a 32px gap */
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* 
+  Active navigation state:
+  Highlights the 'Home' link in brand purple with a bottom border 
+  that matches the active indicator line in the design.
+*/
+.nav-links a.active {
+    color: #6033c9;
+    font-weight: 600;
+    border-bottom: 3px solid #6033c9;
+    padding-bottom: 4px;
+}
+
+/* Header 'Book Now' button: solid purple pill with rounded corners */
+.btn-book {
+    background-color: #6033c9;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =======================================================
+   Hero Banner & Floating Search Bar
+======================================================= */
+
+/* 
+  Hero Wrapper:
+  Constrains the hero section with side padding to keep it aligned with the page grid.
+*/
+.hero-wrapper {
+    padding: 16px 80px 0;
+    position: relative;
+}
+
+/* 
+  Hero Banner:
+  Features the mountain sunset panoramic image as its background.
+  A linear-gradient overlay darkens the left side so white text is readable against the bright sky.
+*/
+.hero-banner {
+    position: relative;
+    border-radius: 20px;
+    padding: 50px 48px 90px;
+    background-image: linear-gradient(
+        to right,
+        rgba(15, 15, 35, 0.75) 0%,
+        rgba(15, 15, 35, 0.5) 45%,
+        rgba(15, 15, 35, 0.05) 100%
+    ), url('../../../Task 3/Assets/07.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 500px;
+    z-index: 2;
+}
+
+/* Large bold white headline typography with tight line-height */
+.hero-text h1 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+}
+
+.hero-text p {
+    font-size: 15px;
+    color: #e2e8f0;
+    line-height: 1.5;
+    margin-top: 14px;
+    margin-bottom: 26px;
+}
+
+/* Button group positioning primary and secondary buttons side-by-side */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* Solid purple primary button */
+.btn-primary {
+    background-color: #6033c9;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14.5px;
+}
+
+/* Outlined translucent secondary button with a thin white border */
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 11px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14.5px;
+}
+
+/* =======================================================
+   Floating Search Filter Card
+======================================================= */
+
+/* 
+  Floating Search Card:
+  Negative margin-top (-45px) pulls the search bar upward over the bottom edge 
+  of the hero banner, creating the layered floating card effect.
+*/
+.search-card {
+    position: relative;
+    z-index: 10;
+    margin: -45px auto 0;
+    max-width: 980px;
+    background-color: #ffffff;
+    border: 1px solid #edf0f8;
+    border-radius: 16px;
+    padding: 14px 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Individual search filter item showing icon and stacked text */
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.filter-item img {
+    width: 28px;
+    height: 28px;
+}
+
+.filter-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #161824;
+}
+
+.filter-sub {
+    font-size: 12.5px;
+    color: #64748b;
+}
+
+/* Thin vertical gray line separating filter items */
+.divider {
+    width: 1px;
+    height: 36px;
+    background-color: #e2e8f0;
+}
+
+/* Search button styled with brand purple and icon + text inline */
+.btn-search {
+    background-color: #6033c9;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+
+/* =======================================================
+   Popular Destinations Section
+======================================================= */
+
+.destinations-section {
+    padding: 50px 80px 70px;
+}
+
+/* 
+  Section Header:
+  Centered title flanked by two small purple horizontal accent lines.
+*/
+.section-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.accent-bar {
+    width: 36px;
+    height: 3px;
+    background-color: #6033c9;
+    border-radius: 2px;
+}
+
+.section-title-wrap h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #161824;
+}
+
+/* 
+  Destinations Grid:
+  Uses Flexbox with equal spacing to align 3 cards horizontally.
+*/
+.cards-grid {
+    display: flex;
+    gap: 24px;
+}
+
+/* 
+  Destination Card:
+  'flex: 1' makes all 3 cards equal in width.
+  'position: relative' allows overlaying the gradient and text on top of the image.
+*/
+.destination-card {
+    flex: 1;
+    position: relative;
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Background image filling the entire card area */
+.card-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 
+  Dark Gradient Overlay:
+  Ensures bottom text and badge remain clearly readable over scenic images.
+*/
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.3) 40%,
+        rgba(0, 0, 0, 0) 70%
+    );
+}
+
+/* Bottom info container positioning destination details on left and price badge on right */
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.location-details h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.location-details p {
+    font-size: 13px;
+    color: #e2e8f0;
+    margin-top: 2px;
+}
+
+/* White pill price badge with bold dark text */
+.price-badge {
+    background-color: #ffffff;
+    color: #161824;
+    font-size: 13.5px;
+    font-weight: 800;
+    padding: 5px 14px;
+    border-radius: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* =======================================================
+   Responsive Adjustments
+======================================================= */
+@media (max-width: 900px) {
+    .header {
+        padding: 18px 24px;
+    }
+
+    .hero-wrapper {
+        padding: 16px 24px 0;
+    }
+
+    .search-card {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .cards-grid {
+        flex-direction: column;
+    }
+
+    .destinations-section {
+        padding: 40px 24px 50px;
+    }
+}
