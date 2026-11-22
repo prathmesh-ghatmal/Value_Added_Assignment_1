@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+  --primary-color: rgb(113, 57, 187);
+}
+
+
+body {
+    display: flex;
+}
+
+aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: var(--primary-color);
+}
