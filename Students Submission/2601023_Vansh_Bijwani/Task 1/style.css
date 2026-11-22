@@ -1,0 +1,223 @@
+/* Basic page styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #17162f;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header and navigation */
+.header {
+    height: 75px;
+    border-bottom: 1px solid #e7e7ed;
+}
+
+.header-inner,
+.hero-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.header-inner {
+    height: 76px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.brand img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    height: 76px;
+}
+
+.nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 76px;
+    color: #404050;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav a.active {
+    color: #4827df;
+}
+
+/* This creates the underline beneath the active navigation link. */
+.nav a.active::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    height: 3px;
+    border-radius: 3px;
+    background: #5425ff;
+}
+
+.get-started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 117px;
+    height: 44px;
+    margin-left: auto;
+    border-radius: 9px;
+    color: #fff;
+    background: #5422f4;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Main banner */
+.hero {
+    height: 453px;
+    border-bottom: 1px solid #e8e9f2;
+    background: #f7f8ff;
+}
+
+.hero-inner {
+    height: 453px;
+}
+
+.hero-copy {
+    width: 51%;
+}
+
+.hero-copy h1 {
+    margin: 0 0 19px;
+    font-size: 47px;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+.hero-copy h1 span {
+    color: #5a31d9;
+}
+
+.hero-copy p {
+    margin: 0 0 28px;
+    color: #555a70;
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.hero-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.primary-button {
+    width: 216px;
+    color: #fff;
+    background: linear-gradient(135deg, #6923f2, #4e22cb);
+}
+
+.primary-button span {
+    margin-left: 12px;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.secondary-button {
+    width: 181px;
+    border: 1.5px solid #9d7cff;
+    color: #572bdf;
+    background: #fff;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 49%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 510px;
+    height: 390px;
+    object-fit: contain;
+}
+
+/* Feature cards */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+    gap: 32px;
+    max-width: 1040px;
+    height: 235px;
+    margin: 0 auto;
+    padding-bottom: 42px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 164px;
+    border: 1px solid #e6e6ed;
+    border-radius: 11px;
+    box-shadow: 0 2px 5px rgba(31, 27, 78, 0.04);
+}
+
+.feature-card img {
+    width: 57px;
+    height: 57px;
+    margin-bottom: 12px;
+    object-fit: contain;
+}
+
+.feature-card h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #53586b;
+    font-size: 17px;
+}
+
