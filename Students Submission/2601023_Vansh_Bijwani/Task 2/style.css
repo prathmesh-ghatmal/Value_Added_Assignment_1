@@ -1,0 +1,437 @@
+/* ==================== 1. RESET & BASE STYLES ==================== */
+/* Removes default browser margins/padding and keeps box sizes predictable */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f8f9fc; /* Light gray-blue page background */
+  color: #1e1b39;            /* Dark navy text color */
+}
+
+/* ==================== 2. MAIN PAGE LAYOUT ==================== */
+/* Flexbox places the sidebar on the left and the main area on the right */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ==================== 3. LEFT SIDEBAR ==================== */
+.sidebar {
+  width: 240px;
+  background-color: #201c49; /* Dark purple-navy sidebar */
+  color: #ffffff;
+  padding: 28px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* Keeps sidebar width fixed at 240px */
+}
+
+/* Top Logo Area */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px 32px 12px;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  color: #9b87f5;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Navigation Links */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item svg,
+.nav-img-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Hover state for navigation links */
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Active ("Dashboard") link */
+.nav-item.active {
+  background-color: #6c47ff;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Divider line above Logout */
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 24px 12px;
+}
+
+/* ==================== 4. RIGHT MAIN CONTENT ==================== */
+.main-content {
+  flex: 1; /* Fills all remaining screen width next to the sidebar */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top White Header Bar */
+.top-header {
+  background-color: #ffffff;
+  height: 76px;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eef0f6;
+}
+
+.top-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Notification Bell */
+.notification-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #475569;
+  display: flex;
+  align-items: center;
+}
+
+.notification-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.badge-dot {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444; /* Red alert dot */
+  border-radius: 50%;
+}
+
+/* User Profile Pill */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  background-color: #6c47ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.user-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.chevron {
+  width: 16px;
+  height: 16px;
+  color: #64748b;
+}
+
+/* ==================== 5. DASHBOARD BODY ==================== */
+.dashboard-body {
+  padding: 28px 36px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  background-color: #ece8ff; /* Pastel purple */
+  border-radius: 16px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.welcome-text h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.welcome-text p {
+  font-size: 15px;
+  color: #4b5563;
+  max-width: 440px;
+  line-height: 1.5;
+}
+
+.welcome-illustration svg {
+  width: 240px;
+  height: auto;
+  display: block;
+}
+
+/* ==================== 6. STATS CARDS GRID ==================== */
+/* Creates 4 equal-width columns */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Card Pastel Colors */
+.card-purple { background-color: #efeafd; }
+.card-green  { background-color: #e4f8eb; }
+.card-yellow { background-color: #fef6dc; }
+.card-pink   { background-color: #feeaed; }
+
+.stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.stat-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stat-info p {
+  font-size: 14px;
+  color: #4b5563;
+  margin-top: 2px;
+}
+
+/* ==================== 7. BOTTOM TWO-COLUMN GRID ==================== */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 24px;
+}
+
+.panel {
+  background-color: #ffffff;
+  border: 1px solid #eef0f6;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.panel h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* --- Left Panel: Your Courses --- */
+.course-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Removes divider line under the last item */
+.course-item:last-child {
+  border-bottom: none;
+  padding-bottom: 4px;
+}
+
+.course-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.course-details {
+  flex: 1; /* Pushes the progress bar to the right edge */
+}
+
+.course-details h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.course-details p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.course-progress {
+  width: 120px;
+  text-align: right;
+}
+
+.percent-text {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #e9e5ff;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #6c47ff;
+  border-radius: 99px;
+}
+
+/* --- Right Panel: Upcoming Assignments --- */
+.assignment-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.assignment-item:last-child {
+  border-bottom: none;
+  padding-bottom: 4px;
+}
+
+.doc-icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: #f3f0ff;
+  color: #6c47ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doc-icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+.assignment-details {
+  flex: 1; /* Pushes the Pending badge to the right edge */
+}
+
+.assignment-details h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.assignment-details p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.status-badge.pending {
+  background-color: #fee2e2;
+  color: #e11d48;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+/* ==================== 8. RESPONSIVE DESIGN ==================== */
+/* Adjusts columns automatically on tablets and phones */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .welcome-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
