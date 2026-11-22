@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skilli Travel - Explore the World</title>
+  <!-- Google font for clean text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Linking CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top navbar with logo, links, and button -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      
+      <!-- Brand logo and name -->
+      <a href="#" class="logo-box">
+        <img src="Assets/04.png" alt="Skilli Travel Logo" class="logo-img">
+        <span class="logo-text">Skilli Travel</span>
+      </a>
+
+      <!-- Center navigation menu -->
+      <nav class="menu-links">
+        <a href="#" class="link active-link">Home</a>
+        <a href="#" class="link">Destinations</a>
+        <a href="#" class="link">Packages</a>
+        <a href="#" class="link">About</a>
+        <a href="#" class="link">Contact</a>
+      </nav>
+
+      <!-- Right action button -->
+      <a href="#" class="btn purple-btn nav-btn">Book Now</a>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero banner with background image and text overlay -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1 class="hero-title">
+          Explore the World<br>
+          with Skilli Travel
+        </h1>
+        <p class="hero-subtitle">
+          Discover amazing destinations, curated travel<br>
+          packages, and unforgettable experiences.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn purple-btn hero-btn">Explore Packages &rarr;</a>
+          <a href="#" class="btn outline-btn hero-btn">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating white search bar overlapping bottom of hero -->
+    <section class="search-section">
+      <div class="search-bar">
+        
+        <!-- Field 1: Destination -->
+        <div class="search-item">
+          <img src="Assets/03.png" alt="Destination" class="search-icon">
+          <div class="search-text">
+            <span class="search-label">Destination</span>
+            <span class="search-placeholder">Where to go?</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Field 2: Travel Date -->
+        <div class="search-item">
+          <img src="Assets/02.png" alt="Travel Date" class="search-icon">
+          <div class="search-text">
+            <span class="search-label">Travel Date</span>
+            <span class="search-placeholder">Select date</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Field 3: Travelers -->
+        <div class="search-item">
+          <img src="Assets/01.png" alt="Travelers" class="search-icon">
+          <div class="search-text">
+            <span class="search-label">Travelers</span>
+            <span class="search-placeholder">1 Traveler</span>
+          </div>
+        </div>
+
+        <!-- Search button -->
+        <a href="#" class="btn purple-btn search-btn">
+          <img src="Assets/05.png" alt="Search" class="btn-icon">
+          <span>Search</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Popular Destinations section with 3 cards -->
+    <section class="destinations">
+      <div class="container">
+        
+        <!-- Centered heading with purple lines on both sides -->
+        <div class="section-header">
+          <span class="heading-line"></span>
+          <h2 class="section-title">Popular Destinations</h2>
+          <span class="heading-line"></span>
+        </div>
+
+        <!-- 3 destination image cards -->
+        <div class="cards-grid">
+
+          <!-- Card 1: Lonavala -->
+          <div class="dest-card">
+            <img src="Assets/08.png" alt="Lonavala" class="dest-img">
+            <div class="dest-overlay">
+              <div class="dest-info">
+                <h3 class="dest-name">Lonavala</h3>
+                <p class="dest-location">
+                  <img src="Assets/06.png" alt="Location" class="pin-small">
+                  <span>Maharashtra</span>
+                </p>
+              </div>
+              <span class="price-tag">&#8377;4,999</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Goa -->
+          <div class="dest-card">
+            <img src="Assets/10.png" alt="Goa" class="dest-img">
+            <div class="dest-overlay">
+              <div class="dest-info">
+                <h3 class="dest-name">Goa</h3>
+                <p class="dest-location">
+                  <img src="Assets/06.png" alt="Location" class="pin-small">
+                  <span>India</span>
+                </p>
+              </div>
+              <span class="price-tag">&#8377;8,999</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Manali -->
+          <div class="dest-card">
+            <img src="Assets/09.png" alt="Manali" class="dest-img">
+            <div class="dest-overlay">
+              <div class="dest-info">
+                <h3 class="dest-name">Manali</h3>
+                <p class="dest-location">
+                  <img src="Assets/06.png" alt="Location" class="pin-small">
+                  <span>Himachal Pradesh</span>
+                </p>
+              </div>
+              <span class="price-tag">&#8377;12,999</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

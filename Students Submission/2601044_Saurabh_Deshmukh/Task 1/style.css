@@ -1,0 +1,242 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f3fb;
+  color: #131520;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centers all sections and keeps width equal */
+.container {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* --- Navbar --- */
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eceaf6;
+}
+
+/* Aligns logo, links, and button in one row */
+.nav-wrapper {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #131520;
+}
+
+.logo-img {
+  height: 34px;
+  width: auto;
+  /* Hides white background around logo png */
+  mix-blend-mode: multiply;
+}
+
+.logo-text {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  height: 100%;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 8px;
+  text-decoration: none;
+  color: #2f3346;
+  font-size: 15.5px;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s;
+}
+
+/* Shows purple text and bottom underline on hover */
+.link:hover {
+  color: #5b2be0;
+  border-bottom: 3px solid #5b2be0;
+}
+
+/* Purple underline for active page */
+.active-link {
+  color: #5b2be0;
+  font-weight: 600;
+  border-bottom: 3px solid #5b2be0;
+}
+
+/* --- Buttons --- */
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.purple-btn {
+  background-color: #5b2be0;
+  color: #ffffff;
+  border: 1.5px solid #5b2be0;
+}
+
+.purple-btn:hover {
+  background-color: #481ec2;
+}
+
+.white-btn {
+  background-color: #ffffff;
+  color: #5b2be0;
+  border: 1.5px solid #7a58e6;
+}
+
+.white-btn:hover {
+  background-color: #f5f2ff;
+}
+
+.nav-btn {
+  padding: 9px 22px;
+  font-size: 14.5px;
+}
+
+/* --- Hero Section --- */
+
+.hero {
+  background-color: #fafafe;
+  padding: 26px 0;
+}
+
+/* Keeps text on left and image on right */
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.main-heading {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.16;
+  color: #131520;
+}
+
+.purple-text {
+  color: #5b2be0;
+}
+
+.sub-text {
+  margin-top: 14px;
+  font-size: 16.5px;
+  line-height: 1.5;
+  color: #4b4f68;
+  max-width: 430px;
+}
+
+.hero-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.hero-btn {
+  padding: 12px 24px;
+  font-size: 15px;
+}
+
+.hero-buttons .purple-btn {
+  box-shadow: 0 8px 18px rgba(91, 43, 224, 0.22);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+}
+
+/* --- Feature Cards --- */
+
+.features {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: #f4f3fb;
+  padding: 20px 0 28px;
+}
+
+/* Creates 3 equal columns for the cards */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e6e4f2;
+  border-radius: 16px;
+  padding: 22px 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(27, 22, 66, 0.05);
+}
+
+.card-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card-heading {
+  font-size: 18.5px;
+  font-weight: 700;
+  color: #131520;
+  margin-bottom: 6px;
+}
+
+.card-text {
+  font-size: 14.5px;
+  color: #4b4f68;
+}
