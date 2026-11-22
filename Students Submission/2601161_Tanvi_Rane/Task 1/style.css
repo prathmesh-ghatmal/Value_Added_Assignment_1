@@ -1,1 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #171b3b;
+}
+
+.menu {
+    display: flex;
+    gap: 45px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 19px;
+}
+
+.menu a:first-child {
+    color: #602bd2;
+}
+
+button {
+    background-color: #602bd2;
+    color: white;
+    border: none;
+    padding: 16px 25px;
+    border-radius: 12px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 6%;
+    min-height: 600px;
+}
+
+.left {
+    width: 50%;
+}
+
+.left h1 {
+    font-size: 55px;
+    line-height: 1.25;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.left h1 span {
+    color: #602bd2;
+}
+
+.left p {
+    color: #64708d;
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.second-btn {
+    background-color: white;
+    color: #602bd2;
+    border: 2px solid #602bd2;
+}
+
+.right {
+    width: 48%;
+}
+
+.right img {
+    width: 100%;
+}
+
+
+
+
+.features {
+    display: flex;
+    gap: 25px;
+    padding: 50px 4%;
+    background-color: #f8f5ff;
+}
+
+.card {
+    flex: 1;
+    background-color: white;
+    text-align: center;
+    padding: 30px 15px;
+    border: 1px solid #e5e1f0;
+    border-radius: 18px;
+    box-shadow: 0px 4px 10px #e5e1f0;
+}
+
+.card img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.card p {
+    font-size: 18px;
+    color: #444444;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .left h1 {
+        font-size: 38px;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+}
 
