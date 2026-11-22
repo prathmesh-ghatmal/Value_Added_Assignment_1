@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- left dark sidebar -->
+    <aside class="sidebar">
+      <div class="portal-logo">
+        <img src="../../../Task 2/Assets/17.png" alt="logo">
+        <h2>Student<br>Portal</h2>
+      </div>
+
+      <nav class="side-menu">
+        <a href="#" class="active">
+          <img src="../../../Task 2/Assets/13.png" alt=""> Dashboard
+        </a>
+        <a href="#">
+          <img src="../../../Task 2/Assets/12.png" alt=""> Assignments
+        </a>
+        <a href="#">
+          <img src="../../../Task 2/Assets/11.png" alt=""> Courses
+        </a>
+        <a href="#">
+          <img src="../../../Task 2/Assets/10.png" alt=""> Progress
+        </a>
+        <a href="#">
+          <img src="../../../Task 2/Assets/09.png" alt=""> Profile
+        </a>
+      </nav>
+
+      <div class="logout-box">
+        <a href="#">
+          <img src="../../../Task 2/Assets/08.png" alt=""> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- right main area -->
+    <div class="main">
+
+      <!-- top white bar -->
+      <header class="topbar">
+        <h1>Dashboard</h1>
+        <div class="user-info">
+          <img src="../../../Task 2/Assets/16.png" alt="notifications" class="bell">
+          <img src="../../../Task 2/Assets/15.png" alt="profile" class="avatar">
+          <span>Prathmesh &#9662;</span>
+        </div>
+      </header>
+
+      <!-- dashboard content -->
+      <div class="content">
+
+        <!-- welcome banner -->
+        <div class="banner">
+          <div class="banner-text">
+            <h2>Welcome Back, Prathmesh!</h2>
+            <p>Continue your learning journey and complete your pending assignments.</p>
+          </div>
+          <img src="../../../Task 2/Assets/18.png" alt="laptop study">
+        </div>
+
+        <!-- 4 colored stat boxes -->
+        <div class="stats-row">
+          <div class="stat-card purple">
+            <img src="../../../Task 2/Assets/04.png" alt="">
+            <div>
+              <h3>3</h3>
+              <p>Courses</p>
+            </div>
+          </div>
+
+          <div class="stat-card green">
+            <img src="../../../Task 2/Assets/03.png" alt="">
+            <div>
+              <h3>12</h3>
+              <p>Assignments</p>
+            </div>
+          </div>
+
+          <div class="stat-card yellow">
+            <img src="../../../Task 2/Assets/02.png" alt="">
+            <div>
+              <h3>78%</h3>
+              <p>Progress</p>
+            </div>
+          </div>
+
+          <div class="stat-card red">
+            <img src="../../../Task 2/Assets/01.png" alt="">
+            <div>
+              <h3>5</h3>
+              <p>Due This Week</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- bottom 2 white panels -->
+        <div class="bottom-row">
+
+          <!-- courses list -->
+          <div class="panel">
+            <h3>Your Courses</h3>
+
+            <div class="course-item">
+              <img src="../../../Task 2/Assets/07.png" alt="web">
+              <div class="course-info">
+                <h4>Web Development</h4>
+                <p>HTML, CSS, JavaScript</p>
+              </div>
+              <div class="progress-area">
+                <span>80%</span>
+                <div class="bar"><div class="fill" style="width: 80%;"></div></div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <img src="../../../Task 2/Assets/06.png" alt="python">
+              <div class="course-info">
+                <h4>Python Programming</h4>
+                <p>Basics to Advanced</p>
+              </div>
+              <div class="progress-area">
+                <span>70%</span>
+                <div class="bar"><div class="fill" style="width: 70%;"></div></div>
+              </div>
+            </div>
+
+            <div class="course-item no-border">
+              <img src="../../../Task 2/Assets/05.png" alt="dbms">
+              <div class="course-info">
+                <h4>Database Systems</h4>
+                <p>SQL, Normalization, Queries</p>
+              </div>
+              <div class="progress-area">
+                <span>85%</span>
+                <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- upcoming assignments list -->
+          <div class="panel">
+            <h3>Upcoming Assignments</h3>
+
+            <div class="assign-item">
+              <img src="../../../Task 2/Assets/14.png" alt="doc">
+              <div class="assign-info">
+                <h4>Create a Responsive Landing Page</h4>
+                <p>Due: 20 Nov 2026</p>
+              </div>
+              <span class="badge">Pending</span>
+            </div>
+
+            <div class="assign-item">
+              <img src="../../../Task 2/Assets/14.png" alt="doc">
+              <div class="assign-info">
+                <h4>Array Problem Set</h4>
+                <p>Due: 22 Nov 2026</p>
+              </div>
+              <span class="badge">Pending</span>
+            </div>
+
+            <div class="assign-item no-border">
+              <img src="../../../Task 2/Assets/14.png" alt="doc">
+              <div class="assign-info">
+                <h4>DBMS SQL Queries</h4>
+                <p>Due: 25 Nov 2026</p>
+              </div>
+              <span class="badge">Pending</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
