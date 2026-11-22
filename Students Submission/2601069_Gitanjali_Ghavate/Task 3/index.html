@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- sets the character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes the page responsive -->
+    <title>Skilli Travel</title> <!-- sets the page title -->
+
+    <!-- connects google fonts to use poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- links the external css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- navbar section starts -->
+    <header class="navbar">
+
+        <!-- website logo and name -->
+        <a class="brand" href="#">
+            <img src="assets/04.png" alt="Skilli Travel logo">
+            <span>Skilli Travel</span>
+        </a>
+
+        <!-- navigation links for different sections -->
+        <nav class="nav-links">
+            <a class="active" href="#">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#packages">Packages</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- button to go to the booking section -->
+        <a class="book-button" href="#search">Book Now</a>
+
+    </header>
+    <!-- navbar section ends -->
+
+    <main>
+
+        <!-- hero section starts -->
+        <section class="hero">
+
+            <!-- main heading and description -->
+            <div class="hero-content">
+
+                <h1>Explore the World<br>with Skilli Travel</h1>
+
+                <!-- short description about the travel website -->
+                <p>
+                    Discover amazing destinations, curated travel
+                    <br class="desktop-break">
+                    packages, and unforgettable experiences.
+                </p>
+
+                <!-- buttons for exploring packages and contacting -->
+                <div class="hero-buttons">
+
+                    <!-- button to view travel packages -->
+                    <a class="button primary" href="#packages">
+                        Explore Packages<b>→</b>
+                        
+                    </a>
+
+                    <!-- button to go to contact section -->
+                    <a class="button outline" href="#contact">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- hero section ends -->
+
+        <!-- search section starts -->
+        <section class="search-wrap" id="search">
+
+            <!-- form for entering travel details -->
+            <form class="search-bar">
+
+                <!-- destination input field -->
+                <label class="search-field destination">
+
+                    <!-- location icon -->
+                    <img src="assets/03.png" alt="Location" class="field-icon">
+
+                    <!-- destination label and placeholder text -->
+                    <span>
+                        <strong>Destination</strong>
+                        <small>Where to go?</small>
+                    </span>
+
+                    <!-- input field to enter destination -->
+                    <input aria-label="Destination" type="text" placeholder=" ">
+
+                </label>
+
+                <!-- travel date input field -->
+                <label class="search-field date">
+
+                    <!-- calendar icon -->
+                    <img src="assets/02.png" alt="Calendar" class="field-icon">
+
+                    <!-- travel date label and text -->
+                    <span>
+                        <strong>Travel Date</strong>
+                        <small>Select date</small>
+                    </span>
+
+                    <!-- input field to select travel date -->
+                    <input aria-label="Travel date" type="date">
+
+                </label>
+
+                <!-- travelers selection field -->
+                <label class="search-field travelers">
+
+                    <!-- travelers icon -->
+                    <img src="assets/01.png" alt="Travelers" class="field-icon">
+
+                    <!-- travelers label and default value -->
+                    <span>
+                        <strong>Travelers</strong>
+                        <small>1 Traveler</small>
+                    </span>
+
+                    <!-- dropdown to select number of travelers -->
+                    <select aria-label="Travelers">
+                        <option>1 Traveler</option>
+                        <option>2 Travelers</option>
+                        <option>3 Travelers</option>
+                        <option>4 Travelers</option>
+                    </select>
+
+                </label>
+
+                <!-- search button -->
+                <button class="search-button" type="button">
+
+                    <img src="assets/05.png" alt="Search">
+                    Search
+
+                </button>
+
+            </form>
+
+        </section>
+        <!-- search section ends -->
+
+        <!-- popular destinations section starts -->
+        <section class="destinations" id="destinations">
+
+            <!-- heading of popular destinations section -->
+            <div class="section-heading">
+                <i></i>
+                <h2>Popular Destinations</h2>
+                <i></i>
+            </div>
+
+            <!-- destination cards are displayed here -->
+            <div class="destination-grid" id="packages">
+
+                <!-- first destination card for lonavala -->
+                <article class="destination-card lonavala">
+
+                    <!-- destination name and location -->
+                    <div class="destination-info">
+                        <h3>Lonavala</h3>
+                        <p>
+                            <img src="assets/06.png" alt="Location">
+                            Maharashtra
+                        </p>
+                    </div>
+
+                    <!-- shows lonavala package price -->
+                    <strong class="price">₹4,999</strong>
+
+                </article>
+
+                <!-- second destination card for goa -->
+                <article class="destination-card goa">
+
+                    <!-- destination name and location -->
+                    <div class="destination-info">
+                        <h3>Goa</h3>
+                        <p>
+                            <img src="assets/06.png" alt="Location">
+                            India
+                        </p>
+                    </div>
+
+                    <!-- shows goa package price -->
+                    <strong class="price">₹8,999</strong>
+
+                </article>
+
+                <!-- third destination card for manali -->
+                <article class="destination-card manali">
+
+                    <!-- destination name and location -->
+                    <div class="destination-info">
+                        <h3>Manali</h3>
+                        <p>
+                            <img src="assets/06.png" alt="Location">
+                            Himachal Pradesh
+                        </p>
+                    </div>
+
+                    <!-- shows manali package price -->
+                    <strong class="price">₹12,999</strong>
+
+                </article>
+
+            </div>
+
+        </section>
+        <!-- popular destinations section ends -->
+
+        <!-- empty section for about navigation -->
+        <div id="about"></div>
+
+        <!-- empty section for contact navigation -->
+        <div id="contact"></div>
+
+    </main>
+
+</body>
+</html>

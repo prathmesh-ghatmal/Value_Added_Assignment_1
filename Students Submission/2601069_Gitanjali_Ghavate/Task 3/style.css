@@ -1,0 +1,568 @@
+
+/* basic styling */
+* {
+    box-sizing: border-box; /* includes padding and border in the element's total size */
+}
+
+:root {
+    --purple: #6330dc; /* stores the purple color for reuse */
+    --ink: #11162e; /* stores the main text color */
+    --muted: #515b7e; /* stores the light text color */
+}
+
+html {
+    scroll-behavior: smooth; /* makes scrolling smooth */
+}
+
+body {
+    margin: 0; /* removes default body margin */
+    color: var(--ink); /* sets the main text color */
+    background: #fff; /* sets white background */
+    font-family: "Poppins", Arial, sans-serif; /* sets the font style */
+}
+
+/* navbar styling */
+.navbar {
+    height: 90px; /* sets navbar height */
+    padding: 0 5.5%; /* adds space on left and right */
+    display: flex; /* places items in a row */
+    align-items: center; /* aligns items vertically */
+    justify-content: space-between; /* adds space between navbar items */
+    background: #fff; /* gives navbar a white background */
+}
+
+.brand {
+    display: flex; /* places logo and name in a row */
+    align-items: center; /* aligns logo and text vertically */
+    gap: 15px; /* adds space between logo and name */
+    color: #10152e; /* sets brand text color */
+    text-decoration: none; /* removes underline */
+    font-size: 30px; /* sets brand text size */
+    font-weight: 700; /* makes brand text bold */
+    white-space: nowrap; /* keeps brand text on one line */
+}
+
+.brand img {
+    width: 50px; /* sets logo width */
+    height: 48px; /* sets logo height */
+    object-fit: contain; /* keeps the full logo visible */
+}
+
+.nav-links {
+    height: 100%; /* takes full navbar height */
+    display: flex; /* places links in a row */
+    align-items: center; /* aligns links vertically */
+    gap: 56px; /* adds space between links */
+}
+
+.nav-links a {
+    position: relative; /* allows positioning of the active line */
+    height: 100%; /* takes full height of navbar */
+    display: flex; /* helps align link text */
+    align-items: center; /* centers text vertically */
+    color: #4b5473; /* sets link text color */
+    text-decoration: none; /* removes underline from links */
+    font-size: 20px; /* sets link text size */
+    font-weight: 500; /* sets medium text thickness */
+}
+
+.nav-links a.active {
+    color: var(--purple); /* changes active link color to purple */
+    font-weight: 600; /* makes active link bold */
+}
+
+.nav-links a.active::after {
+    content: ""; /* creates an empty line below active link */
+    position: absolute; /* positions the line inside the link */
+    left: 0; /* aligns line to the left */
+    right: 0; /* aligns line to the right */
+    bottom: 14px; /* places line near the bottom */
+    height: 4px; /* sets line thickness */
+    border-radius: 5px; /* makes line corners rounded */
+    background: var(--purple); /* gives line a purple color */
+}
+
+.book-button {
+    padding: 13px 28px; /* adds space inside the button */
+    border-radius: 14px; /* makes button corners rounded */
+    background: #6332dc; /* sets purple button background */
+    color: #fff; /* makes button text white */
+    text-decoration: none; /* removes underline */
+    font-size: 20px; /* sets button text size */
+    font-weight: 600; /* makes button text bold */
+}
+
+/* hero section styling */
+.hero {
+    height: 456px; /* sets hero section height */
+    padding: 45px 5.5%; /* adds space inside the section */
+    color: #fff; /* makes text white */
+    background:
+        linear-gradient(90deg, rgba(20,35,68,.65), rgba(20,30,60,.08)), /* adds dark overlay on image */
+        url("assets/07.png") center 48% / cover no-repeat; /* sets hero background image */
+}
+
+.hero-content h1 {
+    margin: 0 0 12px; /* removes top margin and adds bottom space */
+    font-size: clamp(43px, 4.1vw, 62px); /* adjusts heading size based on screen width */
+    line-height: 1.12; /* controls space between heading lines */
+    letter-spacing: -.8px; /* reduces space between letters */
+    font-weight: 800; /* makes heading extra bold */
+}
+
+.hero-content p {
+    margin: 13px 0 27px; /* adds space around paragraph */
+    color: #f3f2ff; /* sets paragraph text color */
+    font-size: 25px; /* sets paragraph text size */
+    line-height: 1.5; /* adds space between paragraph lines */
+}
+
+.hero-buttons {
+    display: flex; /* places buttons in a row */
+    gap: 25px; /* adds space between buttons */
+}
+
+.button {
+    min-height: 64px; /* sets minimum button height */
+    padding: 0 30px; /* adds left and right space */
+    display: inline-flex; /* aligns button content in a row */
+    align-items: center; /* centers content vertically */
+    justify-content: center; /* centers content horizontally */
+    border-radius: 15px; /* makes button corners rounded */
+    color: #fff; /* sets button text color to white */
+    text-decoration: none; /* removes underline */
+    font-size: 21px; /* sets button text size */
+    font-weight: 600; /* makes button text bold */
+}
+
+.button.primary {
+    background: linear-gradient(110deg, #7139eb, #6330d9); /* adds purple gradient background */
+    gap: 13px; /* adds space between text and icon */
+}
+
+.button.primary img {
+    width: 22px; /* sets icon width */
+    height: 22px; /* sets icon height */
+    object-fit: contain; /* keeps the full icon visible */
+}
+
+.button.outline {
+    min-width: 188px; /* sets minimum button width */
+    border: 2px solid #fff; /* adds white border */
+    background: rgba(255,255,255,.06); /* adds a slightly transparent background */
+}
+
+/* search section styling */
+.search-wrap {
+    position: relative; /* allows positioning of the search section */
+    z-index: 2; /* keeps search section above nearby elements */
+    margin: -54px auto 0; /* moves search section slightly upward and centers it */
+    width: 84.5%; /* sets search section width */
+}
+
+.search-bar {
+    min-height: 108px; /* sets minimum search bar height */
+    padding: 17px 30px; /* adds space inside search bar */
+    display: grid; /* arranges search fields using grid */
+    grid-template-columns: 1.1fr 1.1fr 1fr auto; /* sets width of each grid column */
+    align-items: center; /* aligns fields vertically */
+    background: #fff; /* gives search bar a white background */
+    border-radius: 24px; /* makes corners rounded */
+    box-shadow: 0 9px 20px rgba(20,20,55,.14); /* adds shadow below search bar */
+}
+
+.search-field {
+    min-width: 0; /* allows field to fit inside its column */
+    min-height: 54px; /* sets minimum field height */
+    position: relative; /* allows positioning of input elements */
+    display: flex; /* places field content in a row */
+    align-items: center; /* aligns content vertically */
+    gap: 22px; /* adds space between icon and text */
+    padding: 0 27px 0 13px; /* adds space inside the field */
+    border-right: 1px solid #d7d9e8; /* adds a right-side divider */
+    cursor: text; /* shows text cursor on hover */
+}
+
+.search-field:nth-child(3) {
+    border-right: 0; /* removes divider from the third field */
+}
+
+/* search field images */
+.field-icon {
+    width: 35px; /* sets icon width */
+    height: 35px; /* sets icon height */
+    object-fit: contain; /* keeps the full icon visible */
+}
+
+.search-field strong,
+.search-field small {
+    display: block; /* places text on separate lines */
+    white-space: nowrap; /* prevents text from moving to another line */
+}
+
+.search-field strong {
+    font-size: 19px; /* sets main field text size */
+    font-weight: 600; /* makes main field text bold */
+}
+
+.search-field small {
+    margin-top: 3px; /* adds small space above text */
+    color: #5b6689; /* sets smaller text color */
+    font-size: 18px; /* sets smaller text size */
+}
+
+.search-field input,
+.search-field select {
+    position: absolute; /* places input over the field */
+    inset: 0; /* stretches input to all sides */
+    width: 100%; /* takes full field width */
+    height: 100%; /* takes full field height */
+    opacity: 0; /* makes input invisible */
+    cursor: pointer; /* shows pointer cursor */
+}
+
+.search-field input[type="text"] {
+    cursor: text; /* shows text cursor for text input */
+}
+
+/* search button styling */
+.search-button {
+    min-width: 168px; /* sets minimum button width */
+    height: 57px; /* sets button height */
+    padding: 0 20px; /* adds left and right space */
+    display: flex; /* places button content in a row */
+    align-items: center; /* centers content vertically */
+    justify-content: center; /* centers content horizontally */
+    gap: 8px; /* adds space between icon and text */
+    border: 0; /* removes default border */
+    border-radius: 14px; /* makes button corners rounded */
+    color: #fff; /* sets text color to white */
+    background: #6332dc; /* sets purple background */
+    font-family: inherit; /* uses the same font as the page */
+    font-size: 20px; /* sets button text size */
+    font-weight: 600; /* makes button text bold */
+    cursor: pointer; /* shows pointer cursor */
+}
+
+.search-button img {
+    width: 23px; /* sets icon width */
+    height: 23px; /* sets icon height */
+    object-fit: contain; /* keeps the full icon visible */
+}
+
+/* popular destinations section */
+.destinations {
+    padding: 47px 3.6% 45px; /* adds space around the section */
+}
+
+.section-heading {
+    display: flex; /* places heading and lines in a row */
+    justify-content: center; /* centers all heading content */
+    align-items: center; /* aligns items vertically */
+    gap: 29px; /* adds space between heading and lines */
+    margin: 0 0 36px; /* adds space below the heading */
+}
+
+.section-heading h2 {
+    margin: 0; /* removes default heading margin */
+    font-size: 39px; /* sets heading size */
+    font-weight: 700; /* makes heading bold */
+    letter-spacing: -.8px; /* reduces space between letters */
+}
+
+.section-heading i {
+    display: block; /* makes the line behave like a block */
+    width: 55px; /* sets line width */
+    height: 3px; /* sets line thickness */
+    border-radius: 4px; /* makes line corners rounded */
+    background: #6934e4; /* gives line a purple color */
+}
+
+/* destination cards styling */
+.destination-grid {
+    display: grid; /* arranges destination cards in a grid */
+    grid-template-columns: repeat(3, 1fr); /* creates three equal columns */
+    gap: 26px; /* adds space between cards */
+}
+
+.destination-card {
+    position: relative; /* allows positioning of card information */
+    height: 248px; /* sets card height */
+    overflow: hidden; /* hides content outside the card */
+    border-radius: 23px; /* makes card corners rounded */
+    background-position: center; /* centers background image */
+    background-size: cover; /* covers the full card with image */
+    box-shadow: 0 4px 8px rgba(0,0,0,.1); /* adds a light shadow */
+}
+
+.destination-card::before {
+    content: ""; /* creates an empty overlay */
+    position: absolute; /* places overlay over the card */
+    inset: 0; /* stretches overlay across the card */
+    background: linear-gradient(0deg, rgba(0,0,0,.75), transparent 70%); /* adds dark gradient for readable text */
+}
+
+.destination-card.lonavala {
+    background-image: url("assets/08.png"); /* sets lonavala card image */
+}
+
+.destination-card.goa {
+    background-image: url("assets/10.png"); /* sets goa card image */
+}
+
+.destination-card.manali {
+    background-image: url("assets/09.png"); /* sets manali card image */
+}
+
+/* destination information styling */
+.destination-info {
+    position: absolute; /* places information over the card */
+    left: 28px; /* adds space from the left side */
+    bottom: 22px; /* adds space from the bottom */
+    color: #fff; /* makes information text white */
+}
+
+.destination-info h3 {
+    margin: 0 0 2px; /* removes top margin and adds small bottom space */
+    font-size: 30px; /* sets destination name size */
+    line-height: 1.3; /* controls heading line spacing */
+    font-weight: 700; /* makes destination name bold */
+}
+
+.destination-info p {
+    margin: 0; /* removes default paragraph margin */
+    font-size: 19px; /* sets paragraph text size */
+}
+
+.destination-info p img {
+    width: 16px; /* sets small icon width */
+    height: 16px; /* sets small icon height */
+    margin-right: 5px; /* adds space after icon */
+    object-fit: contain; /* keeps the full icon visible */
+    vertical-align: -2px; /* adjusts icon alignment with text */
+}
+
+.price {
+    position: absolute; /* places price at the card corner */
+    right: 17px; /* adds space from the right side */
+    bottom: 20px; /* adds space from the bottom */
+    padding: 7px 17px; /* adds space inside price label */
+    border-radius: 24px; /* makes price label rounded */
+    color: #10152d; /* sets price text color */
+    background: #fff; /* gives price label a white background */
+    font-size: 19px; /* sets price text size */
+    font-weight: 600; /* makes price text bold */
+}
+
+/* tablet responsive design */
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 3%; /* reduces navbar side spacing */
+    }
+
+    .nav-links {
+        gap: 22px; /* reduces space between navigation links */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* reduces navigation text size */
+    }
+
+    .brand {
+        font-size: 24px; /* reduces brand text size */
+    }
+
+    .book-button {
+        font-size: 16px; /* reduces button text size */
+        padding: 11px 18px; /* reduces button padding */
+    }
+
+    .search-wrap {
+        width: 92%; /* increases search section width */
+    }
+
+    .search-bar {
+        padding: 15px; /* reduces inner spacing */
+        grid-template-columns: repeat(3, 1fr); /* changes layout to three columns */
+        gap: 12px; /* adds space between grid items */
+    }
+
+    .search-field {
+        padding: 0 12px; /* reduces field side spacing */
+        gap: 10px; /* reduces space between icon and text */
+    }
+
+    .search-button {
+        grid-column: 1 / -1; /* makes button take the full row */
+        width: 100%; /* sets button width to full available space */
+    }
+
+    .destination-card {
+        height: 210px; /* reduces destination card height */
+    }
+
+    .destination-info h3 {
+        font-size: 24px; /* reduces destination name size */
+    }
+
+    .destination-info p {
+        font-size: 15px; /* reduces destination details size */
+    }
+}
+
+/* mobile responsive design */
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto; /* allows navbar height to adjust */
+        min-height: 75px; /* sets minimum navbar height */
+        padding: 12px 5%; /* adds space inside navbar */
+        flex-wrap: wrap; /* moves items to the next line if needed */
+        gap: 12px; /* adds space between navbar items */
+    }
+
+    .brand {
+        font-size: 22px; /* reduces brand text size */
+    }
+
+    .brand img {
+        width: 40px; /* reduces logo width */
+        height: 38px; /* reduces logo height */
+    }
+
+    .nav-links {
+        order: 3; /* moves navigation links to the third position */
+        width: 100%; /* takes full available width */
+        height: 42px; /* sets navigation height */
+        justify-content: space-between; /* spreads links evenly */
+        gap: 10px; /* adds space between links */
+    }
+
+    .nav-links a {
+        font-size: 12px; /* reduces navigation text size */
+    }
+
+    .nav-links a.active::after {
+        bottom: 0; /* places active line at the bottom */
+        height: 3px; /* reduces active line thickness */
+    }
+
+    .book-button {
+        font-size: 14px; /* reduces button text size */
+        padding: 9px 14px; /* reduces button padding */
+    }
+
+    .hero {
+        height: 420px; /* reduces hero section height */
+        padding: 48px 6%; /* adjusts hero section spacing */
+        background-position: 60% center; /* adjusts background image position */
+    }
+
+    .hero-content h1 {
+        font-size: 39px; /* reduces hero heading size */
+    }
+
+    .hero-content p {
+        font-size: 17px; /* reduces paragraph text size */
+    }
+
+    .desktop-break {
+        display: none; /* hides desktop line break on mobile */
+    }
+
+    .hero-buttons {
+        gap: 10px; /* reduces space between buttons */
+        flex-wrap: wrap; /* moves buttons to the next line if needed */
+    }
+
+    .button {
+        min-height: 53px; /* reduces button height */
+        padding: 0 16px; /* reduces button side spacing */
+        font-size: 15px; /* reduces button text size */
+    }
+
+    .button.outline {
+        min-width: 125px; /* reduces outline button width */
+    }
+
+    .search-wrap {
+        width: 92%; /* makes search section wider on mobile */
+        margin-top: -35px; /* moves search section slightly upward */
+    }
+
+    .search-bar {
+        grid-template-columns: 1fr; /* arranges fields in one column */
+        padding: 12px 18px; /* adjusts search bar spacing */
+        gap: 4px; /* reduces space between fields */
+    }
+
+    .search-field {
+        border-right: 0; /* removes right-side divider */
+        border-bottom: 1px solid #e5e5ef; /* adds bottom divider */
+        min-height: 66px; /* increases field height for mobile */
+    }
+
+    .search-field strong {
+        font-size: 15px; /* reduces field heading size */
+    }
+
+    .search-field small {
+        font-size: 14px; /* reduces field detail size */
+    }
+
+    .field-icon {
+        width: 29px; /* reduces icon width */
+        height: 29px; /* reduces icon height */
+    }
+
+    .search-button {
+        grid-column: auto; /* uses normal grid placement */
+    }
+
+    .destinations {
+        padding: 32px 5% 40px; /* adjusts destination section spacing */
+    }
+
+    .section-heading {
+        gap: 10px; /* reduces space around heading */
+        margin-bottom: 22px; /* reduces space below heading */
+    }
+
+    .section-heading h2 {
+        font-size: 23px; /* reduces section heading size */
+        white-space: nowrap; /* keeps heading on one line */
+    }
+
+    .section-heading i {
+        width: 24px; /* reduces decorative line width */
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr; /* displays cards in one column */
+        gap: 15px; /* reduces space between cards */
+    }
+
+    .destination-card {
+        height: 220px; /* sets mobile card height */
+    }
+
+    .destination-info {
+        left: 18px; /* reduces left spacing */
+        bottom: 16px; /* reduces bottom spacing */
+    }
+
+    .destination-info h3 {
+        font-size: 25px; /* adjusts destination name size */
+    }
+
+    .destination-info p {
+        font-size: 15px; /* adjusts destination details size */
+    }
+
+    .price {
+        right: 13px; /* adjusts price position from right */
+        bottom: 15px; /* adjusts price position from bottom */
+        font-size: 15px; /* reduces price text size */
+    }
+}

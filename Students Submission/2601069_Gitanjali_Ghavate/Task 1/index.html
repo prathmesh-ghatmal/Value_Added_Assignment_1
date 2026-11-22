@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- defines the character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes the page responsive -->
+  <title>DSA Tracker</title> <!-- sets the page title -->
+
+  <!-- connects google fonts to use poppins font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- links the external css file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- navbar section starts -->
+  <header class="navbar">
+
+    <!-- website logo and name -->
+    <a class="brand" href="#">
+      <img src="assets/04.png" alt="DSA Tracker logo">
+      <span>DSA Tracker</span>
+    </a>
+
+    <!-- navigation links for different sections -->
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="#">Home</a>
+      <a href="#problems">Problems</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <!-- button to move to the problems section -->
+    <a class="top-button" href="#problems">Get Started</a>
+
+  </header>
+  <!-- navbar section ends -->
+
+  <main>
+
+    <!-- hero section starts -->
+    <section class="hero">
+
+      <!-- left side content of the hero section -->
+      <div class="hero-copy">
+        <h1>
+          Practice DSA<br>
+          Track Progress<br>
+          Become <span>Job Ready</span>
+        </h1>
+
+        <!-- short description about the website -->
+        <p>
+          Solve daily coding problems, track your progress,<br class="desktop-break">
+          and build a strong DSA foundation.
+        </p>
+
+        <!-- buttons for starting practice and viewing problems -->
+        <div class="hero-actions">
+          <a class="button primary" href="#problems">
+            Start Practicing <b>→</b>
+          </a>
+
+          <a class="button secondary" href="#problems">
+            View Problems
+          </a>
+        </div>
+      </div>
+
+      <!-- right side image of the hero section -->
+      <div class="hero-art">
+        <img src="assets/05.png" alt="Student practicing coding on a laptop">
+      </div>
+
+    </section>
+    <!-- hero section ends -->
+
+    <!-- features section starts -->
+    <section class="features" id="about">
+
+      <!-- first card for daily challenges -->
+      <article class="feature-card">
+        <div class="feature-icon">
+          <img src="assets/03.png" alt="Daily Challenges icon">
+        </div>
+        <h2>Daily Challenges</h2>
+        <p>Solve a new problem every day</p>
+      </article>
+
+      <!-- second card for tracking progress -->
+      <article class="feature-card">
+        <div class="feature-icon">
+          <img src="assets/02.png" alt="Track Progress icon">
+        </div>
+        <h2>Track Progress</h2>
+        <p>See your improvement over time</p>
+      </article>
+
+      <!-- third card for leaderboard -->
+      <article class="feature-card" id="leaderboard">
+        <div class="feature-icon">
+          <img src="assets/01.png" alt="Leaderboard icon">
+        </div>
+        <h2>Leaderboard</h2>
+        <p>Compete with your peers</p>
+      </article>
+
+    </section>
+    <!-- features section ends -->
+
+    <!-- empty section for problems navigation -->
+    <div id="problems"></div>
+
+  </main>
+
+</body>
+</html>

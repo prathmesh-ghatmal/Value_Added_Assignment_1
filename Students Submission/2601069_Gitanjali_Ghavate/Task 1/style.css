@@ -1,0 +1,355 @@
+
+/* basic reset - removes default spacing from all elements */
+* {
+    box-sizing: border-box; /* includes padding and border in total width and height */
+    margin: 0; /* removes default outer spacing */
+    padding: 0; /* removes default inner spacing */
+}
+
+/* color variables - stores colors to reuse them in the page */
+:root {
+    --primary-color: #5928d7; /* main purple color */
+    --secondary-color: #7a45f2; /* light purple color */
+    --text-color: #111522; /* main text color */
+    --light-text: #5f6b8b; /* light text color */
+}
+
+/* page settings */
+html {
+    scroll-behavior: smooth; /* makes scrolling smooth when clicking links */
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif; /* sets the font style */
+    background-color: #ffffff; /* sets white background */
+    color: var(--text-color); /* applies the main text color */
+}
+
+/* navigation bar styling */
+.navbar {
+    height: 100px; /* sets the height of navbar */
+    padding: 0 5.7%; /* adds space on left and right side */
+    display: flex; /* places items in a row */
+    align-items: center; /* aligns items vertically in the center */
+    justify-content: space-between; /* gives equal space between items */
+    background-color: #ffffff; /* sets navbar background to white */
+    border-bottom: 1px solid #eeeef6; /* adds a light bottom border */
+}
+
+.brand {
+    display: flex; /* places logo and text in a row */
+    align-items: center; /* aligns logo and text vertically */
+    gap: 14px; /* adds space between logo and website name */
+    color: #111b43; /* sets brand text color */
+    font-size: 30px; /* sets text size */
+    font-weight: 700; /* makes text bold */
+    text-decoration: none; /* removes underline from link */
+    white-space: nowrap; /* prevents text from moving to next line */
+}
+
+.brand img {
+    width: 60px; /* sets logo width */
+    height: 50px; /* sets logo height */
+    object-fit: contain; /* keeps the full logo visible without stretching */
+}
+
+/* navigation links styling */
+.nav-links {
+    display: flex; /* displays links in a row */
+    align-items: center; /* aligns links vertically */
+    gap: 52px; /* adds space between navigation links */
+    height: 100%; /* takes full height of navbar */
+}
+
+.nav-links a {
+    position: relative; /* allows positioning of the active link line */
+    display: flex; /* uses flexbox for link content */
+    align-items: center; /* aligns link text vertically */
+    height: 100%; /* takes full height of navigation area */
+    color: #3f4964; /* sets link text color */
+    font-size: 20px; /* sets link text size */
+    font-weight: 500; /* gives medium font thickness */
+    text-decoration: none; /* removes underline from links */
+}
+
+.nav-links a.active {
+    color: var(--primary-color); /* changes active link color to purple */
+    font-weight: 600; /* makes active link slightly bold */
+}
+
+.nav-links a.active::after {
+    content: ""; /* creates an empty line below active link */
+    position: absolute; /* positions the line relative to the link */
+    bottom: 12px; /* sets distance from bottom */
+    left: -12px; /* moves line towards left */
+    right: -12px; /* moves line towards right */
+    height: 5px; /* sets line thickness */
+    border-radius: 8px; /* makes line corners rounded */
+    background-color: var(--primary-color); /* gives line purple color */
+}
+
+/* get started button styling */
+.top-button {
+    display: inline-flex; /* aligns button content in a row */
+    align-items: center; /* aligns text vertically */
+    justify-content: center; /* aligns text horizontally */
+    padding: 15px 25px; /* adds space inside the button */
+    background-color: var(--primary-color); /* sets purple background */
+    color: #ffffff; /* sets text color to white */
+    font-size: 19px; /* sets button text size */
+    font-weight: 600; /* makes button text bold */
+    text-decoration: none; /* removes underline */
+    border-radius: 15px; /* makes button corners rounded */
+    box-shadow: 0 3px 0 #4b1fc1 inset; /* adds a small inner shadow */
+}
+
+/* hero section styling */
+.hero {
+    min-height: 608px; /* sets minimum height of hero section */
+    padding: 58px 5.75% 52px; /* adds space inside the section */
+    display: grid; /* uses grid layout to arrange content */
+    grid-template-columns: 1fr 1.08fr; /* creates two columns with different widths */
+    align-items: center; /* aligns content vertically in the center */
+    gap: 20px; /* adds space between both columns */
+    background-color: #ffffff; /* sets white background */
+}
+
+.hero-copy {
+    padding-top: 0; /* removes extra top padding */
+}
+
+.hero h1 {
+    margin-bottom: 20px; /* adds space below the heading */
+    font-size: clamp(42px, 4vw, 61px); /* adjusts heading size according to screen width */
+    line-height: 1.15; /* controls space between heading lines */
+    letter-spacing: -1.8px; /* reduces space between letters */
+    font-weight: 800; /* makes heading extra bold */
+}
+
+.hero h1 span {
+    color: var(--primary-color); /* highlights selected heading text in purple */
+}
+
+.hero-copy p {
+    margin: 22px 0 38px; /* adds space around the paragraph */
+    color: var(--light-text); /* sets paragraph text color */
+    font-size: 25px; /* sets paragraph text size */
+    line-height: 1.55; /* adds space between paragraph lines */
+}
+
+/* hero section buttons */
+.hero-actions {
+    display: flex; /* places buttons in a row */
+    gap: 30px; /* adds space between buttons */
+    flex-wrap: wrap; /* moves buttons to next line if space is less */
+}
+
+.button {
+    min-height: 68px; /* sets minimum button height */
+    padding: 0 36px; /* adds left and right space inside button */
+    display: inline-flex; /* aligns button content using flexbox */
+    align-items: center; /* aligns content vertically */
+    justify-content: center; /* aligns content horizontally */
+    border: 2px solid var(--secondary-color); /* adds purple border */
+    border-radius: 15px; /* makes button corners rounded */
+    font-size: 23px; /* sets button text size */
+    font-weight: 600; /* makes button text bold */
+    text-decoration: none; /* removes underline from button links */
+}
+
+.button.primary {
+    gap: 16px; /* adds space between text and arrow */
+    color: #ffffff; /* sets text color to white */
+    background-color: var(--primary-color); /* sets purple background */
+    border-color: var(--primary-color); /* sets purple border */
+}
+
+.button.primary b {
+    font-size: 29px; /* increases arrow size */
+    font-weight: 400; /* gives normal font thickness to arrow */
+}
+
+.button.secondary {
+    color: var(--primary-color); /* sets text color to purple */
+    background-color: #ffffff; /* sets white background */
+}
+
+/* hero section image styling */
+.hero-art {
+    display: flex; /* uses flexbox for image alignment */
+    align-items: center; /* aligns image vertically */
+    justify-content: center; /* aligns image horizontally */
+    min-width: 0; /* allows image container to shrink when needed */
+}
+
+.hero-art img {
+    width: 100%; /* takes full width of image container */
+    max-width: 690px; /* limits maximum image width */
+    height: 490px; /* sets image height */
+    object-fit: contain; /* keeps the full image visible without cropping */
+}
+
+/* features section styling */
+.features {
+    min-height: 316px; /* sets minimum height of features section */
+    padding: 50px 3.85%; /* adds space inside the section */
+    display: grid; /* uses grid layout for feature cards */
+    grid-template-columns: repeat(3, 1fr); /* creates three equal columns */
+    gap: 25px; /* adds space between cards */
+    background: linear-gradient(110deg, #faf8ff, #f5f2ff); /* adds light purple gradient background */
+}
+
+/* feature cards styling */
+.feature-card {
+    min-height: 218px; /* sets minimum card height */
+    padding: 20px; /* adds space inside each card */
+    display: flex; /* uses flexbox for card content */
+    flex-direction: column; /* arranges card items vertically */
+    align-items: center; /* aligns content horizontally in center */
+    justify-content: center; /* aligns content vertically in center */
+    text-align: center; /* aligns text in center */
+    background-color: rgba(255, 255, 255, 0.9); /* gives card a slightly transparent white background */
+    border: 1px solid #e4e2f1; /* adds a light border */
+    border-radius: 20px; /* makes card corners rounded */
+    box-shadow: 0 4px 9px rgba(35, 24, 80, 0.08); /* adds a light shadow below card */
+}
+
+/* feature icon image container */
+.feature-icon {
+    width: 68px; /* sets icon container width */
+    height: 68px; /* sets icon container height */
+    margin-bottom: 8px; /* adds space below the icon */
+    display: flex; /* uses flexbox for icon alignment */
+    align-items: center; /* aligns icon vertically */
+    justify-content: center; /* aligns icon horizontally */
+}
+
+.feature-icon img {
+    width: 100%; /* takes full width of icon container */
+    height: 100%; /* takes full height of icon container */
+    object-fit: contain; /* keeps the full icon visible */
+}
+
+.feature-card h2 {
+    margin: 8px 0 4px; /* adds space around the card heading */
+    font-size: 29px; /* sets heading size */
+    line-height: 1.3; /* controls space between heading lines */
+    font-weight: 700; /* makes heading bold */
+}
+
+.feature-card p {
+    margin-top: 4px; /* adds space above paragraph */
+    color: #41424b; /* sets paragraph text color */
+    font-size: 21px; /* sets paragraph text size */
+}
+
+/* tablet and small laptop screens */
+@media (max-width: 900px) {
+
+    .navbar {
+        height: auto; /* adjusts navbar height according to content */
+        min-height: 82px; /* sets minimum navbar height */
+        padding: 14px 5%; /* adds space inside navbar */
+        flex-wrap: wrap; /* allows navbar items to move to next line */
+        gap: 14px; /* adds space between navbar items */
+    }
+
+    .brand {
+        font-size: 24px; /* reduces brand text size */
+    }
+
+    .brand img {
+        width: 48px; /* reduces logo width */
+        height: 42px; /* reduces logo height */
+    }
+
+    .nav-links {
+        order: 3; /* moves navigation links to the third position */
+        width: 100%; /* takes full available width */
+        height: 45px; /* sets navigation height */
+        justify-content: center; /* aligns links in the center */
+        gap: 25px; /* reduces space between links */
+    }
+
+    .nav-links a {
+        font-size: 15px; /* reduces navigation text size */
+    }
+
+    .nav-links a.active::after {
+        bottom: 0; /* moves active line to the bottom */
+        height: 3px; /* reduces active line thickness */
+    }
+
+    .top-button {
+        padding: 11px 17px; /* reduces button inner spacing */
+        font-size: 15px; /* reduces button text size */
+    }
+
+    .hero {
+        grid-template-columns: 1fr; /* changes hero layout into one column */
+        padding: 55px 7%; /* adjusts space inside hero section */
+        text-align: center; /* aligns hero text in center */
+    }
+
+    .hero-copy p {
+        font-size: 19px; /* reduces paragraph text size */
+    }
+
+    .hero-actions {
+        justify-content: center; /* aligns buttons in center */
+    }
+
+    .hero-art img {
+        height: auto; /* adjusts image height automatically */
+        max-height: 390px; /* limits maximum image height */
+    }
+
+    .features {
+        grid-template-columns: 1fr; /* displays feature cards in one column */
+        padding: 30px 7%; /* adjusts section spacing */
+    }
+}
+
+/* mobile screen styling */
+@media (max-width: 520px) {
+
+    .nav-links {
+        justify-content: space-between; /* gives equal space between navigation links */
+        gap: 14px; /* adds space between links */
+    }
+
+    .nav-links a {
+        font-size: 13px; /* reduces link text size for mobile */
+    }
+
+    .hero h1 {
+        font-size: 39px; /* reduces heading size for mobile */
+        letter-spacing: -1px; /* adjusts letter spacing */
+    }
+
+    .hero-copy p {
+        font-size: 17px; /* reduces paragraph size for mobile */
+    }
+
+    .desktop-break {
+        display: none; /* hides desktop line break on mobile */
+    }
+
+    .button {
+        width: 100%; /* makes buttons take full available width */
+        min-height: 58px; /* reduces button height */
+        font-size: 18px; /* reduces button text size */
+    }
+
+    .hero-actions {
+        gap: 12px; /* reduces space between buttons */
+    }
+
+    .feature-card h2 {
+        font-size: 24px; /* reduces feature heading size */
+    }
+
+    .feature-card p {
+        font-size: 17px; /* reduces feature paragraph size */
+    }
+}

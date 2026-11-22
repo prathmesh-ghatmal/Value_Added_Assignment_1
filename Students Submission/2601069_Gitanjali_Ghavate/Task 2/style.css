@@ -1,0 +1,650 @@
+
+/* basic reset - removes default spacing from all elements */
+* {
+    box-sizing: border-box; /* includes padding and border in total width */
+    margin: 0; /* removes default outer space */
+    padding: 0; /* removes default inner space */
+}
+
+/* color variables - stores colors for reuse */
+:root {
+    --purple: #6236d9; /* main purple color */
+    --navy: #20234f; /* dark blue color */
+    --ink: #10152d; /* main text color */
+    --muted: #505d80; /* light text color */
+}
+
+/* general page styling */
+body {
+    min-height: 100vh; /* makes the page at least full screen height */
+    font-family: "Poppins", Arial, sans-serif; /* sets the font style */
+    color: var(--ink); /* applies the main text color */
+    background-color: #ffffff; /* sets white background */
+}
+
+
+/* ==============================
+   sidebar section
+================================= */
+
+.sidebar {
+    position: fixed; /* keeps sidebar fixed while scrolling */
+    top: 0; /* places sidebar at the top */
+    left: 0; /* places sidebar on the left side */
+    bottom: 0; /* stretches sidebar to the bottom */
+    width: 287px; /* sets sidebar width */
+    padding: 28px 13px; /* adds space inside sidebar */
+    color: #ffffff; /* sets sidebar text color to white */
+    background: linear-gradient(155deg, #20214e, #242653 60%, #1d2049); /* adds dark blue gradient background */
+    z-index: 5; /* keeps sidebar above other elements */
+}
+
+/* portal logo and name */
+.portal-brand {
+    display: flex; /* places logo and name in a row */
+    align-items: center; /* aligns logo and text vertically */
+    gap: 20px; /* adds space between logo and text */
+    margin: 0 25px 53px; /* adds space around the brand */
+    color: #ffffff; /* sets brand text color */
+    font-size: 27px; /* sets text size */
+    font-weight: 700; /* makes text bold */
+    line-height: 1.15; /* controls space between text lines */
+    text-decoration: none; /* removes underline from link */
+}
+
+.portal-brand img {
+    width: 65px; /* sets logo width */
+    height: 65px; /* sets logo height */
+    object-fit: contain; /* keeps full logo visible without stretching */
+}
+
+/* sidebar navigation links */
+.side-nav {
+    display: flex; /* uses flexbox for navigation links */
+    flex-direction: column; /* arranges links vertically */
+    gap: 9px; /* adds space between links */
+}
+
+.side-nav a,
+.logout {
+    min-height: 66px; /* sets minimum height of links */
+    padding: 0 24px; /* adds left and right space inside links */
+    display: flex; /* aligns icon and text in a row */
+    align-items: center; /* aligns content vertically */
+    gap: 21px; /* adds space between icon and text */
+    border-radius: 13px; /* makes corners rounded */
+    color: #ffffff; /* sets text color to white */
+    font-size: 19px; /* sets link text size */
+    font-weight: 500; /* gives medium font thickness */
+    text-decoration: none; /* removes underline from links */
+}
+
+/* highlights the selected navigation link */
+.side-nav a.selected {
+    background: linear-gradient(110deg, #6740d7, #6847ce); /* adds purple gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* adds a light shadow */
+}
+
+/* sidebar navigation images */
+.side-nav img,
+.logout img {
+    width: 25px; /* sets icon width */
+    height: 25px; /* sets icon height */
+    object-fit: contain; /* keeps full icon visible */
+}
+
+.side-divider {
+    height: 1px; /* sets divider thickness */
+    margin: 30px 16px 22px; /* adds space around divider */
+    background-color: #55598c; /* sets divider color */
+}
+
+.logout {
+    min-height: 55px; /* sets logout link height */
+}
+
+
+/* ==============================
+   main content section
+================================= */
+
+.main-area {
+    min-height: 100vh; /* makes main area full screen height */
+    margin-left: 287px; /* leaves space for fixed sidebar */
+}
+
+/* top header styling */
+.topbar {
+    height: 95px; /* sets header height */
+    padding: 0 2.5%; /* adds left and right spacing */
+    display: flex; /* places header items in a row */
+    align-items: center; /* aligns items vertically */
+    justify-content: space-between; /* places heading and user details at opposite ends */
+    border-bottom: 1px solid #e5e5f0; /* adds a light bottom border */
+    box-shadow: 0 2px 5px rgba(20, 20, 60, 0.03); /* adds a light shadow */
+}
+
+.topbar h1 {
+    margin: 0; /* removes default heading margin */
+    font-size: 37px; /* sets heading size */
+    font-weight: 700; /* makes heading bold */
+    letter-spacing: -0.8px; /* reduces space between letters */
+}
+
+/* user details in header */
+.topbar-user {
+    display: flex; /* places user details in a row */
+    align-items: center; /* aligns items vertically */
+    gap: 16px; /* adds space between user details */
+    font-size: 20px; /* sets text size */
+}
+
+.topbar-user strong {
+    font-weight: 500; /* sets medium font thickness */
+}
+
+.topbar-user img {
+    width: 25px; /* sets image width */
+    height: 25px; /* sets image height */
+    object-fit: contain; /* keeps full image visible */
+}
+
+.topbar-user .avatar {
+    width: 53px; /* sets profile image width */
+    height: 53px; /* sets profile image height */
+    border-radius: 50%; /* makes profile image circular */
+    background-color: #e9e3ff; /* sets light purple background */
+    object-fit: cover; /* fills image area without stretching */
+}
+
+.topbar-user .dropdown-icon {
+    width: 18px; /* sets dropdown icon width */
+    height: 18px; /* sets dropdown icon height */
+}
+
+
+/* ==============================
+   dashboard content
+================================= */
+
+.content {
+    padding: 31px 1.4% 45px 2.4%; /* adds space inside main content */
+}
+
+/* welcome banner styling */
+.welcome-banner {
+    min-height: 257px; /* sets minimum banner height */
+    padding: 35px 42px; /* adds space inside banner */
+    display: flex; /* places text and image in a row */
+    align-items: center; /* aligns items vertically */
+    justify-content: space-between; /* places text and image at opposite ends */
+    overflow: hidden; /* hides content that goes outside the banner */
+    border-radius: 17px; /* makes banner corners rounded */
+    background: linear-gradient(110deg, #eeeaff, #e9e5ff); /* adds light purple gradient background */
+}
+
+.welcome-banner h2 {
+    margin: 0 0 10px; /* adds space below heading */
+    font-size: clamp(27px, 2.7vw, 40px); /* adjusts heading size according to screen width */
+    line-height: 1.3; /* controls space between heading lines */
+    letter-spacing: -0.8px; /* reduces letter spacing */
+}
+
+.welcome-banner p {
+    margin: 0; /* removes default paragraph margin */
+    color: #515c7d; /* sets paragraph text color */
+    font-size: 23px; /* sets paragraph size */
+    line-height: 1.65; /* adds space between paragraph lines */
+}
+
+.welcome-banner img {
+    align-self: flex-end; /* aligns image at the bottom of the banner */
+    width: 42%; /* sets image width according to banner */
+    max-width: 470px; /* limits maximum image width */
+    height: 220px; /* sets image height */
+    object-fit: contain; /* keeps the full image visible */
+    object-position: center bottom; /* places image at bottom center */
+}
+
+
+/* ==============================
+   statistics cards
+================================= */
+
+.stats-grid {
+    margin: 32px 0 31px; /* adds space above and below cards */
+    display: grid; /* uses grid layout for cards */
+    grid-template-columns: repeat(4, 1fr); /* creates four equal columns */
+    gap: 29px; /* adds space between cards */
+}
+
+.stat-card {
+    min-height: 124px; /* sets minimum card height */
+    padding: 20px 24px; /* adds space inside cards */
+    display: flex; /* places icon and details in a row */
+    align-items: center; /* aligns content vertically */
+    gap: 27px; /* adds space between icon and details */
+    border: 1px solid transparent; /* adds a transparent border */
+    border-radius: 17px; /* makes card corners rounded */
+}
+
+/* different colors for statistics cards */
+.stat-card.purple {
+    color: #6840dd; /* sets purple text and icon color */
+    background-color: #eeeaff; /* sets light purple background */
+    border-color: #ded7ff; /* sets light purple border */
+}
+
+.stat-card.green {
+    color: #31b579; /* sets green text and icon color */
+    background-color: #e4f8ed; /* sets light green background */
+    border-color: #d1f2df; /* sets light green border */
+}
+
+.stat-card.yellow {
+    color: #ffbd35; /* sets yellow text and icon color */
+    background-color: #fff6e2; /* sets light yellow background */
+    border-color: #ffebbf; /* sets light yellow border */
+}
+
+.stat-card.pink {
+    color: #ef526b; /* sets pink text and icon color */
+    background-color: #ffeaef; /* sets light pink background */
+    border-color: #ffd8e0; /* sets light pink border */
+}
+
+/* statistics card images */
+.stat-icon {
+    width: 45px; /* sets icon width */
+    height: 45px; /* sets icon height */
+    object-fit: contain; /* keeps full icon visible */
+}
+
+.stat-card strong {
+    display: block; /* displays number on a separate line */
+    color: #10152d; /* sets number color */
+    font-size: 34px; /* sets number size */
+    line-height: 1.2; /* controls line spacing */
+}
+
+.stat-card p {
+    margin-top: 1px; /* adds small space above text */
+    color: #35415f; /* sets description color */
+    font-size: 19px; /* sets description size */
+    white-space: nowrap; /* prevents text from moving to next line */
+}
+
+
+/* ==============================
+   dashboard panels
+================================= */
+
+.dashboard-panels {
+    display: grid; /* uses grid layout for panels */
+    grid-template-columns: 1fr 1fr; /* creates two equal columns */
+    gap: 29px; /* adds space between panels */
+}
+
+.panel {
+    min-width: 0; /* allows panel to shrink when needed */
+    padding: 21px 28px 12px; /* adds space inside panel */
+    border: 1px solid #e1e2f0; /* adds a light border */
+    border-radius: 17px; /* makes panel corners rounded */
+    box-shadow: 0 3px 6px rgba(30, 30, 80, 0.07); /* adds a light shadow */
+}
+
+.panel h2 {
+    margin: 0 0 8px; /* adds space below panel heading */
+    padding-bottom: 12px; /* adds space below heading text */
+    border-bottom: 1px solid #efeff5; /* adds a line below heading */
+    font-size: 25px; /* sets heading size */
+    font-weight: 700; /* makes heading bold */
+}
+
+
+/* ==============================
+   courses section
+================================= */
+
+.course-row {
+    min-height: 91px; /* sets minimum row height */
+    display: flex; /* places course details in a row */
+    align-items: center; /* aligns content vertically */
+    gap: 18px; /* adds space between course items */
+    border-bottom: 1px solid #e8e8f1; /* adds a line below each course */
+}
+
+.course-row:last-child {
+    border-bottom: 0; /* removes border from last course */
+}
+
+/* course images */
+.course-icon {
+    flex: 0 0 55px; /* keeps the icon width fixed */
+    width: 55px; /* sets icon width */
+    height: 55px; /* sets icon height */
+    border-radius: 12px; /* makes image corners rounded */
+    object-fit: contain; /* keeps full image visible */
+}
+
+.course-info {
+    min-width: 0; /* allows course information to shrink */
+    flex: 1; /* takes available space in the row */
+}
+
+.course-info h3,
+.assignment-info h3 {
+    margin: 0; /* removes default heading margin */
+    font-size: 18px; /* sets heading size */
+    font-weight: 600; /* makes heading slightly bold */
+    line-height: 1.4; /* controls line spacing */
+    white-space: nowrap; /* keeps heading in one line */
+}
+
+.course-info p,
+.assignment-info p {
+    margin: 3px 0 0; /* adds small space above paragraph */
+    color: #536083; /* sets paragraph color */
+    font-size: 16px; /* sets paragraph size */
+    white-space: nowrap; /* keeps paragraph in one line */
+}
+
+/* course progress bar */
+.course-progress {
+    flex: 0 0 31%; /* gives progress bar 31 percent width */
+    display: flex; /* uses flexbox for progress details */
+    flex-direction: column; /* arranges percentage and bar vertically */
+    align-items: flex-end; /* aligns items to the right */
+    gap: 8px; /* adds space between percentage and bar */
+}
+
+.course-progress strong {
+    font-size: 18px; /* sets percentage text size */
+    font-weight: 500; /* gives medium font thickness */
+}
+
+.course-progress span {
+    width: 100%; /* takes full available width */
+    height: 13px; /* sets progress bar height */
+    overflow: hidden; /* hides extra progress bar content */
+    border-radius: 20px; /* makes progress bar rounded */
+    background-color: #e5e5f0; /* sets background of progress bar */
+}
+
+.course-progress i {
+    display: block; /* displays progress as a block */
+    height: 100%; /* takes full height of progress bar */
+    border-radius: inherit; /* uses same rounded corners as parent */
+    background: linear-gradient(90deg, #6335db, #7447e7); /* adds purple gradient to progress */
+}
+
+
+/* ==============================
+   assignments section
+================================= */
+
+.assignment-row {
+    min-height: 90px; /* sets minimum assignment row height */
+    display: flex; /* places assignment details in a row */
+    align-items: center; /* aligns content vertically */
+    gap: 20px; /* adds space between assignment items */
+    border-bottom: 1px solid #e4e5ef; /* adds a line below each assignment */
+}
+
+.assignment-row:last-child {
+    border-bottom: 0; /* removes border from last assignment */
+}
+
+.assignment-info {
+    min-width: 0; /* allows assignment details to shrink */
+    flex: 1; /* takes available space in the row */
+}
+
+/* document images */
+.document-icon {
+    flex: 0 0 52px; /* keeps the icon space fixed */
+    width: 35px; /* sets document image width */
+    height: 40px; /* sets document image height */
+    object-fit: contain; /* keeps the full document image visible */
+}
+
+/* assignment status styling */
+.status {
+    padding: 7px 13px; /* adds space inside status label */
+    border-radius: 12px; /* makes status corners rounded */
+    color: #e83f55; /* sets status text color */
+    background-color: #ffe3e8; /* sets light pink background */
+    font-size: 16px; /* sets status text size */
+    white-space: nowrap; /* keeps status text in one line */
+}
+
+
+/* ==============================
+   tablet screen
+================================= */
+
+@media (max-width: 1150px) {
+
+    .sidebar {
+        width: 230px; /* reduces sidebar width */
+    }
+
+    .main-area {
+        margin-left: 230px; /* adjusts main area according to sidebar width */
+    }
+
+    .portal-brand {
+        margin-left: 10px; /* reduces left margin of logo */
+        gap: 12px; /* reduces space between logo and text */
+        font-size: 23px; /* reduces brand text size */
+    }
+
+    .stats-grid {
+        gap: 12px; /* reduces space between statistics cards */
+    }
+
+    .stat-card {
+        padding: 15px; /* reduces space inside cards */
+        gap: 13px; /* reduces space between icon and details */
+    }
+
+    .stat-card p {
+        font-size: 15px; /* reduces description text size */
+    }
+
+    .stat-icon {
+        width: 38px; /* reduces icon width */
+        height: 38px; /* reduces icon height */
+    }
+
+    .dashboard-panels {
+        grid-template-columns: 1fr; /* displays panels in one column */
+    }
+}
+
+
+/* ==============================
+   mobile screen
+================================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: static; /* removes fixed positioning on mobile */
+        width: 100%; /* takes full screen width */
+        padding: 13px; /* reduces sidebar spacing */
+    }
+
+    .portal-brand {
+        margin: 0 10px 12px; /* adjusts logo spacing */
+        font-size: 20px; /* reduces brand text size */
+    }
+
+    .portal-brand img {
+        width: 45px; /* reduces logo width */
+        height: 45px; /* reduces logo height */
+    }
+
+    .side-nav {
+        flex-direction: row; /* displays navigation links in a row */
+        gap: 5px; /* reduces space between links */
+        overflow-x: auto; /* allows horizontal scrolling if links do not fit */
+    }
+
+    .side-nav a {
+        min-height: 46px; /* reduces navigation link height */
+        padding: 0 12px; /* reduces space inside links */
+        gap: 8px; /* reduces space between icon and text */
+        font-size: 13px; /* reduces link text size */
+        white-space: nowrap; /* keeps link text in one line */
+    }
+
+    .side-nav img {
+        width: 19px; /* reduces navigation icon width */
+        height: 19px; /* reduces navigation icon height */
+    }
+
+    .side-divider,
+    .logout {
+        display: none; /* hides divider and logout on mobile */
+    }
+
+    .main-area {
+        margin-left: 0; /* removes left margin on mobile */
+    }
+
+    .topbar {
+        height: 70px; /* reduces header height */
+        padding: 0 18px; /* adjusts header spacing */
+    }
+
+    .topbar h1 {
+        font-size: 27px; /* reduces dashboard heading size */
+    }
+
+    .topbar-user {
+        gap: 8px; /* reduces space between user details */
+        font-size: 14px; /* reduces user name size */
+    }
+
+    .topbar-user img {
+        width: 20px; /* reduces notification icon width */
+        height: 20px; /* reduces notification icon height */
+    }
+
+    .topbar-user .avatar {
+        width: 38px; /* reduces profile image width */
+        height: 38px; /* reduces profile image height */
+    }
+
+    .content {
+        padding: 18px 14px 30px; /* adjusts content spacing for mobile */
+    }
+
+    .welcome-banner {
+        padding: 25px; /* reduces banner inner spacing */
+    }
+
+    .welcome-banner img {
+        display: none; /* hides welcome image on mobile */
+    }
+
+    .welcome-banner h2 {
+        font-size: 26px; /* reduces welcome heading size */
+    }
+
+    .welcome-banner p {
+        font-size: 16px; /* reduces welcome paragraph size */
+    }
+
+    .desktop-break {
+        display: none; /* hides desktop line break on mobile */
+    }
+
+    /* mobile statistics cards */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* displays two cards in each row */
+        gap: 10px; /* reduces space between cards */
+        margin: 16px 0; /* adjusts space around cards */
+    }
+
+    .stat-card {
+        min-height: 100px; /* reduces card height */
+        padding: 12px; /* reduces inner card spacing */
+        gap: 10px; /* reduces space between icon and details */
+    }
+
+    .stat-card strong {
+        font-size: 26px; /* reduces statistics number size */
+    }
+
+    .stat-card p {
+        font-size: 13px; /* reduces statistics description size */
+        white-space: normal; /* allows text to move to next line */
+    }
+
+    .stat-icon {
+        width: 32px; /* reduces statistics icon width */
+        height: 32px; /* reduces statistics icon height */
+    }
+
+    /* mobile dashboard panels */
+    .panel {
+        padding: 17px 14px 8px; /* reduces panel inner spacing */
+    }
+
+    .panel h2 {
+        font-size: 20px; /* reduces panel heading size */
+    }
+
+    /* mobile courses section */
+    .course-row {
+        gap: 9px; /* reduces space between course details */
+    }
+
+    .course-icon {
+        flex-basis: 39px; /* reduces fixed icon space */
+        width: 39px; /* reduces course icon width */
+        height: 42px; /* reduces course icon height */
+    }
+
+    .course-info h3,
+    .assignment-info h3 {
+        font-size: 13px; /* reduces course and assignment heading size */
+        white-space: normal; /* allows heading to move to next line */
+    }
+
+    .course-info p,
+    .assignment-info p {
+        font-size: 12px; /* reduces description text size */
+        white-space: normal; /* allows description to move to next line */
+    }
+
+    .course-progress {
+        flex-basis: 23%; /* reduces progress bar width */
+    }
+
+    .course-progress strong {
+        font-size: 13px; /* reduces percentage text size */
+    }
+
+    .course-progress span {
+        height: 8px; /* reduces progress bar height */
+    }
+
+    /* mobile assignments section */
+    .assignment-row {
+        gap: 8px; /* reduces space between assignment items */
+    }
+
+    .document-icon {
+        flex-basis: 30px; /* reduces fixed document icon space */
+        width: 25px; /* reduces document image width */
+        height: 30px; /* reduces document image height */
+    }
+
+    .status {
+        padding: 5px 8px; /* reduces space inside status label */
+        font-size: 12px; /* reduces status text size */
+    }
+}
