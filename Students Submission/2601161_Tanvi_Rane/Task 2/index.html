@@ -1,1 +1,313 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Student<br>Portal</span>
+        </div>
+
+        <nav class="navigation">
+
+            <a href="#" class="nav-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\03.png" alt="">
+                <span>Assignments</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\04.png" alt="">
+                <span>Courses</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\10.png" alt="">
+                <span>Progress</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\15.png" alt="">
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-logout">
+            <a href="#" class="nav-item">
+                <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\08.png" alt="">
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <h1>Dashboard</h1>
+
+            <div class="topbar-actions">
+
+                <button class="notification" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="user-profile">
+                    <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\15.png" alt="User profile">
+                    <span>Prathmesh</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Welcome Banner -->
+        <section class="welcome-card">
+
+            <div class="welcome-text">
+
+                <h2>Welcome Back, Prathmesh! 👋</h2>
+
+                <p>
+                    Continue your learning journey and complete your
+                    <br class="desktop-break">
+                    pending assignments.
+                </p>
+
+            </div>
+
+            <img
+                class="welcome-image"
+                src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\18.png"
+                alt="Laptop, books and plant illustration"
+            >
+
+        </section>
+
+
+        <!-- Statistics Cards -->
+        <section class="stats-grid">
+
+            <article class="stat-card stat-purple">
+
+                <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\04.png" alt="Courses">
+
+                <div>
+                    <h2>3</h2>
+                    <p>Courses</p>
+                </div>
+
+            </article>
+
+
+            <article class="stat-card stat-green">
+
+                <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\03.png" alt="Assignments">
+
+                <div>
+                    <h2>12</h2>
+                    <p>Assignments</p>
+                </div>
+
+            </article>
+
+
+            <article class="stat-card stat-yellow">
+
+                <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\02.png" alt="Progress">
+
+                <div>
+                    <h2>78%</h2>
+                    <p>Progress</p>
+                </div>
+
+            </article>
+
+
+            <article class="stat-card stat-pink">
+
+                <img src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\01.png" alt="Calendar">
+
+                <div>
+                    <h2>5</h2>
+                    <p>Due This Week</p>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- Courses and Assignments -->
+        <section class="bottom-grid">
+
+
+            <!-- Your Courses -->
+            <article class="panel">
+
+                <h2 class="panel-heading">Your Courses</h2>
+
+
+                <div class="course-row">
+
+                    <img
+                        class="course-image"
+                        src="C:\Users\ranet\OneDrive\Desktop\valueadded\Value_Added_Assignment_1\Task 2\Assets\07.png"
+                        alt="Web Development"
+                    >
+
+                    <div class="course-details">
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript</p>
+                    </div>
+
+                    <div class="course-progress">
+                        <span>80%</span>
+
+                        <div class="progress-track">
+                            <div style="width:80%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="course-row">
+
+                    <img
+                        class="course-image python-image"
+                        src="Assets/06.png"
+                        alt="Python"
+                    >
+
+                    <div class="course-details">
+                        <h3>Python Programming</h3>
+                        <p>Basics to Advanced</p>
+                    </div>
+
+                    <div class="course-progress">
+                        <span>70%</span>
+
+                        <div class="progress-track">
+                            <div style="width:70%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="course-row">
+
+                    <img
+                        class="course-image database-image"
+                        src="Assets/05.png"
+                        alt="Database"
+                    >
+
+                    <div class="course-details">
+                        <h3>Database Systems</h3>
+                        <p>SQL, Normalization, Queries</p>
+                    </div>
+
+                    <div class="course-progress">
+                        <span>85%</span>
+
+                        <div class="progress-track">
+                            <div style="width:85%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Upcoming Assignments -->
+            <article class="panel">
+
+                <h2 class="panel-heading">Upcoming Assignments</h2>
+
+
+                <div class="assignment-row">
+
+                    <i class="fa-regular fa-file-lines assignment-file"></i>
+
+                    <div class="assignment-details">
+                        <h3>Create a Responsive Landing Page</h3>
+                        <p>Due: 20 Nov 2026</p>
+                    </div>
+
+                    <span class="pending">Pending</span>
+
+                </div>
+
+
+                <div class="assignment-row">
+
+                    <i class="fa-regular fa-file-lines assignment-file"></i>
+
+                    <div class="assignment-details">
+                        <h3>Array Problem Set</h3>
+                        <p>Due: 22 Nov 2026</p>
+                    </div>
+
+                    <span class="pending">Pending</span>
+
+                </div>
+
+
+                <div class="assignment-row">
+
+                    <i class="fa-regular fa-file-lines assignment-file"></i>
+
+                    <div class="assignment-details">
+                        <h3>DBMS SQL Queries</h3>
+                        <p>Due: 25 Nov 2026</p>
+                    </div>
+
+                    <span class="pending">Pending</span>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
