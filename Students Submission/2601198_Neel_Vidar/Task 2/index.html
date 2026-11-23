@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal - Dashboard</title>
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- The page is split into a fixed sidebar and a scrollable content area;
+       the wrapper lets CSS place them side by side -->
+  <div class="layout">
+
+    <!-- SIDEBAR: <aside> because it is navigation that supports, but is separate from, the main content -->
+    <aside class="sidebar">
+
+      <a href="#" class="brand">
+        <img src="images/logo.png" alt="" class="brand-icon" />
+        <span>Student<br />Portal</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <!-- A list is used for the menu so assistive tech announces "list of 5 items" -->
+        <ul class="menu">
+          <li>
+            <!-- aria-current marks the open page for screen readers; CSS also styles it as the highlighted item -->
+            <a href="#" class="menu-link active" aria-current="page">
+              <img src="images/icon-dashboard.png" alt="" class="menu-icon" />
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="menu-link">
+              <img src="images/icon-assignments.png" alt="" class="menu-icon" />
+              Assignments
+            </a>
+          </li>
+          <li>
+            <a href="#" class="menu-link">
+              <img src="images/icon-courses.png" alt="" class="menu-icon" />
+              Courses
+            </a>
+          </li>
+          <li>
+            <a href="#" class="menu-link">
+              <img src="images/icon-progress.png" alt="" class="menu-icon" />
+              Progress
+            </a>
+          </li>
+          <li>
+            <a href="#" class="menu-link">
+              <img src="images/icon-profile.png" alt="" class="menu-icon" />
+              Profile
+            </a>
+          </li>
+        </ul>
+
+        <!-- Logout sits in its own list so a divider line can separate it from the page links -->
+        <ul class="menu menu-bottom">
+          <li>
+            <a href="#" class="menu-link">
+              <img src="images/icon-logout.png" alt="" class="menu-icon" />
+              Logout
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+
+    <!-- CONTENT AREA: top bar on top, then the main dashboard content -->
+    <div class="content">
+
+      <header class="topbar">
+        <h1>Dashboard</h1>
+
+        <div class="topbar-right">
+          <!-- The bell is a button because it will open notifications; the red dot is drawn in CSS -->
+          <button type="button" class="bell" aria-label="Notifications">
+            <img src="images/bell.png" alt="" />
+          </button>
+
+          <div class="user">
+            <img src="images/avatar.png" alt="" class="avatar" />
+            <span>Neel</span>
+            <!-- Inline SVG chevron takes its colour from the text, so no extra image file is needed -->
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+
+        <!-- WELCOME BANNER: greeting on the left, illustration on the right -->
+        <section class="welcome">
+          <div class="welcome-text">
+            <h2>Welcome Back, Neel! 👋</h2>
+            <p>Continue your learning journey and complete your pending assignments.</p>
+          </div>
+          <img src="images/banner.png" alt="" class="welcome-art" />
+        </section>
+
+        <!-- SUMMARY CARDS: four quick numbers; each colour modifier tints the card to tell them apart -->
+        <section class="stats" aria-label="Summary">
+          <article class="stat-card stat-purple">
+            <img src="images/stat-courses.png" alt="" class="stat-icon" />
+            <div>
+              <p class="stat-value">3</p>
+              <p class="stat-label">Courses</p>
+            </div>
+          </article>
+
+          <article class="stat-card stat-green">
+            <img src="images/stat-assignments.png" alt="" class="stat-icon" />
+            <div>
+              <p class="stat-value">12</p>
+              <p class="stat-label">Assignments</p>
+            </div>
+          </article>
+
+          <article class="stat-card stat-yellow">
+            <img src="images/stat-progress.png" alt="" class="stat-icon" />
+            <div>
+              <p class="stat-value">78%</p>
+              <p class="stat-label">Progress</p>
+            </div>
+          </article>
+
+          <article class="stat-card stat-pink">
+            <img src="images/stat-due.png" alt="" class="stat-icon" />
+            <div>
+              <p class="stat-value">5</p>
+              <p class="stat-label">Due This Week</p>
+            </div>
+          </article>
+        </section>
+
+        <!-- TWO PANELS: courses and assignments share a row on wide screens -->
+        <div class="panels">
+
+          <section class="panel">
+            <h2>Your Courses</h2>
+            <ul class="list">
+
+              <li class="course">
+                <img src="images/course-web.png" alt="" class="item-icon" />
+                <div class="item-info">
+                  <h3>Web Development</h3>
+                  <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="course-progress">
+                  <span class="percent">80%</span>
+                  <!-- The fill width comes from a modifier class instead of inline style, keeping all styling in the CSS file -->
+                  <div class="bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                    aria-label="Web Development progress">
+                    <div class="bar-fill fill-80"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="course">
+                <img src="images/course-python.png" alt="" class="item-icon" />
+                <div class="item-info">
+                  <h3>Python Programming</h3>
+                  <p>Basics to Advanced</p>
+                </div>
+                <div class="course-progress">
+                  <span class="percent">70%</span>
+                  <div class="bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                    aria-label="Python Programming progress">
+                    <div class="bar-fill fill-70"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="course">
+                <img src="images/course-database.png" alt="" class="item-icon" />
+                <div class="item-info">
+                  <h3>Database Systems</h3>
+                  <p>SQL, Normalization, Queries</p>
+                </div>
+                <div class="course-progress">
+                  <span class="percent">85%</span>
+                  <div class="bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                    aria-label="Database Systems progress">
+                    <div class="bar-fill fill-85"></div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </section>
+
+          <section class="panel">
+            <h2>Upcoming Assignments</h2>
+            <ul class="list">
+
+              <li class="assignment">
+                <img src="images/file.png" alt="" class="item-icon item-icon-small" />
+                <div class="item-info">
+                  <h3>Create a Responsive Landing Page</h3>
+                  <!-- <time> gives the due date a machine-readable value while showing friendly text -->
+                  <p>Due: <time datetime="2026-11-20">20 Nov 2026</time></p>
+                </div>
+                <span class="badge">Pending</span>
+              </li>
+
+              <li class="assignment">
+                <img src="images/file.png" alt="" class="item-icon item-icon-small" />
+                <div class="item-info">
+                  <h3>Array Problem Set</h3>
+                  <p>Due: <time datetime="2026-11-22">22 Nov 2026</time></p>
+                </div>
+                <span class="badge">Pending</span>
+              </li>
+
+              <li class="assignment">
+                <img src="images/file.png" alt="" class="item-icon item-icon-small" />
+                <div class="item-info">
+                  <h3>DBMS SQL Queries</h3>
+                  <p>Due: <time datetime="2026-11-25">25 Nov 2026</time></p>
+                </div>
+                <span class="badge">Pending</span>
+              </li>
+
+            </ul>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+
+</html>

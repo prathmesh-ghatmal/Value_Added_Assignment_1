@@ -1,0 +1,511 @@
+/* =====================================================
+   Skilli Travel - Landing Page
+   1. Base  2. Navbar  3. Buttons  4. Hero
+   5. Search bar  6. Destinations  7. Responsive
+   ===================================================== */
+
+
+/* ---------- 1. BASE ---------- */
+
+/* Clear browser defaults once so every gap in this file is intentional.
+   border-box keeps padding inside an element's width, which makes grid maths predictable. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Colours are defined once so the theme can change from one place */
+:root {
+  --primary: #6a3de0;
+  --primary-dark: #5630c0;   /* hover state of primary buttons */
+  --text-dark: #14123a;
+  --text-muted: #6a6888;
+  --border: #e4e1f2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text-dark);
+  background: #fdfcff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* block display removes the small gap inline images leave below themselves */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Shared wrapper: caps width on big monitors and keeps side padding on phones */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+/* ---------- 2. NAVBAR ---------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;               /* stays above the hero and the overlapping search bar while scrolling */
+  background: #fff;
+}
+
+/* space-between puts logo left, links in the middle, button right without extra wrappers */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;       /* keeps the plane's proportions if the file isn't square */
+}
+
+/* Links stretch to the full navbar height so the active underline
+   can sit near the bottom edge of the bar */
+.nav-links {
+  display: flex;
+  gap: 52px;
+  height: 100%;
+}
+
+.nav-links a {
+  position: relative;        /* anchor for the underline pseudo-element */
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+}
+
+/* The underline is a pseudo-element so the HTML stays clean */
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--primary);
+}
+
+
+/* ---------- 3. BUTTONS ---------- */
+
+/* Base button shape; the variants below only change colours.
+   The transparent border reserves space so .btn-outline doesn't grow by 2px. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;                 /* space between label and icon */
+  padding: 18px 32px;
+  font-family: inherit;      /* <button> doesn't inherit the font by default, <a> does */
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Glass-style outline: the faint fill keeps text readable over the photo */
+.btn-outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Compact version so the navbar button doesn't dominate the header */
+.btn-nav {
+  padding: 14px 26px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+
+/* ---------- 4. HERO ---------- */
+
+/* Two background layers: the gradient on top darkens the left side where the text sits,
+   and fades out so the hiker on the right stays bright. */
+.hero {
+  padding: 56px 0 100px;     /* extra bottom padding leaves room for the overlapping search bar */
+  background:
+    linear-gradient(90deg, rgba(20, 18, 60, 0.6) 0%, rgba(20, 18, 60, 0.25) 50%, rgba(20, 18, 60, 0) 80%),
+    url("images/hero.png") center / cover no-repeat;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 66px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* max-width limits the line length so the paragraph wraps onto two lines like the design */
+.hero p {
+  max-width: 580px;
+  margin-top: 20px;
+  font-size: 25px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* flex-wrap lets the buttons drop onto separate lines on narrow screens */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+
+/* ---------- 5. SEARCH BAR ---------- */
+
+/* Negative top margin pulls the bar up over the hero image so it
+   sits half on the photo and half on the white page. z-index keeps it above the hero. */
+.search-bar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  max-width: 1300px;
+  margin: -54px auto 0;
+  padding: 0 30px 0 40px;
+  min-height: 108px;
+  background: #fff;
+  border-radius: 26px;
+  box-shadow: 0 12px 40px rgba(40, 24, 110, 0.14);
+}
+
+/* flex:1 lets the three fields share the free space evenly;
+   the right border draws the thin divider between neighbouring fields */
+.field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.field + .field {
+  border-left: 1px solid var(--border);
+}
+
+/* The first field has no divider, so it needs no left padding to align with the bar's edge */
+.field:first-child {
+  padding-left: 0;
+}
+
+.field-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.field-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;              /* allows the input to shrink instead of overflowing the flex row */
+}
+
+.field-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Inputs are stripped of their default box so they look like plain text inside the pill */
+.field input,
+.field select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 20px;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.field input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Keyboard users lose the default outline above, so the whole field shows focus instead */
+.field:focus-within .field-title {
+  color: var(--primary);
+}
+
+.btn-search {
+  margin-left: 20px;
+  padding: 16px 30px;
+  font-size: 22px;
+  border-radius: 10px;
+}
+
+.search-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+
+/* ---------- 6. DESTINATIONS ---------- */
+
+.destinations {
+  padding: 56px 0 72px;
+}
+
+/* The two purple dashes are pseudo-elements on either side of the text,
+   so the heading stays a single clean <h2> in the HTML */
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 40px;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  width: 56px;
+  height: 3px;
+  background: var(--primary);
+}
+
+/* repeat(3, 1fr) gives three equal cards without calculating percentages */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* aspect-ratio keeps every card the same shape whatever the photo's own size is.
+   overflow:hidden clips the zooming image to the rounded corners. */
+.card {
+  position: relative;
+  aspect-ratio: 1.85;
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(20, 18, 58, 0.14);
+}
+
+/* The photo fills the card and is cropped (cover) rather than stretched */
+.card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.card:hover .card-img {
+  transform: scale(1.06);
+}
+
+/* Dark fade at the bottom keeps the white text readable on any photo.
+   It's a pseudo-element so it sits between the image and the text. */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 10, 30, 0.8) 0%, rgba(10, 10, 30, 0) 55%);
+}
+
+/* z-index lifts the text above the gradient pseudo-element;
+   space-between puts the name left and the price pill right */
+.card-info {
+  position: absolute;
+  z-index: 1;
+  left: 28px;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.card-info h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.card-place {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.pin {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.price {
+  padding: 8px 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  background: #fff;
+  border-radius: 999px;
+}
+
+
+/* ---------- 7. RESPONSIVE ---------- */
+/* Breakpoints go from large to small so each one builds on the previous */
+
+/* Small laptops: tighten the nav and shrink the headline */
+@media (max-width: 1100px) {
+  .nav-links {
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .card-info h3 {
+    font-size: 26px;
+  }
+}
+
+/* Tablets: nav links hide (a menu would need extra markup or JavaScript),
+   the search bar stacks vertically and cards go one per row */
+@media (max-width: 860px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-inner {
+    height: 76px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .hero {
+    padding: 40px 0 90px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px 24px;
+    margin-top: -50px;
+  }
+
+  /* Dividers switch from vertical to horizontal once the fields are stacked */
+  .field,
+  .field:first-child {
+    padding: 16px 0;
+  }
+
+  .field + .field {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .btn-search {
+    margin: 8px 0 0;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Phones: smaller type and buttons so everything fits */
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 19px;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 18px;
+  }
+
+  .btn-nav {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+
+  /* Smaller heading and dashes so the title stays on one line between them */
+  .section-title {
+    font-size: 24px;
+    gap: 10px;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    width: 20px;
+  }
+}

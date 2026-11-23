@@ -1,0 +1,492 @@
+/* =====================================================
+   Student Portal - Dashboard
+   1. Base  2. Sidebar  3. Top bar  4. Welcome banner
+   5. Summary cards  6. Panels  7. Responsive
+   ===================================================== */
+
+
+/* ---------- 1. BASE ---------- */
+
+/* Clear browser defaults once so every gap in this file is intentional.
+   border-box keeps padding inside an element's width, which makes grid maths predictable. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* All colours are defined here so the theme can change from one place */
+:root {
+  --sidebar-bg: #241b5e;
+  --primary: #5b3fd1;
+  --text-dark: #14123a;
+  --text-muted: #5d5b7e;
+  --border: #e8e5f6;
+  --page-bg: #fbfaff;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text-dark);
+  background: var(--page-bg);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* block display removes the tiny gap inline images leave below themselves */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Sidebar and content sit side by side; min-height makes the dark sidebar
+   run the full height of the screen even when the content is short */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+/* ---------- 2. SIDEBAR ---------- */
+
+/* flex-shrink:0 stops the content area from squeezing the sidebar narrower */
+.sidebar {
+  flex-shrink: 0;
+  width: 280px;
+  padding: 36px 14px;
+  background: var(--sidebar-bg);
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 24px;
+  margin-bottom: 56px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.brand-icon {
+  width: 66px;
+  height: 66px;
+  object-fit: contain;   /* keeps the logo proportions if the image is not square */
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #d9d5f5;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.menu-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* Selected page gets the solid brand colour; kept after :hover so it always wins */
+.menu-link.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* The border on top acts as the divider between page links and Logout */
+.menu-bottom {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+/* ---------- 3. TOP BAR ---------- */
+
+/* min-width:0 lets this flex child shrink below its content width,
+   otherwise wide children would push the page into a horizontal scroll */
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 94px;
+  padding: 0 34px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar h1 {
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+/* position:relative gives the red notification dot something to anchor to */
+.bell {
+  position: relative;
+  display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bell img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+/* The dot is a pseudo-element so it needs no extra HTML and is easy to remove later */
+.bell::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ef4458;
+  border: 2px solid #fff;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+/* A fixed square plus border-radius:50% makes the avatar a circle;
+   object-fit:cover crops instead of stretching a non-square photo */
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* ---------- 4. WELCOME BANNER ---------- */
+
+.main {
+  padding: 32px 34px 48px;
+}
+
+/* Text and illustration are pushed to opposite ends with space-between */
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 258px;
+  padding: 0 44px;
+  background: #ece8fc;
+  border-radius: 22px;
+  border: 1px solid #e2dcf8;
+}
+
+.welcome-text h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* max-width keeps the sentence breaking onto two lines like the design */
+.welcome-text p {
+  max-width: 580px;
+  margin-top: 12px;
+  font-size: 24px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.welcome-art {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 470px;
+  height: auto;
+}
+
+
+/* ---------- 5. SUMMARY CARDS ---------- */
+
+/* Four equal columns; 1fr shares the free space evenly so no percentages are needed */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 32px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 124px;
+  padding: 0 30px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.stat-value {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 20px;
+  color: var(--text-muted);
+}
+
+/* Each modifier only changes the tint, so layout rules are written once above */
+.stat-purple {
+  background: #ece8fc;
+  border-color: #e0daf8;
+}
+
+.stat-green {
+  background: #e3f6ea;
+  border-color: #d3eddc;
+}
+
+.stat-yellow {
+  background: #fdf3d9;
+  border-color: #f7e8be;
+}
+
+.stat-pink {
+  background: #fde6e9;
+  border-color: #f9d6db;
+}
+
+
+/* ---------- 6. PANELS ---------- */
+
+.panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 32px;
+}
+
+.panel {
+  padding: 26px 28px 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(91, 63, 209, 0.06);
+}
+
+.panel h2 {
+  padding-bottom: 14px;
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Both lists share one row layout: icon | text | extra (progress or badge) */
+.course,
+.assignment {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.course {
+  grid-template-columns: 56px 1fr 176px;
+}
+
+.assignment {
+  grid-template-columns: 40px 1fr auto;
+}
+
+/* The last row doesn't need a divider because the panel border closes it */
+.list li:last-child {
+  border-bottom: none;
+}
+
+.item-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+/* Document icons are drawn smaller than course logos in the design */
+.item-icon-small {
+  width: 36px;
+  height: 36px;
+}
+
+.item-info h3 {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.item-info p {
+  margin-top: 2px;
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+/* Percentage text sits above the bar and lines up with its right edge */
+.percent {
+  display: block;
+  margin-bottom: 6px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* The track is the pale full-width bar; overflow:hidden clips the fill to its rounded ends */
+.bar {
+  height: 12px;
+  overflow: hidden;
+  background: #e8e5f6;
+  border-radius: 999px;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+}
+
+/* One class per value avoids inline styles in the HTML */
+.fill-80 {
+  width: 80%;
+}
+
+.fill-70 {
+  width: 70%;
+}
+
+.fill-85 {
+  width: 85%;
+}
+
+.badge {
+  padding: 8px 16px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #e0364b;
+  background: #fde3e7;
+  border-radius: 10px;
+}
+
+
+/* ---------- 7. RESPONSIVE ---------- */
+/* Breakpoints go from large to small so each one builds on the previous */
+
+/* Small laptops: stack the two panels and show the cards two per row */
+@media (max-width: 1200px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablets: the sidebar is hidden to give the content the full width
+   (a collapsible menu would need extra markup or JavaScript) */
+@media (max-width: 860px) {
+  .sidebar {
+    display: none;
+  }
+
+  .topbar {
+    height: 78px;
+    padding: 0 20px;
+  }
+
+  .topbar h1 {
+    font-size: 28px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .welcome {
+    flex-direction: column;
+    padding: 28px 24px 12px;
+    text-align: center;
+  }
+
+  .welcome-text h2 {
+    font-size: 30px;
+  }
+
+  .welcome-text p {
+    font-size: 19px;
+  }
+}
+
+/* Phones: one card per row and a simpler top bar */
+@media (max-width: 560px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-right {
+    gap: 20px;
+  }
+
+  /* The name is hidden first because the avatar alone is enough to identify the menu */
+  .user span {
+    display: none;
+  }
+
+  /* Progress bars drop under the course text instead of squeezing beside it */
+  .course {
+    grid-template-columns: 56px 1fr;
+  }
+
+  .course-progress {
+    grid-column: 1 / -1;
+  }
+}
