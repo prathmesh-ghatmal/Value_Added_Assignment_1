@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Dashboard</title>
+
+    <!-- Linked style.css for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar (to provide navigation from one section to another) -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <img src="Assets/17.png" alt="logo" class="brand-logo">
+                <span>Student<br>Portal</span>
+            </div>
+
+            <!-- Navigation links (For easy navigations) -->
+            <nav class="side-nav">
+
+                <a href="#" class="nav-item active">
+                    <img src="Assets/13.png" alt="Dashboard" class="nav-img">
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <img src="Assets/12.png" alt="Assignments" class="nav-img">
+                    <span>Assignments</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <img src="Assets/11.png" alt="Courses" class="nav-img">
+                    <span>Courses</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <img src="Assets/10.png" alt="Progress" class="nav-img">
+                    <span>Progress</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <img src="Assets/09.png" alt="Profile" class="nav-img">
+                    <span>Profile</span>
+                </a>
+
+            </nav>
+
+            <!-- Logout link -->
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <img src="Assets/08.png" alt="Logout" class="nav-img">
+                    <span>Logout</span>
+                </a>
+            </div>
+
+        </aside>
+
+        <!-- Main wrapper (contains topbar and the content of the dashboard) -->
+        <div class="main-wrapper">
+
+            <!-- Topbar (page title and user info) -->
+            <header class="topbar">
+
+                <h1>Dashboard</h1>
+
+                <div class="user-controls">
+
+                    <div class="bell-icon">
+                        <img src="Assets/16.png" alt="Notifications">
+                    </div>
+
+                    <div class="profile-box">
+                        <img src="Assets/15.png" alt="Vaishnavi" class="avatar-img">
+                        <span>Vaishnavi</span>
+                        <span class="caret">&#9662;</span>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- Main dashboard -->
+            <main class="content">
+
+                <!-- Welcome banner giving a short welcome message to the student -->
+                <section class="banner">
+
+                    <div class="banner-text">
+                        <h2>Welcome Back, Vaishnavi! <span class="wave">&#128075;</span></h2>
+                        <p>Continue your learning journey and complete your pending assignments.</p>
+                    </div>
+
+                    <div class="banner-art">
+                        <img src="Assets/18.png" alt="Learning illustration">
+                    </div>
+
+                </section>
+
+                <!-- cards: display the student's overall learning details -->
+                <section class="stats-grid">
+
+                    <div class="stat-card card-purple">
+                        <img src="Assets/04.png" alt="Courses icon">
+                        <div class="stat-info">
+                            <div class="stat-num">3</div>
+                            <div class="stat-label">Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card-green">
+                        <img src="Assets/03.png" alt="Assignments icon">
+                        <div class="stat-info">
+                            <div class="stat-num">12</div>
+                            <div class="stat-label">Assignments</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card-yellow">
+                        <img src="Assets/02.png" alt="Progress icon">
+                        <div class="stat-info">
+                            <div class="stat-num">78%</div>
+                            <div class="stat-label">Progress</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card-pink">
+                        <img src="Assets/01.png" alt="Due this week icon">
+                        <div class="stat-info">
+                            <div class="stat-num">5</div>
+                            <div class="stat-label">Due This Week</div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                    <!-- panel(shows upcoming events and deadlines) -->
+                    <div class="panel">
+
+                        <h3>Upcoming Assignments</h3>
+
+                        <div class="assignment-row">
+                            <img src="Assets/14.png" alt="Assignment" class="doc-img">
+
+                            <div class="assignment-meta">
+                                <div class="assignment-title">Create a Responsive Landing Page</div>
+                                <div class="assignment-due">Due: 20 Nov 2026</div>
+                            </div>
+
+                            <span class="badge">Pending</span>
+                        </div>
+
+
+                        <div class="assignment-row">
+                            <img src="Assets/14.png" alt="Assignment" class="doc-img">
+
+                            <div class="assignment-meta">
+                                <div class="assignment-title">Array Problem Set</div>
+                                <div class="assignment-due">Due: 22 Nov 2026</div>
+                            </div>
+
+                            <span class="badge">Pending</span>
+                        </div>
+
+
+                        <div class="assignment-row">
+                            <img src="Assets/14.png" alt="Assignment" class="doc-img">
+
+                            <div class="assignment-meta">
+                                <div class="assignment-title">DBMS SQL Queries</div>
+                                <div class="assignment-due">Due: 25 Nov 2026</div>
+                            </div>
+
+                            <span class="badge">Pending</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

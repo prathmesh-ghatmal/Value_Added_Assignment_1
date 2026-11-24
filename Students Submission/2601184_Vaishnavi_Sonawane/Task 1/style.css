@@ -1,0 +1,378 @@
+
+/* Google font (To use poppins font ) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #20243a;
+}
+
+
+/* Flexbox is used to keep the logo, navigation links and button in one row */
+.navbar {
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo, .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #252a50;
+}
+
+.logo img, .footer-logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Gap is used to maintain equal spacing between navigation links */
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #555b70;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Link colour changes when the mouse is placed over it */
+.navbar nav a:hover {
+    color: #6256e8;
+}
+
+.nav-btn {
+    text-decoration: none;
+    background-color: #6256e8;
+    color: white;
+    padding: 11px 23px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Button moves slightly upwards when hovered */
+.nav-btn:hover, .primary-btn:hover {
+    background-color: #493dc5;
+    transform: translateY(-2px);
+}
+
+
+/* Flexbox places the home section text and image side by side */
+.hero {
+    min-height: 570px;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #f5f4ff, #ffffff);
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.tagline {
+    color: #6256e8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    color: #20243a;
+    font-weight: 800;
+}
+
+.hero h1 span, .section-heading h2 span, .about h2 span {
+    color: #6256e8;
+}
+
+.hero-description {
+    color: #6c7082;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 22px 0 30px;
+}
+
+/* Flexbox keeps both buttons next to each other */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.primary-btn, .secondary-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    color: #ffffff;
+    background-color: #6256e8;
+}
+
+.secondary-btn {
+    color: #6256e8;
+    border: 1px solid #6256e8;
+}
+
+.secondary-btn:hover {
+    background-color: #6256e8;
+    color: #ffffff;
+}
+
+/* Image width is adjusted so it fits properly beside the home section text */
+.hero-image {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 490px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Features section */
+.features {
+    padding: 85px 8%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: #20243a;
+    margin-bottom: 13px;
+}
+
+.section-heading p {
+    color: #777b8d;
+    font-size: 14px;
+}
+
+.section-heading .tagline {
+    color: #6256e8;
+    font-size: 12px;
+}
+
+/* Grid is used to arrange the three feature cards in equal columns */
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 55px;
+}
+
+/* Each feature has its own card to keep the information separate */
+.feature-card {
+    padding: 35px 25px;
+    border-radius: 13px;
+    background-color: #ffffff;
+    border: 1px solid #eeeef5;
+    box-shadow: 0 5px 25px rgba(35, 35, 80, 0.06);
+    transition: 0.3s;
+}
+
+/* Card moves upwards slightly to show a hover effect */
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(35, 35, 80, 0.12);
+}
+
+/* Circular background is given to make the feature images stand out */
+.feature-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f0ff;
+    border-radius: 50%;
+}
+
+.feature-image img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.feature-card h3 {
+    color: #252a50;
+    font-size: 19px;
+    margin-bottom: 13px;
+}
+
+.feature-card p {
+    color: #777b8d;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* About section content is kept in the center */
+.about {
+    padding: 75px 8%;
+    text-align: center;
+    background-color: #f5f4ff;
+}
+
+.about-content {
+    max-width: 720px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 33px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #6c7082;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.about-content .tagline {
+    color: #6256e8;
+    font-size: 12px;
+    margin-bottom: 17px;
+}
+
+
+/* Footer section */
+footer {
+    padding: 35px 8%;
+    text-align: center;
+    background-color: #20243a;
+    color: #ffffff;
+}
+
+.footer-logo {
+    justify-content: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #c3c5d3;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.copyright {
+    border-top: 1px solid #41445a;
+    padding-top: 18px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+
+/* This media query adjusts the layout for tablet screens */
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .feature-container {
+        gap: 15px;
+    }
+
+    .feature-card {
+        padding: 25px 15px;
+    }
+}
+
+
+/* This media query changes the layout for smaller mobile screens */
+@media (max-width: 650px) {
+
+    /* Navigation links are moved to the next row on mobile */
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .nav-btn {
+        padding: 9px 15px;
+    }
+
+    /* Home section is changed from row to column on mobile */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    /* Feature cards are displayed one below another on mobile */
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2, .about h2 {
+        font-size: 27px;
+    }
+}
