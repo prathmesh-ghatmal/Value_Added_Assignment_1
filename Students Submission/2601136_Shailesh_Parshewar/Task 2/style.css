@@ -222,12 +222,16 @@ header .nav-title {
 
 .pending-tag {
     font-size: 0.9rem;
-    max-height: 2rem;
+    height: 1.5rem;
     padding: 0rem 1rem;
     border-radius: 0.5rem;
     color: rgb(189, 0, 0);
     background: rgba(255, 169, 169, 0.253);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .progress-bar-container {
     display: flex;
