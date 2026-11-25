@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px 6%;
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    display: flex;
+    align-items:center;
+}
+
+.logo img {
+    width: 60px;
+    height: 45px;
+}
+
+.logo h2 {
+    color: #172554;
+    margin-left: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #444;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.menu .active {
+    color: purple;
+}
+
+.get-started {
+    background-color:blueviolet;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 6%;
+}
+
+.left {
+    width: 50%;
+}
+
+.left h1 {
+    font-size: 60px;
+    color: #111;
+    line-height: 1.1;
+}
+
+.left h1 span {
+    color: blueviolet;
+}
+
+.left p {
+    font-size: 22px;
+    color: #5b6687;
+    line-height: 1.5;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+.start {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.view {
+    background-color: white;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    padding: 18px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.right {
+    width: 50%;
+    text-align: center;
+}
+
+.right img {
+    width: 100%;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f7f4ff;
+    padding: 50px 4%;
+}
+
+.card {
+    background-color: white;
+    width: 30%;
+    text-align: center;
+    padding: 30px 15px;
+    border: 1px;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px ;
+}
+.card img {
+    width: 67px;
+    height: 67px;
+}
+.card h2 {
+    font-size: 28px;
+    margin-top: 15px;
+}
+.card p {
+    font-size: 20px;
+}
