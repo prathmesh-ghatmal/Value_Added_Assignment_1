@@ -1,0 +1,183 @@
+
+/* Basic Page Styling */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: black;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 92px;
+    height: 100px;
+    border-bottom: 1px solid #d7d3d3;
+}
+
+/* Website Logo and Name */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.logo h2 {
+    font-size: 30px;
+    color: black;
+    margin: 0;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    font-size: 21px;
+    color: rgb(92, 92, 92);
+    font-weight: 600;
+}
+
+/* Active and Hover Navigation Links */
+.nav-links li.active,
+.nav-links li:hover {
+    color: #5425d5;
+    border-bottom: 4px solid #5425d5;
+    padding-bottom: 10px;
+}
+
+/* Get Started Button */
+.get-started {
+    background-color: #5425d5;
+    color: white;
+    padding: 16px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 92px;
+    height: 500px;
+    gap: 30px;
+}
+
+/* Left Side - Text Content */
+.text {
+    width: 50%;
+}
+
+.text h1 {
+    font-size: 60px;
+    line-height: 1.17;
+    margin: 0 0 20px;
+    color: black;
+}
+
+.text h1 span {
+    color: #5425d5;
+}
+
+.text p {
+    font-size: 26px;
+    line-height: 1.5;
+    color: #606b89;
+    margin: 0 0 35px;
+}
+
+/* Hero Section Buttons */
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.start-btn {
+    background-color: #5425d5;
+    color: white;
+    padding: 18px 36px;
+    font-size: 23px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.view-btn {
+    border: 2px solid #7543f5;
+    color: #5425d5;
+    padding: 18px 36px;
+    font-size: 23px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+/* Right Side - Hero Illustration */
+.picture {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture img {
+    width: 100%;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 50px 60px;
+    background-color: #e7e2f9;
+}
+
+/* Individual Feature Cards */
+.feature-card {
+    flex: 1;
+    height: 218px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #e5e2f0;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Feature Icons */
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Feature Card Headings */
+.feature-card h2 {
+    font-size: 30px;
+    margin: 10px 0;
+    color: black;
+}
+
+/* Feature Card Description */
+.feature-card p {
+    font-size: 22px;
+    margin: 0;
+    color: #3c3c42;
+}

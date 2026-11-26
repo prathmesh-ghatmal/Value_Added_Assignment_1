@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 2 - Student Dashboard</title>
+        <!-- Linking the external CSS file -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- Main Dashboard Container -->
+        <div class="dashboard">
+
+            <!-- Sidebar -->
+            <section class="sidebar">
+
+                <!-- Website Logo and Name -->
+                <div class="logo">
+                    <img src="images/17.png">
+                    <h2> Student Portal </h2>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    <li class="selected"> <img src="images/13.png" class="sidebar-icon"> Dashboard </li>
+                    <li> <img src="images/12.png" class="sidebar-icon"> Assignments </li>
+                    <li> <img src="images/11.png" class="sidebar-icon"> Courses </li>
+                    <li> <img src="images/10.png" class="sidebar-icon"> Progress </li>
+                    <li> <img src="images/09.png" class="sidebar-icon"> Profile </li>
+                    <li class="logout"> <img src="images/08.png" class="sidebar-icon"> Logout </li>
+                </ul>
+
+            </section>
+
+            <!-- Main Dashboard Content -->
+            <div class="content">
+
+                <!-- Top Bar -->
+                <header class="topbar">
+
+                    <h1> Dashboard </h1>
+
+                    <!-- Notification and User Profile -->
+                    <div class="user-info">
+                        <img src="images/16.png" class="notification">
+
+                        <div class="profile">
+                            <img src="images/15.png">
+                            <h3> Simraa </h3>
+                        </div>
+                    </div>
+
+                </header>
+
+                <!-- Welcome Section -->
+                <section class="welcome">
+
+                    <!-- Left Side - Welcome Text -->
+                    <div class="welcome-text">
+                        <h2> Welcome Back, Simraa! 👋 </h2>
+                        <p> Continue your learning journey and complete your pending assignments. </p>
+                    </div>
+
+                    <!-- Right Side - Welcome Illustration -->
+                    <div class="welcome-image">
+                        <img src="images/18.png">
+                    </div>
+
+                </section>
+
+
+                <!-- Dashboard Statistics -->
+                <section class="statistics">
+
+                    <!-- Courses Count -->
+                    <div class="stat-card stat-course">
+                        <img src="images/04.png">
+                        <div>
+                            <h2> 3 </h2>
+                            <p> Courses </p>
+                        </div>
+                    </div>
+
+                    <!-- Assignments Count -->
+                    <div class="stat-card stat-assignment">
+                        <img src="images/03.png">
+                        <div>
+                            <h2> 12 </h2>
+                            <p> Assignments </p>
+                        </div>
+                    </div>
+
+                    <!-- Overall Progress -->
+                    <div class="stat-card stat-progress">
+                        <img src="images/02.png">
+                        <div>
+                            <h2> 78% </h2>
+                            <p> Progress </p>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Due Dates -->
+                    <div class="stat-card stat-due">
+                        <img src="images/01.png">
+                        <div>
+                            <h2> 5 </h2>
+                            <p> Due This Week </p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- Courses and Assignments Section -->
+                <section class="details">
+
+                    <!-- Your Courses -->
+                    <div class="courses">
+                        <h2> Your Courses </h2>
+
+                        <!-- Web Development Course -->
+                        <div class="course-card">
+                            <img src="images/07.png">
+
+                            <div class="title">
+                                <h3> Web Development </h3>
+                                <p> HTML, CSS, JavaScript </p>
+                            </div>
+
+                            <div class="progress">
+                                <h3> 80% </h3>
+                                <div class="progress-bar"> <div class="progress-fill"> </div> </div>
+                            </div>
+                        </div>
+
+                        <!-- Python Programming Course -->
+                        <div class="course-card">
+                            <img src="images/06.png">
+
+                            <div class="title">
+                                <h3> Python Programming </h3>
+                                <p> Basics to Advanced </p>
+                            </div>
+
+                            <div class="progress">
+                                <h3> 80% </h3>
+                                <div class="progress-bar"> <div class="progress-fill"> </div> </div>
+                            </div>
+                        </div>
+
+                        <!-- Database Systems Course -->
+                        <div class="course-card">
+                            <img src="images/05.png">
+
+                            <div class="title">
+                                <h3> Database Systems </h3>
+                                <p> SQL, Normalization, Queries </p>
+                            </div>
+
+                            <div class="progress">
+                                <h3> 80% </h3>
+                                <div class="progress-bar"> <div class="progress-fill"> </div> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Assignments -->
+                    <div class="assignments">
+                        <h2> Upcoming Assignments </h2>
+
+                        <!-- First Assignment -->
+                        <div class="assignment-card">
+                            <img src="images/14.png">
+
+                            <div class="information">
+                                <h3> Create a Responsive Landing Page </h3>
+                                <p> Due: 20 Nov 2026 </p>
+                            </div>
+
+                            <span class="pending"> Pending </span>
+                        </div>
+
+                        <!-- Second Assignment -->
+                        <div class="assignment-card">
+                            <img src="images/14.png">
+
+                            <div class="information">
+                                <h3> Array Problem Set </h3>
+                                <p> Due: 22 Nov 2026 </p>
+                            </div>
+
+                            <span class="pending"> Pending </span>
+                        </div>
+
+                        <!-- Third Assignment -->
+                        <div class="assignment-card">
+                            <img src="images/14.png">
+
+                            <div class="information">
+                                <h3> DBMS SQL Queries </h3>
+                                <p> Due: 25 Nov 2026 </p>
+                            </div>
+
+                            <span class="pending"> Pending </span>
+                        </div>  
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
