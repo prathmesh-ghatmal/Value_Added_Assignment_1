@@ -1,0 +1,248 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #17172b;
+}
+
+
+/* Navigation Bar */
+.navbar {
+    height: 65px;
+    padding: 10px 5%;
+    background-color: white;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 27%;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    transform: rotate(+45deg);
+}
+
+.logo h2 {
+    display: inline-block;
+    font-size: 19px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.navigation {
+    display: inline-block;
+    width: 55%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.navigation a {
+    display: inline-block;
+    text-decoration: none;
+    color: #45455e;
+    font-size: 13px;
+    margin: 0 14px;
+    padding: 12px 0;
+}
+
+.navigation .active {
+    color: #673de0;
+    border-bottom: 3px solid #673de0;
+}
+
+.book-btn {
+    background-color: #673de0;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 20px;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 265px;
+    background-image: url("Assets/07.png");
+    background-size: cover;
+    background-position: center;
+    padding: 30px 50px;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.hero-text p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.explore-btn {
+    background-color: #7041e8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.contact-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 11px 20px;
+    cursor: pointer;
+}
+
+
+/* Search Bar */
+.search-bar {
+    width: 85%;
+    background-color: white;
+    padding: 15px;
+    margin: -30px auto 25px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.search-item {
+    display: inline-block;
+    width: 23%;
+    padding: 0 15px;
+    border-right: 1px solid #dddddd;
+    vertical-align: middle;
+}
+
+.search-item img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.search-item div {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.search-item h4 {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.search-item p {
+    font-size: 11px;
+    color: #77778d;
+}
+
+.search-btn {
+    background-color: #673de0;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 17px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.search-btn img {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+
+/* Popular Destinations */
+.destinations {
+    padding: 5px 4% 25px 4%;
+    text-align: center;
+}
+
+.destinations h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.destination-cards {
+    text-align: center;
+}
+
+.destination-card {
+    display: inline-block;
+    width: 31%;
+    height: 145px;
+    margin: 0 5px;
+    border-radius: 13px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: left;
+    color: white;
+    vertical-align: top;
+}
+
+/* Destination Images */
+.lonavala {
+    background-image: url("Assets/08.png");
+}
+
+.goa {
+    background-image: url("Assets/10.png");
+}
+
+.manali {
+    background-image: url("Assets/09.png");
+}
+
+/* Destination Details */
+.destination-info {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+}
+
+.destination-info h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.destination-info p {
+    font-size: 11px;
+}
+
+.destination-info img {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+}
+
+.price {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: white;
+    color: #17172b;
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+}

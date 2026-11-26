@@ -1,0 +1,310 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7fc;
+    color: #17172b;
+}
+
+/* Main Dashboard */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 15%;
+    background-color: #211d50;
+    color: white;
+    padding: 20px 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+
+.logo h3 {
+    font-size: 14px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+    color: white;
+    font-size: 12px;
+}
+
+.menu-item img {
+    width: 18px;
+    height: 18px;
+}
+
+.active {
+    background-color: #6844d6;
+    border-radius: 8px;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 15px 12px;
+    border-top: 1px solid #514b7c;
+    font-size: 12px;
+}
+
+.logout img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Main Content */
+.main-content {
+    width: 85%;
+    background-color: white;
+}
+
+/* Topbar */
+.topbar {
+    height: 60px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eeeeF5;
+}
+
+.topbar h2 {
+    font-size: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.profile img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Dashboard Content */
+.content {
+    padding: 20px;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    background-color: #eee9ff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-banner h2 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.welcome-banner p {
+    color: #62627c;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.welcome-banner img {
+    width: 200px;
+    height: 110px;
+}
+
+/* Statistics Cards */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.stat-card {
+    width: 24%;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat-card img {
+    width: 28px;
+    height: 28px;
+}
+
+.stat-card h2 {
+    font-size: 18px;
+}
+
+.stat-card p {
+    font-size: 11px;
+}
+
+.purple {
+    background-color: #eee9ff;
+}
+
+.green {
+    background-color: #e2f7ec;
+}
+
+.yellow {
+    background-color: #fff4dc;
+}
+
+.pink {
+    background-color: #ffe8ee;
+}
+
+/* Bottom Section */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel {
+    width: 49%;
+    border: 1px solid #e7e5f2;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 5px;
+}
+
+.panel h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Courses */
+.course {
+    display: flex;
+    align-items: center;
+    padding: 10px 3px;
+    gap: 10px;
+}
+
+.course img {
+    width: 28px;
+    height: 28px;
+}
+
+.course-info {
+    width: 60%;
+}
+
+.course-info h4 {
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.course-info p {
+    font-size: 9px;
+    color: #696982;
+}
+
+.course-progress {
+    width: 25%;
+    text-align: right;
+    font-size: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #e5e4f1;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.progress-80 {
+    width: 80%;
+    height: 6px;
+    background-color: #6741d9;
+    border-radius: 10px;
+}
+
+.progress-70 {
+    width: 70%;
+    height: 6px;
+    background-color: #6741d9;
+    border-radius: 10px;
+}
+
+.progress-85 {
+    width: 85%;
+    height: 6px;
+    background-color: #6741d9;
+    border-radius: 10px;
+}
+
+/* Assignments */
+.assignment {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 3px;
+    border-bottom: 1px solid #eeeeF5;
+}
+
+.assignment img {
+    width: 20px;
+    height: 20px;
+}
+
+.assignment {
+    padding: 12px 3px;
+    border-bottom: 1px solid #eeeeF5;
+}
+
+.assignment img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.assignment div {
+    display: inline-block;
+    width: 75%;
+    vertical-align: middle;
+}
+
+.pending {
+    display: inline-block;
+    background-color: #ffe2e9;
+    color: #e94b6b;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 9px;
+}
+
