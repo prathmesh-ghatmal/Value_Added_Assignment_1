@@ -1,0 +1,190 @@
+/* remove default space around all element */
+*{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+       /* to arrange header items in one line */
+        .head header{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            height:80px;
+            padding:15px 40px;
+            border-bottom:1px solid #e2e8f0;
+         
+        }
+
+        /* for logo and website name display together */
+        .dsa-tracker{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* setting size and thickness of website name */
+        .dsa-tracker h1{
+            font-size:24px;
+            font-weight: 700;
+        }
+        
+
+        /* for adjusting image of logo */
+        .head .img{
+            width:100px;
+            height:100px;
+            object-fit:contain;
+
+        }
+
+        /* to arrrange all navigation link in one line with same gap between them */
+        .head .page-link{
+            display:flex;
+            align-items:center;
+            gap:50px;
+        }
+
+        /* to style the page links */
+        .head .page-link a{
+            color:black;
+            font-size:15px;
+            text-decoration: none;
+            text-transform:none;
+            font-size:20px;
+            padding-bottom:4px;
+        }
+
+
+        /* style get started button with background_color,padding,border,font of text */
+        .head .btn .get{
+            color:white ;
+            background-color: blueviolet;
+            padding:10px 15px 10px 15px;
+            border:none;
+            border-radius: 8px;
+            font-size:15px;
+        }
+
+         /* for middle section */
+         
+        /* to set information and image side by side */
+        .container{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            gap:32px;
+            padding:40px 50px; 
+             
+        }
+
+        /* give equal space for info and image */
+        .container .info,.container .image{
+            flex:1;
+            min-width:0;
+        }
+
+        /* adjusting image sizze and position */
+        .container .image .img{
+            width:100%;
+            max-width:900px;
+            height:auto;
+            display:block;
+            margin-left:auto;
+        }  
+
+        /* setting font style and width for info */
+        .container .info{
+            width:100%;
+            font-family:  Arial, sans-serif;
+            max-width:600px; 
+           
+        }  
+        
+        /* for style main heading in info */
+        .coontainer .info h1{
+            font-size:44px;
+            font-weight: 800;
+            line-height:1.5;
+            margin-bottom:16px;
+          
+        }
+
+        /* change same part of text of heading with specific color */
+        .container .info .job-ready{
+            color:blueviolet;
+        }
+/* 
+        styling the description text */
+        .container .info h3{
+            font-size:20px;
+            font-weight: 400;
+            line-height:1.5;
+            margin-top: 20px;
+            margin-bottom: 24px;
+        }
+
+
+        .container .info .btn{
+            gap:32px;
+        }
+
+        /* styling start practicing button */
+        .container .info .btn1{
+            background-color: blueviolet;
+            border:none;
+            padding :12px 22px;
+            border-radius: 8px;
+            color:white;
+            margin-right:20px;
+        }
+
+        /* styling view problems button */
+        .container .info .btn2{
+            background-color: white;
+            border:none;
+            padding :12px 22px;
+            border-radius: 8px;
+          
+            border:2px solid blueviolet;
+            color:blueviolet;
+            font-weight: bold;
+        }
+
+        /* #card section  this section show features */
+/* 
+        #arranging three feature cards in one row */
+        .card-bottom{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+           padding-top:10px;
+           padding-bottom: 10px;
+           margin:10px;
+           gap:24px;
+        }
+
+        /* set all 3 cards style same  */
+        .card-bottom .card{
+            border:1px solid #e2e8f0;
+            border-radius: 12px;
+            padding:30px 100px;
+            text-align: center;
+        }
+
+        /* set image size */
+        .card-bottom .img{
+            width:50px;
+            height:50px;
+            margin:0 auto 10px;
+        }
+
+        
+        .card-bottom .card h4{
+            font-size: 25px;
+            font-weight:bold;
+        }
+        .card-bottom .card p{
+            margin-top:5px;
+        }
