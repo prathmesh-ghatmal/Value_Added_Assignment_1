@@ -1,0 +1,289 @@
+/* colors picked from color picker extension  */
+
+/* basic reset and default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* colors used across the page */
+:root {
+  --purple: #5b2fcf;
+  --purple-dark: #4a22b0;
+  --text-dark: #111127;
+  --text-muted: #5b5f7a;
+  --bg-soft: #f5f3ff;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* keeps the content centered with some space on the sides */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/*   buttons styling */
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid var(--purple);
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background: var(--purple);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--purple-dark);
+}
+
+.btn-outline {
+  background: #fff;
+  color: var(--purple);
+}
+
+.btn-outline:hover {
+  background: var(--bg-soft);
+}
+
+/* styling for navbar */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1c1250;
+}
+
+.logo img {
+  width: 48px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  display: block;
+  padding: 30px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.nav-links a:hover {
+  color: var(--purple);
+}
+
+/* active page underline */
+.nav-links a.active {
+  color: var(--purple);
+  border-bottom: 3px solid var(--purple);
+}
+
+.navbar .btn {
+  padding: 14px 24px;
+  font-size: 17px;
+}
+
+/* styling for hero section */
+.hero {
+  padding: 80px 0;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.highlight {
+  color: var(--purple);
+}
+
+.hero-text p {
+  max-width: 560px;
+  margin: 24px 0 36px;
+  font-size: 22px;
+  color: var(--text-muted);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 24px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+/* image stays on the right side */
+.hero-image img {
+  width: 100%;
+  max-width: 620px;
+  margin-left: auto;
+}
+
+/* styling for  cards */
+.features {
+  background: var(--bg-soft);
+  padding: 50px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(91, 47, 207, 0.08);
+}
+
+.card img {
+  height: 64px;
+  margin: 0 auto 12px;
+}
+
+.card h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.card p {
+  margin-top: 4px;
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+/* styling for tablet */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 46px;
+  }
+}
+
+/* styling for mobile */
+@media (max-width: 768px) {
+
+  /* nav links move to their own row below the logo and button */
+  .navbar-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 16px 30px;
+    gap: 12px;
+  }
+
+  .navbar nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+
+  /* hero stacks vertically and gets centered */
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .hero-text p {
+    margin: 20px auto 28px;
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image img {
+    margin: 0 auto;
+  }
+
+  /* one card per row */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - Dashboard</title>
+
+  <!-- inter font from google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- sidebar -->
+    <aside class="sidebar">
+
+      <!--  logo -->
+      <a href="#" class="brand">
+        <img src="../../../Task 2/Assets/17.png" alt="">
+        <span>Student<br>Portal</span>
+      </a>
+
+      <!-- main menu -->
+      <nav class="menu">
+        <a href="#" class="menu-item active"><img src="../../../Task 2/Assets/13.png" alt="">Dashboard</a>
+        <a href="#" class="menu-item"><img src="../../../Task 2/Assets/12.png" alt="">Assignments</a>
+        <a href="#" class="menu-item"><img src="../../../Task 2/Assets/11.png" alt="">Courses</a>
+        <a href="#" class="menu-item"><img src="../../../Task 2/Assets/10.png" alt="">Progress</a>
+        <a href="#" class="menu-item"><img src="../../../Task 2/Assets/09.png" alt="">Profile</a>
+      </nav>
+
+      <a href="#" class="menu-item logout"><img src="../../../Task 2/Assets/08.png" alt="">Logout</a>
+    </aside>
+
+    <!-- right side  -->
+    <div class="main">
+
+      <!-- top bar -->
+      <header class="topbar">
+        <h1>Dashboard</h1>
+
+        <div class="topbar-right">
+          <a href="#" class="bell"><img src="../../../Task 2/Assets/16.png" alt="Notifications"></a>
+          <a href="#" class="user">
+            <img src="../../../Task 2/Assets/15.png" alt="">
+            <span>r0ny</span>
+            <span class="arrow">&#8964;</span>
+          </a>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <section class="welcome">
+          <div>
+            <h2>Welcome Back, r0ny! &#128075;</h2>
+            <p>Continue your learning journey and complete your pending assignments.</p>
+          </div>
+          <img src="../../../Task 2/Assets/18.png" alt="">
+        </section>
+
+        <!--  tiles -->
+        <section class="stats">
+          <div class="stat stat-purple">
+            <img src="../../../Task 2/Assets/04.png" alt="">
+            <div><strong>3</strong><span>Courses</span></div>
+          </div>
+          <div class="stat stat-green">
+            <img src="../../../Task 2/Assets/03.png" alt="">
+            <div><strong>12</strong><span>Assignments</span></div>
+          </div>
+          <div class="stat stat-yellow">
+            <img src="../../../Task 2/Assets/02.png" alt="">
+            <div><strong>78%</strong><span>Progress</span></div>
+          </div>
+          <div class="stat stat-red">
+            <img src="../../../Task 2/Assets/01.png" alt="">
+            <div><strong>5</strong><span>Due This Week</span></div>
+          </div>
+        </section>
+
+        <!-- courses and assignments  -->
+        <section class="panels">
+
+          <!--  courses -->
+          <div class="panel">
+            <h3>Your Courses</h3>
+
+            <div class="row">
+              <img class="icon" src="../../../Task 2/Assets/07.png" alt="">
+              <div class="row-info">
+                <strong>Web Development</strong>
+                <span>HTML, CSS, JavaScript</span>
+              </div>
+              <div class="progress">
+                <b>80%</b>
+                <div class="bar"><div class="fill fill-80"></div></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <img class="icon" src="../../../Task 2/Assets/06.png" alt="">
+              <div class="row-info">
+                <strong>Python Programming</strong>
+                <span>Basics to Advanced</span>
+              </div>
+              <div class="progress">
+                <b>70%</b>
+                <div class="bar"><div class="fill fill-70"></div></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <img class="icon" src="../../../Task 2/Assets/05.png" alt="">
+              <div class="row-info">
+                <strong>Database Systems</strong>
+                <span>SQL, Normalization, Queries</span>
+              </div>
+              <div class="progress">
+                <b>85%</b>
+                <div class="bar"><div class="fill fill-85"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  assignments -->
+          <div class="panel">
+            <h3>Upcoming Assignments</h3>
+
+            <div class="row">
+              <img class="icon doc" src="../../../Task 2/Assets/14.png" alt="">
+              <div class="row-info">
+                <strong>Create a Responsive Landing Page</strong>
+                <span>Due: 20 Nov 2026</span>
+              </div>
+              <span class="badge">Pending</span>
+            </div>
+
+            <div class="row">
+              <img class="icon doc" src="../../../Task 2/Assets/14.png" alt="">
+              <div class="row-info">
+                <strong>Array Problem Set</strong>
+                <span>Due: 22 Nov 2026</span>
+              </div>
+              <span class="badge">Pending</span>
+            </div>
+
+            <div class="row">
+              <img class="icon doc" src="../../../Task 2/Assets/14.png" alt="">
+              <div class="row-info">
+                <strong>DBMS SQL Queries</strong>
+                <span>Due: 25 Nov 2026</span>
+              </div>
+              <span class="badge">Pending</span>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

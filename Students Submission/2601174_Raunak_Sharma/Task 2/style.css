@@ -1,0 +1,433 @@
+/* colors picked from color picker extension  */
+
+/* basic reset and default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* colors used across the page */
+:root {
+  --purple: #5b2fcf;
+  --sidebar: #1f1a5a;
+  --text-dark: #111127;
+  --text-muted: #5b5f7a;
+  --border: #ececf4;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--text-dark);
+  background: #fdfdff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+/* sidebar on the left, everything else on the right */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  min-width: 0; /* stops wide content from pushing the layout out */
+}
+
+/* styling for sidebar */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 12px;
+  background: var(--sidebar);
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 14px;
+  margin-bottom: 36px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.brand img {
+  width: 60px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #e6e3ff;
+}
+
+.menu-item img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* active page styling */
+
+.menu-item.active {
+  background: var(--purple);
+  color: #fff;
+}
+
+.logout {
+  margin-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0;
+  padding-top: 28px;
+}
+
+/* styling for top bar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+  padding: 0 36px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.bell img {
+  width: 34px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.user img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.arrow {
+  font-size: 20px;
+  margin-top: -8px;
+}
+
+/* main content area */
+.content {
+  padding: 32px 36px;
+}
+
+/* styling for welcome banner */
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 36px 42px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+  background: #edeaff;
+}
+
+.welcome h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.welcome p {
+  max-width: 600px;
+  margin-top: 14px;
+  font-size: 21px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.welcome img {
+  width: 440px;
+  max-width: 40%;
+}
+
+/* styling for  tiles */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 26px 30px;
+  border-radius: 14px;
+}
+
+.stat img {
+  width: 66px;
+  height: 66px;
+  object-fit: contain;
+  mix-blend-mode: multiply; /* hides the icon's own background so it blends into the tile */
+}
+
+.stat strong {
+  display: block;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.stat span {
+  font-size: 19px;
+  color: var(--text-muted);
+}
+
+/* a different background color for each tile */
+.stat-purple { background: #e9e5fb; }
+.stat-green  { background: #e3f6ea; }
+.stat-yellow { background: #fdf2d6; }
+.stat-red    { background: #fde8eb; }
+
+/* styling for courses and assignments panels */
+.panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.panel {
+  padding: 26px 28px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(91, 47, 207, 0.06);
+}
+
+.panel h3 {
+  padding-bottom: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* no line under the last row */
+.row:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.icon.doc {
+  width: 34px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+.row-info {
+  flex: 1;
+}
+
+.row-info strong {
+  display: block;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.row-info span {
+  font-size: 17px;
+  color: var(--text-muted);
+}
+
+/* styling for course  */
+.progress {
+  width: 180px;
+}
+
+.progress b {
+  display: block;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.bar {
+  height: 10px;
+  margin-top: 6px;
+  border-radius: 10px;
+  background: #e8e6f5;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 10px;
+  background: var(--purple);
+}
+
+/* how full each progress bar is */
+.fill-80 { width: 80%; }
+.fill-70 { width: 70%; }
+.fill-85 { width: 85%; }
+
+.badge {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #fde1e4;
+  color: #e5384d;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* styling for tablet */
+@media (max-width: 1100px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* courses and assignments stack on top of each other */
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* styling for mobile */
+@media (max-width: 768px) {
+
+  /* sidebar becomes a strip at the top */
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .brand {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  .brand img {
+    width: 44px;
+  }
+
+  .menu {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .menu-item {
+    padding: 10px 14px;
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+
+  .logout {
+    margin-top: 0;
+    border-top: none;
+    padding: 10px 14px;
+  }
+
+  .topbar {
+    padding: 0 20px;
+  }
+
+  .topbar h1 {
+    font-size: 24px;
+  }
+
+  .topbar-right {
+    gap: 16px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  /* illustration is hidden to save space */
+  .welcome {
+    padding: 24px;
+  }
+
+  .welcome h2 {
+    font-size: 26px;
+  }
+
+  .welcome p {
+    font-size: 17px;
+  }
+
+  .welcome img {
+    display: none;
+  }
+
+  /* one tile per row */
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* progress bar drops below the course name */
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .progress {
+    width: 100%;
+  }
+}
