@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --primary-color : rgb(23, 0, 85);
+}
+
+img {
+    height: 10px;
+    width: 10px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+/* Sidebar */
+#sidebar {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem .1rem;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebar-title {
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+#sidebar-title img {
+    height: 2.5rem;
+    width: 3rem;
+}
+
+#sidebar-tabs{
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#sidebar-tabs div{
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    padding: 1rem;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+#sidebar-tabs div:hover{
+    background-color: rgb(90, 70, 238);
+}
+
+#sidebar-tabs div img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#sidebar-tabs div:nth-child(6){
+    padding: 0;
+    height: 1px;
+    background-color: rgb(90, 70, 238);
+}
+
+/* header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0px 1px 3px gray;
+}
+
+#header-title {
+    font-weight: 900;
+    font-size: 1.75rem;
+}
+
+#header-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    gap: 2rem;
+}
+
+#notification img, #user-info img {
+    height: 2rem;
+    width: 1.8rem;
+}
+
+#user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+}
+
+/* banner */
+#banner {
+    margin: 2rem;
+    padding: 0 2.5rem;
+    background-color: rgb(215, 206, 255);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+}
+
+#image-container img {
+    height: 100%;
+    width: 100%;
+}
+
+#banner-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#banner-desc {
+    font-size: 1.5rem;
+}
+
+/* cards */
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 2rem;
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1.25rem;
+    border-radius: 15px;
+    gap: 1rem;
+}
+
+.card img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card:nth-child(1) {
+    background-color: rgb(234, 230, 253);
+}
+
+.card:nth-child(2) {
+    background-color: rgb(227, 247, 235);
+}
+
+.card:nth-child(3) {
+    background-color: rgb(254, 245, 222);
+}
+
+.card:nth-child(4) {
+    background-color: rgb(254, 232, 238);
+}
+
+/* Bottom Container */
+#bottom-container {
+    display: grid;
+    margin: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.content-box {
+    padding: 1.25rem;
+    box-shadow: 0px 0px 2px gray;
+    border-radius: 15px;
+}
+
+.box-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 5fr auto;
+    align-items: center;
+}
+
+.box-content {
+    display: grid;
+    gap: 1rem;
+}
+
+.item img {
+    height: 2rem;
+    width: 2rem;
+}
+
+.item-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.item-desc {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.content-box:nth-child(2) .item img{
+    height: 1.75rem;
+    width: 1.5rem;
+}
+
+.badge{
+    background-color: rgb(254, 232, 238);
+    border-radius: 10px;
+    padding: .5rem;
+    font-size: .75rem;
+    color: red;
+    font-weight: 600;
+}
+
+.progress-container {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.progress-bar {
+    height: .75rem;
+    width: 10rem;
+    background: rgb(207, 207, 207);
+    border-radius: 15px;
+}
+
+.progress {
+    background-color: rgb(99, 65, 212);
+    height: 100%;
+    border-radius: 15px;
+}
