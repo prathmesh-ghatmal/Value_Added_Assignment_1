@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fcfbfe;
+  color: #111;
+  padding: 20px 80px;
+}
+/* Nav bar staic*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 20px;
+  border-bottom: 1px solid #ecebf5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.logo h2 {
+  font-size: 22px;
+}
+
+.links {
+  display: flex;
+  gap: 35px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.links .active {
+  color: #6133c7;
+  border-bottom: 3px solid #6133c7;
+  padding-bottom: 5px;
+}
+
+/* Buttons common */
+.btn {
+  display: inline-block;
+  background-color: #6133c7;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #6133c7;
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: #6133c7;
+}
+
+/* Herosec */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0;
+  gap: 40px;
+}
+
+.hero-left h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-left h1 span {
+  color: #6133c7;
+}
+
+.hero-left p {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-img {
+  width: 550px;
+  max-width: 100%;
+}
+
+/* container cards */
+.cards {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.cards div {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #e5e5ea;
+  border-radius: 15px;
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.cards img {
+  width: 48px;
+  margin-bottom: 15px;
+}
+
+.cards h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.cards p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  body {
+    padding: 20px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .btn-group {
+    justify-content: center;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
