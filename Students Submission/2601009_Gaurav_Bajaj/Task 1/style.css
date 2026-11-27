@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #11152b;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: 100px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeeF5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo img {
+  width: 58px;
+  height: 58px;
+}
+
+.logo h2 {
+  font-size: 32px;
+}
+
+nav {
+  display: flex;
+  gap: 55px;
+  height: 100%;
+  align-items: center;
+  color: #4c5371;
+  font-size: 21px;
+}
+
+nav a {
+  padding-top: 5px;
+}
+
+nav .current {
+  color: #6132d5;
+  border-bottom: 4px solid #6132d5;
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.top-button,
+.button {
+  background: #6132d5;
+  color: white;
+  border-radius: 14px;
+  font-weight: bold;
+}
+
+.top-button {
+  padding: 16px 27px;
+  font-size: 19px;
+}
+
+.intro {
+  min-height: 610px;
+  padding: 55px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro-text {
+  width: 49%;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 60px;
+  line-height: 1.15;
+}
+
+h1 span {
+  color: #6132d5;
+}
+
+.intro-text p {
+  color: #59617e;
+  font-size: 26px;
+  line-height: 1.4;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 18px 35px;
+  font-size: 21px;
+}
+
+.second-button {
+  margin-left: 25px;
+  color: #6132d5;
+  background: white;
+  border: 2px solid #6132d5;
+}
+
+.student-picture {
+  width: 49%;
+  max-height: 470px;
+  object-fit: contain;
+}
+
+.boxes {
+  padding: 50px 4%;
+  display: flex;
+  gap: 25px;
+  background: #faf8ff;
+}
+
+.box {
+  width: 33.33%;
+  padding: 28px 10px;
+  text-align: center;
+  border: 1px solid #e4e0f3;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 5px 12px #ddd9eb;
+}
+
+.box img {
+  width: 65px;
+  height: 65px;
+}
+
+.box h2 {
+  margin: 12px 0 8px;
+  font-size: 28px;
+}
+
+.box p {
+  margin: 0;
+  font-size: 21px;
+}
+
+@media (max-width: 800px) {
+  header {
+    height: auto;
+    padding: 18px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  nav .current {
+    height: 35px;
+  }
+
+  .intro {
+    display: block;
+    padding: 45px 8%;
+  }
+
+  .intro-text,
+  .student-picture {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 43px;
+  }
+
+  .intro-text p {
+    font-size: 19px;
+  }
+
+  .student-picture {
+    margin-top: 35px;
+  }
+
+  .boxes {
+    display: block;
+    padding: 35px 8%;
+  }
+
+  .box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
