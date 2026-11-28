@@ -93,12 +93,29 @@ header {
     border-bottom: 2px solid rgb(228, 228, 228);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 header .nav-title {
     font-weight: bold;
     font-size: 2rem;
 }
+
+.nav-btns {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-btns img:first-of-type {
+    margin-right: 3rem;
+}
+.nav-btns img {
+    object-fit: contain;
+    height: 100%;
+}
+
 .banners {
     padding: 2rem;
 }
