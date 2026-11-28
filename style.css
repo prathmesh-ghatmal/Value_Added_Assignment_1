@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F5F4FA;;
+}
+div {
+    background-color:white;
+ }
+
+.header {
+    height: 75px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid darkgrey;
+   
+}
+
+#h1 {
+    font-size: 20px;
+    align-items: center;
+}
+
+.click {
+    color: rgba(70, 0, 128, 0.779);
+    text-decoration: Underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 15px;
+}
+
+#img2 {
+    height: 50px;
+    width: 60px;
+    margin-right: -130px;
+}
+#dsa_text {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#b1 {
+    height: 45px;
+    width: 145px;
+    background-color: rgba(70, 0, 128, 0.779);
+    color: white;
+    border-radius: 12px;
+    font-weight: bold
+}
+
+.Description {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-left: 100px;
+    margin-top: 30px;
+    height:410px;
+    
+}
+
+.text-part {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#p1 {
+    font-size: 60px;
+    font-weight: bold;
+
+}
+#p2 {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.751);
+}
+span {
+    color: rgba(70, 0, 128, 0.779);
+
+
+}
+#b2 {
+    height: 45px;
+    width: 145px;
+    background-color: rgba(70, 0, 128, 0.779);
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#b3 {
+    height: 45px;
+    width: 145px;
+    color: rgba(70, 0, 128, 0.779);;
+    border: 2px solid  rgba(70, 0, 128, 0.779);
+    background-color:white;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-left: 6px;
+}
+
+#img1 {
+    height: 380px;
+    width: 620px;
+}
+.man_image {
+    margin-right: 140px;
+    margin-top: 10px;
+}
+
+.Bottom_part {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 90px;
+    margin-top: 20px;
+    margin-right: 100px;
+    background-color: #F5F4FA;
+}
+.daily {
+    height: 165px;
+    width: 380px;
+    border-radius: 12px;
+    text-align: center;
+    align-content: center;
+}
+
+#img3 {
+    height: 60px;
+    width: 75px;
+}
+
+.track {
+    height: 165px;
+    width: 390px;
+    border-radius: 12px;
+    text-align: center;
+    align-content: center;
+
+}
+
+#img4 {
+    height: 60px;
+    width: 75px;
+}
+
+.leaderboard {
+    height: 165px;
+    width: 380px;
+    border-radius: 12px;
+    text-align: center;
+    align-content: center;
+
+}
+
+#img5 {
+    height: 60px;
+    width: 75px;
+}
