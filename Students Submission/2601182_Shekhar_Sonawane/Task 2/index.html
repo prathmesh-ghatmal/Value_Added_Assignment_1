@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Assets/17.png" alt="Logo">
+            <h2>Student<br>Portal</h2>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="#" class="menu-item active">
+                <img src="Assets/13.png" alt="">
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <img src="Assets/12.png" alt="">
+                <span>Assignments</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <img src="Assets/11.png" alt="">
+                <span>Courses</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <img src="Assets/10.png" alt="">
+                <span>Progress</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <img src="Assets/09.png" alt="">
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu-item">
+                <img src="Assets/08.png" alt="">
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP HEADER -->
+        <header class="top-header">
+
+            <h1>Dashboard</h1>
+
+            <div class="header-right">
+
+                <div class="notification">
+                    <img src="Assets/16.png" alt="Notification">
+                </div>
+
+                <div class="user-profile">
+                    <img src="Assets/15.png" alt="Profile">
+
+                    <span>Shekhar</span>
+
+                    <span class="dropdown">⌄</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE CONTENT -->
+        <div class="content-area">
+
+
+            <!-- WELCOME BANNER -->
+            <section class="welcome-banner">
+
+                <div class="welcome-text">
+
+                    <h2>
+                        Welcome Back, Shekhar! 👋
+                    </h2>
+
+                    <p>
+                        Continue your learning journey and complete your
+                        <br>
+                        pending assignments.
+                    </p>
+
+                </div>
+
+                <div class="welcome-image">
+
+                    <img src="Assets/18.png" alt="Student Learning">
+
+                </div>
+
+            </section>
+
+
+            <!-- STATISTICS CARDS -->
+            <section class="stats-container">
+
+                <div class="stat-card courses-stat">
+
+                    <img src="Assets/04.png" alt="Courses">
+
+                    <div>
+                        <h2>3</h2>
+                        <p>Courses</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card assignments-stat">
+
+                    <img src="Assets/03.png" alt="Assignments">
+
+                    <div>
+                        <h2>12</h2>
+                        <p>Assignments</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card progress-stat">
+
+                    <img src="Assets/02.png" alt="Progress">
+
+                    <div>
+                        <h2>78%</h2>
+                        <p>Progress</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card due-stat">
+
+                    <img src="Assets/01.png" alt="Calendar">
+
+                    <div>
+                        <h2>5</h2>
+                        <p>Due This Week</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- LOWER CONTENT -->
+            <section class="bottom-container">
+
+
+                <!-- YOUR COURSES -->
+                <div class="content-card courses-section">
+
+                    <h2>Your Courses</h2>
+
+                    <div class="course-list">
+
+
+                        <!-- WEB DEVELOPMENT -->
+                        <div class="course-item">
+
+                            <img src="Assets/07.png" alt="Web Development">
+
+                            <div class="course-info">
+
+                                <h3>Web Development</h3>
+
+                                <p>HTML, CSS, JavaScript</p>
+
+                            </div>
+
+                            <div class="course-progress">
+
+                                <span>80%</span>
+
+                                <div class="progress-bar">
+                                    <div class="progress-fill web-progress"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PYTHON -->
+                        <div class="course-item">
+
+                            <img src="Assets/06.png" alt="Python">
+
+                            <div class="course-info">
+
+                                <h3>Python Programming</h3>
+
+                                <p>Basics to Advanced</p>
+
+                            </div>
+
+                            <div class="course-progress">
+
+                                <span>70%</span>
+
+                                <div class="progress-bar">
+                                    <div class="progress-fill python-progress"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DATABASE -->
+                        <div class="course-item">
+
+                            <img src="Assets/05.png" alt="Database">
+
+                            <div class="course-info">
+
+                                <h3>Database Systems</h3>
+
+                                <p>SQL, Normalization, Queries</p>
+
+                            </div>
+
+                            <div class="course-progress">
+
+                                <span>85%</span>
+
+                                <div class="progress-bar">
+                                    <div class="progress-fill database-progress"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- UPCOMING ASSIGNMENTS -->
+                <div class="content-card assignments-section">
+
+                    <h2>Upcoming Assignments</h2>
+
+                    <div class="assignment-list">
+
+
+                        <!-- ASSIGNMENT 1 -->
+                        <div class="assignment-item">
+
+                            <img src="Assets/14.png" alt="Assignment">
+
+                            <div class="assignment-info">
+
+                                <h3>Create a Responsive Landing Page</h3>
+
+                                <p>Due: 20 Nov 2026</p>
+
+                            </div>
+
+                            <span class="status">Pending</span>
+
+                        </div>
+
+
+                        <!-- ASSIGNMENT 2 -->
+                        <div class="assignment-item">
+
+                            <img src="Assets/14.png" alt="Assignment">
+
+                            <div class="assignment-info">
+
+                                <h3>Array Problem Set</h3>
+
+                                <p>Due: 22 Nov 2026</p>
+
+                            </div>
+
+                            <span class="status">Pending</span>
+
+                        </div>
+
+
+                        <!-- ASSIGNMENT 3 -->
+                        <div class="assignment-item">
+
+                            <img src="Assets/14.png" alt="Assignment">
+
+                            <div class="assignment-info">
+
+                                <h3>DBMS SQL Queries</h3>
+
+                                <p>Due: 25 Nov 2026</p>
+
+                            </div>
+
+                            <span class="status">Pending</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

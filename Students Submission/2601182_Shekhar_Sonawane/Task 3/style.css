@@ -1,0 +1,595 @@
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+/* UNIVERSAL SELECTOR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eeeeee;
+    color: #17172e;
+}
+
+
+/* MAIN WEBSITE */
+.website {
+    max-width: 1400px;
+    margin: 18px auto;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+/* NAVBAR */
+.navbar {
+    height: 80px;
+    padding: 0 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #17172e;
+}
+
+
+/* NAVIGATION */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #565873;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 27px 0;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #7139e7;
+}
+
+.nav-links a.active {
+    border-bottom: 3px solid #7139e7;
+}
+
+
+/* BOOK NOW BUTTON */
+.book-btn {
+    text-decoration: none;
+    background: linear-gradient(135deg, #7541eb, #6232d4);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* HERO SECTION */
+.hero {
+    height: 402px;
+    background-image: url("Assets/07.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px 5.5%;
+}
+
+
+/* HERO OVERLAY */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(14, 27, 53, 0.65),
+        rgba(25, 26, 55, 0.20),
+        rgba(20, 20, 40, 0.03)
+    );
+}
+
+
+/* HERO CONTENT */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    line-height: 1.12;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 21px;
+    line-height: 1.55;
+    color: #f4f2ff;
+    margin-bottom: 23px;
+}
+
+
+/* HERO BUTTONS */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.explore-btn,
+.contact-btn {
+    text-decoration: none;
+    padding: 14px 27px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.explore-btn {
+    background: linear-gradient(135deg, #7842ec, #6335d8);
+    color: white;
+}
+
+.explore-btn:hover {
+    transform: translateY(-3px);
+}
+
+.contact-btn {
+    color: white;
+    border: 2px solid white;
+}
+
+.contact-btn:hover {
+    background-color: white;
+    color: #6335d8;
+}
+
+
+/* SEARCH SECTION */
+.search-section {
+    position: relative;
+    z-index: 2;
+    margin-top: -48px;
+    padding: 0 8.2%;
+}
+
+
+/* SEARCH BOX */
+.search-box {
+    min-height: 96px;
+    background-color: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 8px 22px rgba(30, 25, 60, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    gap: 18px;
+}
+
+
+/* SEARCH ITEMS */
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 0;
+    padding: 0 12px;
+    border-right: 2px solid #e9e7f2;
+}
+
+.search-item img {
+    width: 37px;
+    height: 37px;
+    object-fit: contain;
+}
+
+.search-item h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #17172e;
+    white-space: nowrap;
+}
+
+.search-item p {
+    font-size: 16px;
+    color: #626582;
+    margin-top: 3px;
+    white-space: nowrap;
+}
+
+
+/* SEARCH BUTTON */
+.search-btn {
+    min-width: 148px;
+    height: 52px;
+    background: linear-gradient(135deg, #7541e8, #6033d1);
+    color: white;
+    border-radius: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #5125bd;
+}
+
+.search-btn img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+/* DESTINATIONS SECTION */
+.destinations {
+    padding: 45px 3.5% 30px;
+    background-color: #ffffff;
+}
+
+
+/* SECTION HEADING */
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 33px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #17172e;
+}
+
+.section-heading span {
+    width: 49px;
+    height: 3px;
+    background-color: #7139e7;
+    border-radius: 5px;
+}
+
+
+/* DESTINATION CONTAINER */
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+}
+
+
+/* DESTINATION CARD */
+.destination-card {
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* DESTINATION OVERLAY */
+.destination-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 15px 15px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.05) 70%
+    );
+}
+
+
+/* DESTINATION TEXT */
+.destination-info h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.destination-info p {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: white;
+    font-size: 15px;
+}
+
+.destination-info p img {
+    width: 17px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+/* PRICE */
+.price {
+    background-color: white;
+    color: #17172e;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    white-space: nowrap;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1050px) {
+
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .logo h2 {
+        font-size: 21px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .search-section {
+        padding: 0 4%;
+    }
+
+    .search-box {
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .search-item {
+        gap: 8px;
+        padding: 0 5px;
+    }
+
+    .search-item h3 {
+        font-size: 14px;
+    }
+
+    .search-item p {
+        font-size: 13px;
+    }
+
+    .search-btn {
+        min-width: 115px;
+        font-size: 14px;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 768px) {
+
+    .website {
+        margin: 0;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        padding: 5px 0;
+        font-size: 13px;
+    }
+
+    .book-btn {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .hero {
+        height: 380px;
+        padding: 45px 5%;
+        background-position: center;
+    }
+
+    .hero-content h1 {
+        font-size: 39px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .explore-btn,
+    .contact-btn {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .search-section {
+        margin-top: -35px;
+        padding: 0 4%;
+    }
+
+    .search-box {
+        flex-wrap: wrap;
+        padding: 18px;
+    }
+
+    .search-item {
+        flex: 1 1 40%;
+        border-right: none;
+        padding: 8px;
+    }
+
+    .search-btn {
+        flex: 1 1 100%;
+    }
+
+    .destination-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo h2 {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        height: 350px;
+        padding: 35px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .explore-btn,
+    .contact-btn {
+        padding: 11px 13px;
+        font-size: 12px;
+    }
+
+    .search-box {
+        border-radius: 15px;
+    }
+
+    .search-item {
+        flex: 1 1 100%;
+    }
+
+    .search-item:not(:last-of-type) {
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .destinations {
+        padding: 35px 5%;
+    }
+
+    .section-heading {
+        gap: 10px;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+    .section-heading span {
+        width: 25px;
+    }
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        height: 220px;
+    }
+}
