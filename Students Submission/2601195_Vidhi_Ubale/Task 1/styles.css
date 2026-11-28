@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background-color: #ffffff;
+}
+/* navbar */
+header {
+    border-bottom: 1px solid #eee;
+}
+.navbar {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 20px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* logo and website name */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 55px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 26px;
+    color: #171c3a;
+}
+
+/* links in the navbar */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #454f68;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* show the active page */
+.nav-links .active {
+    color: #5525c9;
+}
+
+/* underline below the home link */
+.nav-links .active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+
+    width: 100%;
+    height: 4px;
+    background-color: #5929c9;
+    border-radius: 5px;
+}
+/* change link color when hovered */
+.nav-links a:hover {
+    color: #5929c9;
+}
+/* get started button */
+.nav-button {
+    text-decoration: none;
+    color: white;
+    background-color: #5929c9;
+    padding: 16px 25px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+/* change button color when hovered */
+.nav-button:hover {
+    background-color: #4720a7;
+}
+
+
+/* hero section */
+.hero {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 70px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+/* hero text */
+.hero-content {
+    max-width: 600px;
+}
+.hero-content h1 {
+    font-size: 64px;
+    line-height: 1.2;
+    color: #171c3a;
+    margin-bottom: 25px;
+}
+/* highlighting the job ready text */
+.hero-content h1 span {
+    color: #5929c9;
+}
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #454f68;
+    margin-bottom: 30px;
+}
+/* hero buttons */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* main button */
+.start-button {
+    text-decoration: none;
+    color: white;
+    background-color: #5929c9;
+    padding: 18px 28px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* second button */
+.view-button {
+    text-decoration: none;
+    color: #5929c9;
+    background-color: white;
+    padding: 18px 28px;
+    border: 2px solid #5929c9;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* change button color when hovered */
+.start-button:hover {
+    background-color: #4720a7;
+}
+.view-button:hover {
+    background-color: #f5f5f5;
+}
+/* hero image */
+.hero-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* features section */
+.features {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 40px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+/* feature cards */
+.feature-card {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+}
+/* feature images */
+.feature-card img {
+    width: 100%;
+    max-width: 180px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+/* card heading */
+.feature-card h3 {
+    font-size: 24px;
+    color: #171c3a;
+    margin-bottom: 15px;
+}
+/* card description */
+.feature-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #454f68;
+}
+/* smooth hover effects */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* move card slightly when hovered */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+/* smooth button hover */
+.start-button,
+.view-button,
+.nav-button {
+    transition: 0.3s ease;
+}
+/* features section */
+.features {
+    width: 100%;
+    padding: 60px 30px 90px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #f7f4ff;
+}
+/* feature cards */
+.feature-card {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #e9e5f5;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    min-height: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* feature images */
+.feature-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+/* card heading */
+.feature-card h3 {
+    font-size: 28px;
+    color: #171c3a;
+    margin-bottom: 15px;
+}
+/* card description */
+.feature-card p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #454f68;
+}
+/* move card slightly when hovered */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* tablet screen */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 20px;
+    }
+    .nav-links {
+        gap: 25px;
+    }
+    .hero {
+        padding: 50px 20px;
+    }
+    .hero-content h1 {
+        font-size: 48px;
+    }
+    .hero-content p {
+        font-size: 18px;
+    }
+    .hero-image {
+        width: 45%;
+    }
+    .features {
+        padding: 40px 20px 60px;
+        gap: 20px;
+    }
+    .feature-card h3 {
+        font-size: 22px;
+    }
+    .feature-card p {
+        font-size: 16px;
+    }
+}
+
+/* mobile screen */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .logo img {
+        width: 45px;
+        height: 40px;
+    }
+    .logo h2 {
+        font-size: 22px;
+    }
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 15px;
+    }
+    .nav-links .active::after {
+        bottom: -8px;
+    }
+    .nav-button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .hero-content {
+        width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 38px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .start-button,
+    .view-button {
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+    .hero-image {
+        width: 100%;
+    }
+    .hero-image img {
+        max-width: 350px;
+    }
+    .features {
+        flex-direction: column;
+        padding: 30px 20px 50px;
+        gap: 20px;
+    }
+    .feature-card {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        padding: 25px 20px;
+    }
+    .feature-card h3 {
+        font-size: 22px;
+    }
+    .feature-card p {
+        font-size: 16px;
+    }
+}
